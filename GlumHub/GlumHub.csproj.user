@@ -1,0 +1,124 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<Project ToolsVersion="Current" xmlns="http://schemas.microsoft.com/developer/msbuild/2003">
+  <PropertyGroup />
+  <ItemGroup>
+    <ApplicationDefinition Update="App.xaml">
+      <SubType>Designer</SubType>
+    </ApplicationDefinition>
+  </ItemGroup>
+  <ItemGroup>
+    <Compile Update="views\client\MasterPage.xaml.cs">
+      <SubType>Code</SubType>
+    </Compile>
+    <Compile Update="views\client\MsterServicePage.xaml.cs">
+      <SubType>Code</SubType>
+    </Compile>
+    <Compile Update="views\master\AsMasterPage.xaml.cs">
+      <SubType>Code</SubType>
+    </Compile>
+    <Compile Update="views\master\EditProfilePageMaster.xaml.cs">
+      <SubType>Code</SubType>
+    </Compile>
+    <Compile Update="views\master\FreeBookingPage.xaml.cs">
+      <SubType>Code</SubType>
+    </Compile>
+    <Compile Update="views\master\HomePageMaster.xaml.cs">
+      <SubType>Code</SubType>
+    </Compile>
+    <Compile Update="views\client\EditProfilePageClient.xaml.cs">
+      <SubType>Code</SubType>
+    </Compile>
+    <Compile Update="views\client\HomePageClient.xaml.cs">
+      <SubType>Code</SubType>
+    </Compile>
+    <Compile Update="views\client\MyProfilePageClient.xaml.cs">
+      <SubType>Code</SubType>
+    </Compile>
+    <Compile Update="views\LoginPage.xaml.cs">
+      <SubType>Code</SubType>
+    </Compile>
+    <Compile Update="views\MainPage.xaml.cs">
+      <SubType>Code</SubType>
+    </Compile>
+    <Compile Update="views\master\MyProfilePageMaster.xaml.cs">
+      <SubType>Code</SubType>
+    </Compile>
+    <Compile Update="views\master\NewBookingPage.xaml.cs">
+      <SubType>Code</SubType>
+    </Compile>
+    <Compile Update="views\master\UpcomingBookingPage.xaml.cs">
+      <SubType>Code</SubType>
+    </Compile>
+    <Compile Update="views\RegisterPage.xaml.cs">
+      <SubType>Code</SubType>
+    </Compile>
+    <Compile Update="views\client\SearchPage.xaml.cs">
+      <SubType>Code</SubType>
+    </Compile>
+    <Compile Update="views\SettingsPage.xaml.cs">
+      <SubType>Code</SubType>
+    </Compile>
+  </ItemGroup>
+  <ItemGroup>
+    <Page Update="files\EnglishDictionary.xaml">
+      <SubType>Designer</SubType>
+    </Page>
+    <Page Update="files\RussianDictionary.xaml">
+      <SubType>Designer</SubType>
+    </Page>
+    <Page Update="views\client\MasterPage.xaml">
+      <SubType>Designer</SubType>
+    </Page>
+    <Page Update="views\client\MsterServicePage.xaml">
+      <SubType>Designer</SubType>
+    </Page>
+    <Page Update="views\master\AsMasterPage.xaml">
+      <SubType>Designer</SubType>
+    </Page>
+    <Page Update="views\master\EditProfilePageMaster.xaml">
+      <SubType>Designer</SubType>
+    </Page>
+    <Page Update="views\master\FreeBookingPage.xaml">
+      <SubType>Designer</SubType>
+    </Page>
+    <Page Update="views\master\HomePageMaster.xaml">
+      <SubType>Designer</SubType>
+    </Page>
+    <Page Update="views\client\EditProfilePageClient.xaml">
+      <SubType>Designer</SubType>
+    </Page>
+    <Page Update="views\client\HomePageClient.xaml">
+      <SubType>Designer</SubType>
+    </Page>
+    <Page Update="views\client\MyProfilePageClient.xaml">
+      <SubType>Designer</SubType>
+    </Page>
+    <Page Update="views\LoginPage.xaml">
+      <SubType>Designer</SubType>
+    </Page>
+    <Page Update="views\MainPage.xaml">
+      <SubType>Designer</SubType>
+    </Page>
+    <Page Update="views\MainWindow.xaml">
+      <SubType>Designer</SubType>
+    </Page>
+    <Page Update="views\master\MyProfilePageMaster.xaml">
+      <SubType>Designer</SubType>
+    </Page>
+    <Page Update="views\master\NewBookingPage.xaml">
+      <SubType>Designer</SubType>
+    </Page>
+    <Page Update="views\master\UpcomingBookingPage.xaml">
+      <SubType>Designer</SubType>
+    </Page>
+    <Page Update="views\RegisterPage.xaml">
+      <SubType>Designer</SubType>
+    </Page>
+    <Page Update="views\client\SearchPage.xaml">
+      <SubType>Designer</SubType>
+    </Page>
+    <Page Update="views\SettingsPage.xaml">
+      <SubType>Designer</SubType>
+    </Page>
+  </ItemGroup>
+</Project>

@@ -1,0 +1,50 @@
+﻿<ResourceDictionary xmlns="http://schemas.microsoft.com/winfx/2006/xaml/presentation"
+                    xmlns:x="http://schemas.microsoft.com/winfx/2006/xaml"
+                    xmlns:v="clr-namespace:System;assembly=mscorlib">
+
+    
+    <!-- Login page -->
+    <v:String x:Key="LoginLabel">Login</v:String>
+    <v:String x:Key="UsernameLabel">Username</v:String>
+    <v:String x:Key="PasswordLabel">Password</v:String>
+    <v:String x:Key="RegisterButton">Register</v:String>
+    <v:String x:Key="LoginButton">Login</v:String>
+
+    <!-- Register page -->
+    <v:String x:Key="RegisterLabel">Register</v:String>
+    <v:String x:Key="FirstNameLabel">First name</v:String>
+    <v:String x:Key="SecondNameLabel">Second name</v:String>
+    <v:String x:Key="EmailLabel">Email</v:String>
+    <v:String x:Key="TelLabel">Tel</v:String>
+
+    <!-- Main page -->
+    <v:String x:Key="HomeButton">Home</v:String>
+    <v:String x:Key="SearchButton">Search</v:String>
+    <v:String x:Key="MyMastersButton">My Masters</v:String>
+    <v:String x:Key="NotificationsButton">Notifications</v:String>
+    <v:String x:Key="ProfileButton">Profile</v:String>
+    <v:String x:Key="SettingsButton">Settings</v:String>
+    <v:String x:Key="LogOutButton">Log Out</v:String>
+
+    <!-- MyProfileClient page -->
+    <v:String x:Key="EditProfileButton">Edit profile</v:String>
+    <v:String x:Key="StatisticButton">Statistic</v:String>
+    <v:String x:Key="HistoryButton">History</v:String>
+
+    <!-- MyProfileMaster page -->
+    <v:String x:Key="PoststButton">Posts</v:String>
+
+    <!-- EditProfileClient page -->
+    <v:String x:Key="ChangePhotoButton">Change photo</v:String>
+    <v:String x:Key="SaveChangesButton">Save changes</v:String>
+
+    <!-- EditProfileMaster page -->
+    <v:String x:Key="BioLabel">Bio</v:String>
+    <v:String x:Key="BusinessAddressLabel">Business address</v:String>
+
+    <!-- Settings page -->
+    <v:String x:Key="SwitchAppearanceButton">Switch Appearance</v:String>
+    <v:String x:Key="SwitchLanguageButton">Switch Language</v:String>
+
+
+</ResourceDictionary>

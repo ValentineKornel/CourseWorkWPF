@@ -1,0 +1,30 @@
+﻿<Page x:Class="GlumHub.HomePageMaster"
+      xmlns="http://schemas.microsoft.com/winfx/2006/xaml/presentation"
+      xmlns:x="http://schemas.microsoft.com/winfx/2006/xaml"
+      xmlns:mc="http://schemas.openxmlformats.org/markup-compatibility/2006" 
+      xmlns:d="http://schemas.microsoft.com/expression/blend/2008" 
+      xmlns:local="clr-namespace:GlumHub"
+      mc:Ignorable="d" 
+      d:DesignHeight="1080" d:DesignWidth="1240" Background="White"
+      Title="HomePageMaster">
+
+    <Page.DataContext>
+        <local:HomePageMasterVM></local:HomePageMasterVM>
+    </Page.DataContext>
+        <Grid>
+        <Grid.ColumnDefinitions>
+            <ColumnDefinition></ColumnDefinition>
+        </Grid.ColumnDefinitions>
+        <Grid.RowDefinitions>
+            <RowDefinition></RowDefinition>
+        </Grid.RowDefinitions>
+        <WrapPanel Width="1240" Height="52" HorizontalAlignment="Left" VerticalAlignment="Top">
+            <Button Command="{Binding AsMasterPageRedirectCommand}" Content="As Master" FontSize="20" Height="50" Width="620"  Style="{StaticResource SecondaryButtonStyle}"></Button>
+            <Button Command="{Binding AsClientPageRedirectCommand}" Content="As Client" FontSize="20" Height="50" Width="620" Style="{StaticResource SecondaryButtonStyle}"></Button>
+            <Border BorderBrush="Black" BorderThickness="2" Width="1220" Margin="10, 0, 10, 0"></Border>
+        </WrapPanel>
+        <Frame x:Name="homePageMasterFrame" Margin="0, 52, 0, 0">
+            
+        </Frame>
+    </Grid>
+</Page>

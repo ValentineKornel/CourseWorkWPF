@@ -1,0 +1,112 @@
+{
+  "Version": 1,
+  "WorkspaceRootPath": "D:\\Study\\CourseWork\\GlumHub\\",
+  "Documents": [
+    {
+      "AbsoluteMoniker": "D:0:0:{3EA0330D-57CB-4EDD-A566-416BC8F779DB}|GlumHub\\GlumHub.csproj|d:\\study\\coursework\\glumhub\\glumhub\\viewmodel\\client\\homepageclientvm.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
+      "RelativeMoniker": "D:0:0:{3EA0330D-57CB-4EDD-A566-416BC8F779DB}|GlumHub\\GlumHub.csproj|solutionrelative:glumhub\\viewmodel\\client\\homepageclientvm.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
+    },
+    {
+      "AbsoluteMoniker": "D:0:0:{3EA0330D-57CB-4EDD-A566-416BC8F779DB}|GlumHub\\GlumHub.csproj|d:\\study\\coursework\\glumhub\\glumhub\\viewmodel\\master\\upcomingbookingpagevm.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
+      "RelativeMoniker": "D:0:0:{3EA0330D-57CB-4EDD-A566-416BC8F779DB}|GlumHub\\GlumHub.csproj|solutionrelative:glumhub\\viewmodel\\master\\upcomingbookingpagevm.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
+    },
+    {
+      "AbsoluteMoniker": "D:0:0:{3EA0330D-57CB-4EDD-A566-416BC8F779DB}|GlumHub\\GlumHub.csproj|d:\\study\\coursework\\glumhub\\glumhub\\viewmodel\\master\\freebookingpagevm.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
+      "RelativeMoniker": "D:0:0:{3EA0330D-57CB-4EDD-A566-416BC8F779DB}|GlumHub\\GlumHub.csproj|solutionrelative:glumhub\\viewmodel\\master\\freebookingpagevm.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
+    },
+    {
+      "AbsoluteMoniker": "D:0:0:{3EA0330D-57CB-4EDD-A566-416BC8F779DB}|GlumHub\\GlumHub.csproj|d:\\study\\coursework\\glumhub\\glumhub\\views\\master\\freebookingpage.xaml||{F11ACC28-31D1-4C80-A34B-F4E09D3D753C}",
+      "RelativeMoniker": "D:0:0:{3EA0330D-57CB-4EDD-A566-416BC8F779DB}|GlumHub\\GlumHub.csproj|solutionrelative:glumhub\\views\\master\\freebookingpage.xaml||{F11ACC28-31D1-4C80-A34B-F4E09D3D753C}"
+    }
+  ],
+  "DocumentGroupContainers": [
+    {
+      "Orientation": 1,
+      "VerticalTabListWidth": 256,
+      "DocumentGroups": [
+        {
+          "DockedHeight": 200,
+          "SelectedChildIndex": 1,
+          "Children": [
+            {
+              "$type": "Bookmark",
+              "Name": "ST:0:0:{1c4feeaa-4718-4aa9-859d-94ce25d182ba}"
+            },
+            {
+              "$type": "Document",
+              "DocumentIndex": 0,
+              "Title": "HomePageClientVM.cs",
+              "DocumentMoniker": "D:\\Study\\CourseWork\\GlumHub\\GlumHub\\ViewModel\\client\\HomePageClientVM.cs",
+              "RelativeDocumentMoniker": "GlumHub\\ViewModel\\client\\HomePageClientVM.cs",
+              "ToolTip": "D:\\Study\\CourseWork\\GlumHub\\GlumHub\\ViewModel\\client\\HomePageClientVM.cs",
+              "RelativeToolTip": "GlumHub\\ViewModel\\client\\HomePageClientVM.cs",
+              "ViewState": "AQIAADoAAAAAAAAAAAAUwFYAAABEAAAA",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
+              "WhenOpened": "2024-04-04T21:18:20.943Z",
+              "EditorCaption": ""
+            },
+            {
+              "$type": "Document",
+              "DocumentIndex": 1,
+              "Title": "UpcomingBookingPageVM.cs",
+              "DocumentMoniker": "D:\\Study\\CourseWork\\GlumHub\\GlumHub\\ViewModel\\master\\UpcomingBookingPageVM.cs",
+              "RelativeDocumentMoniker": "GlumHub\\ViewModel\\master\\UpcomingBookingPageVM.cs",
+              "ToolTip": "D:\\Study\\CourseWork\\GlumHub\\GlumHub\\ViewModel\\master\\UpcomingBookingPageVM.cs",
+              "RelativeToolTip": "GlumHub\\ViewModel\\master\\UpcomingBookingPageVM.cs",
+              "ViewState": "AQIAACoAAAAAAAAAAAAUwE8AAAAPAAAA",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
+              "WhenOpened": "2024-04-04T20:55:24.466Z",
+              "EditorCaption": ""
+            }
+          ]
+        }
+      ]
+    },
+    {
+      "Orientation": 0,
+      "VerticalTabListWidth": 256,
+      "FloatingWindowState": {
+        "Id": "fc28d9e2-7019-4b54-8038-328101a9f097",
+        "Display": 0,
+        "X": 248,
+        "Y": 47,
+        "Width": 832,
+        "Height": 651,
+        "WindowState": 0
+      },
+      "DocumentGroups": [
+        {
+          "DockedWidth": 200,
+          "SelectedChildIndex": 0,
+          "Children": [
+            {
+              "$type": "Document",
+              "DocumentIndex": 2,
+              "Title": "FreeBookingPageVM.cs",
+              "DocumentMoniker": "D:\\Study\\CourseWork\\GlumHub\\GlumHub\\ViewModel\\master\\FreeBookingPageVM.cs",
+              "RelativeDocumentMoniker": "GlumHub\\ViewModel\\master\\FreeBookingPageVM.cs",
+              "ToolTip": "D:\\Study\\CourseWork\\GlumHub\\GlumHub\\ViewModel\\master\\FreeBookingPageVM.cs",
+              "RelativeToolTip": "GlumHub\\ViewModel\\master\\FreeBookingPageVM.cs",
+              "ViewState": "AQIAAD0AAAAAAAAAAAAWwGUAAAAIAAAA",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
+              "WhenOpened": "2024-04-04T19:00:24.888Z",
+              "EditorCaption": ""
+            },
+            {
+              "$type": "Document",
+              "DocumentIndex": 3,
+              "Title": "FreeBookingPage.xaml",
+              "DocumentMoniker": "D:\\Study\\CourseWork\\GlumHub\\GlumHub\\views\\master\\FreeBookingPage.xaml",
+              "RelativeDocumentMoniker": "GlumHub\\views\\master\\FreeBookingPage.xaml",
+              "ToolTip": "D:\\Study\\CourseWork\\GlumHub\\GlumHub\\views\\master\\FreeBookingPage.xaml",
+              "RelativeToolTip": "GlumHub\\views\\master\\FreeBookingPage.xaml",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.003549|",
+              "WhenOpened": "2024-04-04T19:00:32.6Z",
+              "EditorCaption": ""
+            }
+          ]
+        }
+      ]
+    }
+  ]
+}

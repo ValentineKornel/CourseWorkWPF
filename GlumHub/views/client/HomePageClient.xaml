@@ -1,0 +1,49 @@
+﻿<Page x:Class="GlumHub.HomePageClient"
+      xmlns="http://schemas.microsoft.com/winfx/2006/xaml/presentation"
+      xmlns:x="http://schemas.microsoft.com/winfx/2006/xaml"
+      xmlns:mc="http://schemas.openxmlformats.org/markup-compatibility/2006" 
+      xmlns:d="http://schemas.microsoft.com/expression/blend/2008" 
+      xmlns:local="clr-namespace:GlumHub"
+      mc:Ignorable="d" 
+      d:DesignHeight="450" d:DesignWidth="800" Background="White"
+      Title="HomePageClient">
+
+    <Page.DataContext>
+        <local:HomePageClientVM></local:HomePageClientVM>
+    </Page.DataContext>
+    <Grid>
+        <Grid.ColumnDefinitions>
+            <ColumnDefinition Width="110*"></ColumnDefinition>
+            <ColumnDefinition Width="1030*"></ColumnDefinition>
+            <ColumnDefinition Width="100*"></ColumnDefinition>
+        </Grid.ColumnDefinitions>
+        <Grid.RowDefinitions>
+            <RowDefinition></RowDefinition>
+        </Grid.RowDefinitions>
+        <StackPanel Grid.Column="1" Width="auto">
+            <Label Content="Upcoming Booking:" FontSize="20" HorizontalAlignment="Center"></Label>
+            <ListView ItemsSource="{Binding BookedBookings}" BorderThickness="0" Width="auto">
+                <ListView.ItemTemplate>
+                    <DataTemplate>
+                        <StackPanel Width="1000" Height="auto" Margin="10, 10, 0, 10">
+                            <Label Content="{Binding booking.Date_Time}" FontSize="18"></Label>
+                            <Label Content="{Binding booking.Service}" FontSize="16"></Label>
+                            <Button Command="{Binding DeleteBookedBookingCommand}" CommandParameter="{Binding booking.Id}" Visibility="Hidden"
+                            Content="Delete" Width="auto" FontSize="18" HorizontalAlignment="Right" Margin="0, -60, 0, 0" Height="30" Padding="20, 0, 20, 0"></Button>
+                            <StackPanel Width="auto" Height="auto" Orientation="Horizontal">
+                                <Border Style="{StaticResource SmallCircularImageBorder}">
+                                    <Border.Background>
+                                        <ImageBrush ImageSource="{Binding booking.Master.ProfileImage, Converter={StaticResource ByteArrayToImageConverter}}"/>
+                                    </Border.Background>
+                                </Border>
+                                <Label Content="{Binding booking.Master.Firstname}" FontSize="18"></Label>
+                                <Label Content="{Binding booking.Master.Tel}" FontSize="18"></Label>
+                            </StackPanel>
+                        </StackPanel>
+                    </DataTemplate>
+                </ListView.ItemTemplate>
+            </ListView>
+        </StackPanel>
+
+    </Grid>
+</Page>
