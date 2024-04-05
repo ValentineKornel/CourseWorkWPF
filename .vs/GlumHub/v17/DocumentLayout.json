@@ -3,16 +3,8 @@
   "WorkspaceRootPath": "D:\\Study\\CourseWork\\GlumHub\\",
   "Documents": [
     {
-      "AbsoluteMoniker": "D:0:0:{3EA0330D-57CB-4EDD-A566-416BC8F779DB}|GlumHub\\GlumHub.csproj|d:\\study\\coursework\\glumhub\\glumhub\\views\\labs\\forlabspage.xaml||{F11ACC28-31D1-4C80-A34B-F4E09D3D753C}",
-      "RelativeMoniker": "D:0:0:{3EA0330D-57CB-4EDD-A566-416BC8F779DB}|GlumHub\\GlumHub.csproj|solutionrelative:glumhub\\views\\labs\\forlabspage.xaml||{F11ACC28-31D1-4C80-A34B-F4E09D3D753C}"
-    },
-    {
-      "AbsoluteMoniker": "D:0:0:{3EA0330D-57CB-4EDD-A566-416BC8F779DB}|GlumHub\\GlumHub.csproj|d:\\study\\coursework\\glumhub\\glumhub\\viewmodel\\labs\\forlabspagevm.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
-      "RelativeMoniker": "D:0:0:{3EA0330D-57CB-4EDD-A566-416BC8F779DB}|GlumHub\\GlumHub.csproj|solutionrelative:glumhub\\viewmodel\\labs\\forlabspagevm.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
-    },
-    {
-      "AbsoluteMoniker": "D:0:0:{3EA0330D-57CB-4EDD-A566-416BC8F779DB}|GlumHub\\GlumHub.csproj|d:\\study\\coursework\\glumhub\\glumhub\\views\\labs\\forlabspage.xaml.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
-      "RelativeMoniker": "D:0:0:{3EA0330D-57CB-4EDD-A566-416BC8F779DB}|GlumHub\\GlumHub.csproj|solutionrelative:glumhub\\views\\labs\\forlabspage.xaml.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
+      "AbsoluteMoniker": "D:0:0:{3EA0330D-57CB-4EDD-A566-416BC8F779DB}|GlumHub\\GlumHub.csproj|d:\\study\\coursework\\glumhub\\glumhub\\views\\mainpage.xaml||{F11ACC28-31D1-4C80-A34B-F4E09D3D753C}",
+      "RelativeMoniker": "D:0:0:{3EA0330D-57CB-4EDD-A566-416BC8F779DB}|GlumHub\\GlumHub.csproj|solutionrelative:glumhub\\views\\mainpage.xaml||{F11ACC28-31D1-4C80-A34B-F4E09D3D753C}"
     }
   ],
   "DocumentGroupContainers": [
@@ -22,7 +14,7 @@
       "DocumentGroups": [
         {
           "DockedHeight": 200,
-          "SelectedChildIndex": 3,
+          "SelectedChildIndex": 1,
           "Children": [
             {
               "$type": "Bookmark",
@@ -30,40 +22,14 @@
             },
             {
               "$type": "Document",
-              "DocumentIndex": 1,
-              "Title": "ForLabsPageVM.cs",
-              "DocumentMoniker": "D:\\Study\\CourseWork\\GlumHub\\GlumHub\\ViewModel\\labs\\ForLabsPageVM.cs",
-              "RelativeDocumentMoniker": "GlumHub\\ViewModel\\labs\\ForLabsPageVM.cs",
-              "ToolTip": "D:\\Study\\CourseWork\\GlumHub\\GlumHub\\ViewModel\\labs\\ForLabsPageVM.cs",
-              "RelativeToolTip": "GlumHub\\ViewModel\\labs\\ForLabsPageVM.cs",
-              "ViewState": "AQIAAAAAAAAAAAAAAAAAAA4AAAAAAAAA",
-              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
-              "WhenOpened": "2024-04-05T10:47:23.632Z",
-              "EditorCaption": ""
-            },
-            {
-              "$type": "Document",
-              "DocumentIndex": 2,
-              "Title": "ForLabsPage.xaml.cs",
-              "DocumentMoniker": "D:\\Study\\CourseWork\\GlumHub\\GlumHub\\views\\labs\\ForLabsPage.xaml.cs",
-              "RelativeDocumentMoniker": "GlumHub\\views\\labs\\ForLabsPage.xaml.cs",
-              "ToolTip": "D:\\Study\\CourseWork\\GlumHub\\GlumHub\\views\\labs\\ForLabsPage.xaml.cs",
-              "RelativeToolTip": "GlumHub\\views\\labs\\ForLabsPage.xaml.cs",
-              "ViewState": "AQIAAAAAAAAAAAAAAAAAAA8AAAARAAAA",
-              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
-              "WhenOpened": "2024-04-05T10:46:41.52Z",
-              "EditorCaption": ""
-            },
-            {
-              "$type": "Document",
               "DocumentIndex": 0,
-              "Title": "ForLabsPage.xaml",
-              "DocumentMoniker": "D:\\Study\\CourseWork\\GlumHub\\GlumHub\\views\\labs\\ForLabsPage.xaml",
-              "RelativeDocumentMoniker": "GlumHub\\views\\labs\\ForLabsPage.xaml",
-              "ToolTip": "D:\\Study\\CourseWork\\GlumHub\\GlumHub\\views\\labs\\ForLabsPage.xaml",
-              "RelativeToolTip": "GlumHub\\views\\labs\\ForLabsPage.xaml",
+              "Title": "MainPage.xaml",
+              "DocumentMoniker": "D:\\Study\\CourseWork\\GlumHub\\GlumHub\\views\\MainPage.xaml",
+              "RelativeDocumentMoniker": "GlumHub\\views\\MainPage.xaml",
+              "ToolTip": "D:\\Study\\CourseWork\\GlumHub\\GlumHub\\views\\MainPage.xaml",
+              "RelativeToolTip": "GlumHub\\views\\MainPage.xaml",
               "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.003549|",
-              "WhenOpened": "2024-04-05T10:45:56.158Z",
+              "WhenOpened": "2024-04-05T13:06:17.439Z",
               "EditorCaption": ""
             }
           ]
