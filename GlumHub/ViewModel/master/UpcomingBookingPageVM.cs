@@ -73,7 +73,8 @@ namespace GlumHub
             BookedBookings.Clear();
             using (ApplicationContextDB db = new ApplicationContextDB())
             {
-                foreach (Booking b in db.Bookings.Include(b => b.Master).Include(b => b.Client).Where(b => b.Master.Id == Master.Id && b.Booked == true))
+                foreach (Booking b in db.Bookings.Include(b => b.Master).Include(b => b.Client).
+                    Where(b => b.Master.Id == Master.Id && b.Booked == true && b.Date_Time > DateTime.Now))
                 {
                     BookedBookings.Add(new BookingWrapper(b, DeleteBookedBookingCommand));
                 }

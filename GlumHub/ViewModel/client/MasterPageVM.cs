@@ -119,10 +119,11 @@ namespace GlumHub
             FreeBookings.Clear();
             using (ApplicationContextDB db = new ApplicationContextDB())
             {
-                foreach (Booking b in db.Bookings.Include(b => b.Master).Where(b => b.Master.Id == Master.Id && b.Booked == false))
+                foreach (Booking b in db.Bookings.Include(b => b.Master).Where(b => b.Master.Id == Master.Id && b.Booked == false && b.Date_Time > DateTime.Now))
                 {
                     FreeBookings.Add(new BookingWrapper(b, BookFreeBookingCommand));
                 }
+                FreeBookings = new ObservableCollection<BookingWrapper>(FreeBookings.OrderBy(w => w.booking.Date_Time));
             }
         }
 

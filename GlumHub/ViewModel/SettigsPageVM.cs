@@ -15,6 +15,8 @@ namespace GlumHub
     {
         private ResourceDictionary englishDictionary;
         private ResourceDictionary russianDictionary;
+        private ResourceDictionary lightAppearanceDictionary;
+        private ResourceDictionary darkAppearanceDictionary;
 
 
         public SettigsPageVM()
@@ -23,6 +25,12 @@ namespace GlumHub
             englishDictionary.Source = new Uri("files/EnglishDictionary.xaml", UriKind.Relative);
             russianDictionary = new ResourceDictionary();
             russianDictionary.Source = new Uri("files/RussianDictionary.xaml", UriKind.Relative);
+            lightAppearanceDictionary = new ResourceDictionary();
+            lightAppearanceDictionary.Source = new Uri("files/LightAppearanceDictionary.xaml", UriKind.Relative);
+            darkAppearanceDictionary = new ResourceDictionary();
+            darkAppearanceDictionary.Source = new Uri("files/DarkAppearanceDictionary.xaml", UriKind.Relative);
+
+
         }
 
 
@@ -46,7 +54,18 @@ namespace GlumHub
 
         private void SwitchAppearance()
         {
-            
+            if (Application.Current.Resources["Appearance"] == "Light")
+            {
+                Application.Current.Resources.MergedDictionaries.Remove(lightAppearanceDictionary);
+                Application.Current.Resources.MergedDictionaries.Add(darkAppearanceDictionary);
+                Application.Current.Resources["Appearance"] = "Dark";
+            }
+            else
+            {
+                Application.Current.Resources.MergedDictionaries.Remove(darkAppearanceDictionary);
+                Application.Current.Resources.MergedDictionaries.Add(lightAppearanceDictionary);
+                Application.Current.Resources["Appearance"] = "Light";
+            }
         }
 
 
@@ -63,14 +82,16 @@ namespace GlumHub
 
         private void SwitchLanguage()
         {
-            Application.Current.Resources.MergedDictionaries.Clear();
+            //Application.Current.Resources.MergedDictionaries.Clear();
             if (Application.Current.Resources["Language"] == "En")
             {
+                Application.Current.Resources.MergedDictionaries.Remove(englishDictionary);
                 Application.Current.Resources.MergedDictionaries.Add(russianDictionary);
                 Application.Current.Resources["Language"] = "Ru";
             }
             else
             {
+                Application.Current.Resources.MergedDictionaries.Remove(russianDictionary);
                 Application.Current.Resources.MergedDictionaries.Add(englishDictionary);
                 Application.Current.Resources["Language"] = "En";
             }

@@ -7,10 +7,16 @@
     </ApplicationDefinition>
   </ItemGroup>
   <ItemGroup>
+    <Compile Update="views\client\HistoryPageClient.xaml.cs">
+      <SubType>Code</SubType>
+    </Compile>
     <Compile Update="views\client\MasterPage.xaml.cs">
       <SubType>Code</SubType>
     </Compile>
     <Compile Update="views\client\MsterServicePage.xaml.cs">
+      <SubType>Code</SubType>
+    </Compile>
+    <Compile Update="views\labs\ForLabsPage.xaml.cs">
       <SubType>Code</SubType>
     </Compile>
     <Compile Update="views\master\AsMasterPage.xaml.cs">
@@ -20,6 +26,9 @@
       <SubType>Code</SubType>
     </Compile>
     <Compile Update="views\master\FreeBookingPage.xaml.cs">
+      <SubType>Code</SubType>
+    </Compile>
+    <Compile Update="views\master\HistoryPageMaster.xaml.cs">
       <SubType>Code</SubType>
     </Compile>
     <Compile Update="views\master\HomePageMaster.xaml.cs">
@@ -60,16 +69,28 @@
     </Compile>
   </ItemGroup>
   <ItemGroup>
+    <Page Update="files\DarkAppearanceDictionary.xaml">
+      <SubType>Designer</SubType>
+    </Page>
     <Page Update="files\EnglishDictionary.xaml">
       <SubType>Designer</SubType>
     </Page>
+    <Page Update="files\LIghtAppearanceDictionary.xaml">
+      <SubType>Designer</SubType>
+    </Page>
     <Page Update="files\RussianDictionary.xaml">
+      <SubType>Designer</SubType>
+    </Page>
+    <Page Update="views\client\HistoryPageClient.xaml">
       <SubType>Designer</SubType>
     </Page>
     <Page Update="views\client\MasterPage.xaml">
       <SubType>Designer</SubType>
     </Page>
     <Page Update="views\client\MsterServicePage.xaml">
+      <SubType>Designer</SubType>
+    </Page>
+    <Page Update="views\labs\ForLabsPage.xaml">
       <SubType>Designer</SubType>
     </Page>
     <Page Update="views\master\AsMasterPage.xaml">
@@ -79,6 +100,9 @@
       <SubType>Designer</SubType>
     </Page>
     <Page Update="views\master\FreeBookingPage.xaml">
+      <SubType>Designer</SubType>
+    </Page>
+    <Page Update="views\master\HistoryPageMaster.xaml">
       <SubType>Designer</SubType>
     </Page>
     <Page Update="views\master\HomePageMaster.xaml">

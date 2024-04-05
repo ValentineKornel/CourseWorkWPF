@@ -23,6 +23,10 @@ namespace GlumHub
         public MyProfilePageClient()
         {
             InitializeComponent();
+            if (Application.Current.Resources["MyProfilePageFrame"] == null)
+                Application.Current.Resources.Add("MyProfilePageFrame", this.myProfilePageClientFrame);
+            else
+                Application.Current.Resources["MyProfilePageFrame"] = this.myProfilePageClientFrame;
         }
     }
 }

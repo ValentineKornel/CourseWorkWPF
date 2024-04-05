@@ -6,7 +6,7 @@
       xmlns:local="clr-namespace:GlumHub"
       xmlns:ext="http://schemas.xceed.com/wpf/xaml/toolkit"
       mc:Ignorable="d" 
-      d:DesignHeight="450" d:DesignWidth="800" Background="White"
+      d:DesignHeight="450" d:DesignWidth="800" Background="{DynamicResource PageBackground}"
       Title="NewBookingPage">
 
     <Page.DataContext>

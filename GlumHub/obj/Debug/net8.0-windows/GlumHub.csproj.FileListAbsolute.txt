@@ -191,3 +191,11 @@ D:\Study\CourseWork\GlumHub\GlumHub\obj\Debug\net8.0-windows\views\client\Search
 D:\Study\CourseWork\GlumHub\GlumHub\obj\Debug\net8.0-windows\views\client\SearchPage.baml
 D:\Study\CourseWork\GlumHub\GlumHub\obj\Debug\net8.0-windows\views\client\MsterServicePage.g.cs
 D:\Study\CourseWork\GlumHub\GlumHub\obj\Debug\net8.0-windows\views\client\MsterServicePage.baml
+D:\Study\CourseWork\GlumHub\GlumHub\obj\Debug\net8.0-windows\views\client\HistoryPageClient.g.cs
+D:\Study\CourseWork\GlumHub\GlumHub\obj\Debug\net8.0-windows\views\client\HistoryPageClient.baml
+D:\Study\CourseWork\GlumHub\GlumHub\obj\Debug\net8.0-windows\views\master\HistoryPageMaster.g.cs
+D:\Study\CourseWork\GlumHub\GlumHub\obj\Debug\net8.0-windows\views\master\HistoryPageMaster.baml
+D:\Study\CourseWork\GlumHub\GlumHub\obj\Debug\net8.0-windows\files\DarkAppearanceDictionary.baml
+D:\Study\CourseWork\GlumHub\GlumHub\obj\Debug\net8.0-windows\files\LIghtAppearanceDictionary.baml
+D:\Study\CourseWork\GlumHub\GlumHub\obj\Debug\net8.0-windows\views\labs\ForLabsPage.g.cs
+D:\Study\CourseWork\GlumHub\GlumHub\obj\Debug\net8.0-windows\views\labs\ForLabsPage.baml

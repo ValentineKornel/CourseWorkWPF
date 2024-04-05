@@ -5,7 +5,7 @@
       xmlns:d="http://schemas.microsoft.com/expression/blend/2008" 
       xmlns:local="clr-namespace:GlumHub"
       mc:Ignorable="d" 
-      d:DesignHeight="1080" d:DesignWidth="1920" Background="white"
+      d:DesignHeight="1080" d:DesignWidth="1920" Background="{DynamicResource PageBackground}"
       Title="MainPage">
 
     <Page.DataContext>
@@ -41,6 +41,7 @@
             <Button Command="{Binding SettingsPageRedirectCommand}" Content="{DynamicResource SettingsButton}" FontSize="20" Height="60" Margin="0, 10, 0, 0"/>
 
             <Button Command="{Binding LogOutCommand}" Content="{DynamicResource LogOutButton}" FontSize="20" Height="60" Margin="0, 10, 0, 0"/>
+            <Button Command="{Binding ForLabsPageRedirectCommand}" Content="For labs" FontSize="20" Height="60" Margin="0, 10, 0, 0"/>
 
         </StackPanel>
         <Frame x:Name="homePageFrame" Grid.Column="1" />

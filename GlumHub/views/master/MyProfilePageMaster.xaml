@@ -5,7 +5,7 @@
       xmlns:d="http://schemas.microsoft.com/expression/blend/2008" 
       xmlns:local="clr-namespace:GlumHub"
       mc:Ignorable="d" 
-      d:DesignHeight="1080" d:DesignWidth="1920" Background="White"
+      d:DesignHeight="1080" d:DesignWidth="1920" Background="{DynamicResource PageBackground}"
       Title="MyProfilePageMaster">
 
     <Page.DataContext>
@@ -48,9 +48,10 @@
             <StackPanel Height="50" Width="auto" HorizontalAlignment="Center" Orientation="Horizontal">
                 <Button Width="auto" Height="40" FontSize="18" Content="{DynamicResource PoststButton}" Padding="10, 0, 10, 0" Margin="20, 0, 20, 0" Style="{StaticResource SecondaryButtonStyle}"></Button>
                 <Button Width="auto" Height="40" FontSize="18" Content="{DynamicResource StatisticButton}" Padding="10, 0, 10, 0" Margin="20, 0, 20, 0" Style="{StaticResource SecondaryButtonStyle}"></Button>
-                <Button Width="auto" Height="40" FontSize="18" Content="{DynamicResource HistoryButton}" Padding="10, 0, 10, 0" Margin="20, 0, 20, 0" Style="{StaticResource SecondaryButtonStyle}"></Button>
+                <Button Command="{Binding HistoryAsMasterPageRedirectCommand}" Width="auto" Height="40" FontSize="18" Content="{DynamicResource HistoryButton}" Padding="10, 0, 10, 0" Margin="20, 0, 20, 0" Style="{StaticResource SecondaryButtonStyle}"></Button>
+                <Button Command="{Binding HistoryAsClientPageRedirectCommand}" Width="auto" Height="40" FontSize="18" Content="As client history" Padding="10, 0, 10, 0" Margin="20, 0, 20, 0" Style="{StaticResource SecondaryButtonStyle}"></Button>
             </StackPanel>
-            <Frame Height="690"/>
+            <Frame x:Name="myProfilePageMasterFrame" Height="690"/>
 
 
         </StackPanel>

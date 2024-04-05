@@ -14,6 +14,7 @@ namespace GlumHub
     class MyProfilePageMesterVM
     {
         Frame homePageFrame;
+        Frame myProfilePageMasterFrame;
 
         private User _user;
         public User User
@@ -55,6 +56,44 @@ namespace GlumHub
         {
             homePageFrame = Application.Current.Resources["HomePageFrame"] as Frame;
             homePageFrame.Navigate(new EditProfilePageMaster());
+
+        }
+
+
+        private DelegateCommand _historyAsMasterPageRedirectCommand;
+        public ICommand HistoryAsMasterPageRedirectCommand
+        {
+            get
+            {
+                if (_historyAsMasterPageRedirectCommand == null)
+                    _historyAsMasterPageRedirectCommand = new DelegateCommand(HistoryAsMasterPageRedirect);
+                return _historyAsMasterPageRedirectCommand;
+            }
+        }
+
+        private void HistoryAsMasterPageRedirect()
+        {
+            myProfilePageMasterFrame = Application.Current.Resources["MyProfilePageMasterFrame"] as Frame;
+            myProfilePageMasterFrame.Navigate(new HistoryPageMaster());
+
+        }
+
+
+        private DelegateCommand _historyAsClientPageRedirectCommand;
+        public ICommand HistoryAsClientPageRedirectCommand
+        {
+            get
+            {
+                if (_historyAsClientPageRedirectCommand == null)
+                    _historyAsClientPageRedirectCommand = new DelegateCommand(HistoryAsClientPageRedirect);
+                return _historyAsClientPageRedirectCommand;
+            }
+        }
+
+        private void HistoryAsClientPageRedirect()
+        {
+            myProfilePageMasterFrame = Application.Current.Resources["MyProfilePageMasterFrame"] as Frame;
+            myProfilePageMasterFrame.Navigate(new HistoryPageClient());
 
         }
     }

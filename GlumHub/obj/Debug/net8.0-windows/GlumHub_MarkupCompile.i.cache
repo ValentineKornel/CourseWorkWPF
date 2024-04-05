@@ -10,11 +10,11 @@ none
 false
 TRACE;DEBUG;NET;NET8_0;NETCOREAPP
 D:\Study\CourseWork\GlumHub\GlumHub\App.xaml
-201679494236
+25-1487421333
 
-46263768127
+52-1717691031
 247-763552364
-files\EnglishDictionary.xaml;files\RussianDictionary.xaml;views\client\EditProfilePageClient.xaml;views\client\HomePageClient.xaml;views\client\MasterPage.xaml;views\client\MsterServicePage.xaml;views\client\MyProfilePageClient.xaml;views\client\SearchPage.xaml;views\LoginPage.xaml;views\MainPage.xaml;views\MainWindow.xaml;views\master\AsMasterPage.xaml;views\master\EditProfilePageMaster.xaml;views\master\FreeBookingPage.xaml;views\master\HomePageMaster.xaml;views\master\MyProfilePageMaster.xaml;views\master\NewBookingPage.xaml;views\master\UpcomingBookingPage.xaml;views\RegisterPage.xaml;views\SettingsPage.xaml;
+files\DarkAppearanceDictionary.xaml;files\EnglishDictionary.xaml;files\LIghtAppearanceDictionary.xaml;files\RussianDictionary.xaml;views\client\EditProfilePageClient.xaml;views\client\HistoryPageClient.xaml;views\client\HomePageClient.xaml;views\client\MasterPage.xaml;views\client\MsterServicePage.xaml;views\client\MyProfilePageClient.xaml;views\client\SearchPage.xaml;views\labs\ForLabsPage.xaml;views\LoginPage.xaml;views\MainPage.xaml;views\MainWindow.xaml;views\master\AsMasterPage.xaml;views\master\EditProfilePageMaster.xaml;views\master\FreeBookingPage.xaml;views\master\HistoryPageMaster.xaml;views\master\HomePageMaster.xaml;views\master\MyProfilePageMaster.xaml;views\master\NewBookingPage.xaml;views\master\UpcomingBookingPage.xaml;views\RegisterPage.xaml;views\SettingsPage.xaml;
 
 True
 

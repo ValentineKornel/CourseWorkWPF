@@ -134,5 +134,23 @@ namespace GlumHub
         {
             mainFrame.Navigate(new LoginPage());
         }
+
+
+        private DelegateCommand _forLabsPageRedirectCommand;
+        public ICommand ForLabsPageRedirectCommand
+        {
+            get
+            {
+                if (_forLabsPageRedirectCommand == null)
+                    _forLabsPageRedirectCommand = new DelegateCommand(ForLabsPageRedirect);
+                return _forLabsPageRedirectCommand;
+            }
+        }
+
+        private void ForLabsPageRedirect()
+        {
+            homePageFrame = Application.Current.Resources["HomePageFrame"] as Frame;
+            homePageFrame.Navigate(new ForLabsPage());
+        }
     }
 }

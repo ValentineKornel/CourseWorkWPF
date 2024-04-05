@@ -23,6 +23,10 @@ namespace GlumHub
         public MyProfilePageMaster()
         {
             InitializeComponent();
+            if (Application.Current.Resources["MyProfilePageMasterFrame"] == null)
+                Application.Current.Resources.Add("MyProfilePageMasterFrame", this.myProfilePageMasterFrame);
+            else
+                Application.Current.Resources["MyProfilePageMasterFrame"] = this.myProfilePageMasterFrame;
         }
     }
 }
