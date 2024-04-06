@@ -42,6 +42,50 @@ namespace GlumHub
             PropertyChanged?.Invoke(this, new PropertyChangedEventArgs(propertyName));
         }
 
+
+        private DelegateCommand _undoCommand;
+        public ICommand UndoCommand
+        {
+            get
+            {
+                if (_undoCommand == null)
+                    _undoCommand = new DelegateCommand(Udno);
+                return _undoCommand;
+            }
+        }
+
+        private void Udno()
+        {
+            if (mainFrame.CanGoBack)
+            {
+                mainFrame.GoBack();
+            }
+            
+        }
+
+
+        private DelegateCommand _redoCommand;
+        public ICommand RedoCommand
+        {
+            get
+            {
+                if (_redoCommand == null)
+                    _redoCommand = new DelegateCommand(Redo);
+                return _redoCommand;
+            }
+        }
+
+        private void Redo()
+        {
+            if (mainFrame.CanGoForward)
+            {
+                mainFrame.GoForward();
+            }
+
+        }
+
+
+
         private DelegateCommand _myProfileRedirectCommand;
         public ICommand MyProfileRedirectCommand
         {
@@ -135,22 +179,5 @@ namespace GlumHub
             mainFrame.Navigate(new LoginPage());
         }
 
-
-        private DelegateCommand _forLabsPageRedirectCommand;
-        public ICommand ForLabsPageRedirectCommand
-        {
-            get
-            {
-                if (_forLabsPageRedirectCommand == null)
-                    _forLabsPageRedirectCommand = new DelegateCommand(ForLabsPageRedirect);
-                return _forLabsPageRedirectCommand;
-            }
-        }
-
-        private void ForLabsPageRedirect()
-        {
-            homePageFrame = Application.Current.Resources["HomePageFrame"] as Frame;
-            homePageFrame.Navigate(new ForLabsPage());
-        }
     }
 }

@@ -197,9 +197,3 @@ D:\Study\CourseWork\GlumHub\GlumHub\obj\Debug\net8.0-windows\views\master\Histor
 D:\Study\CourseWork\GlumHub\GlumHub\obj\Debug\net8.0-windows\views\master\HistoryPageMaster.baml
 D:\Study\CourseWork\GlumHub\GlumHub\obj\Debug\net8.0-windows\files\DarkAppearanceDictionary.baml
 D:\Study\CourseWork\GlumHub\GlumHub\obj\Debug\net8.0-windows\files\LIghtAppearanceDictionary.baml
-D:\Study\CourseWork\GlumHub\GlumHub\obj\Debug\net8.0-windows\views\labs\ForLabsPage.g.cs
-D:\Study\CourseWork\GlumHub\GlumHub\obj\Debug\net8.0-windows\views\labs\ForLabsPage.baml
-D:\Study\CourseWork\GlumHub\GlumHub\obj\Debug\net8.0-windows\views\labs\MyUserControl.g.cs
-D:\Study\CourseWork\GlumHub\GlumHub\obj\Debug\net8.0-windows\views\labs\MyUserControl.baml
-D:\Study\CourseWork\GlumHub\GlumHub\obj\Debug\net8.0-windows\views\labs\MyWindow.g.cs
-D:\Study\CourseWork\GlumHub\GlumHub\obj\Debug\net8.0-windows\views\labs\MyWindow.baml

@@ -16,15 +16,6 @@
     <Compile Update="views\client\MsterServicePage.xaml.cs">
       <SubType>Code</SubType>
     </Compile>
-    <Compile Update="views\labs\ForLabsPage.xaml.cs">
-      <SubType>Code</SubType>
-    </Compile>
-    <Compile Update="views\labs\MyUserControl.xaml.cs">
-      <SubType>Code</SubType>
-    </Compile>
-    <Compile Update="views\labs\MyWindow.xaml.cs">
-      <SubType>Code</SubType>
-    </Compile>
     <Compile Update="views\master\AsMasterPage.xaml.cs">
       <SubType>Code</SubType>
     </Compile>
@@ -94,15 +85,6 @@
       <SubType>Designer</SubType>
     </Page>
     <Page Update="views\client\MsterServicePage.xaml">
-      <SubType>Designer</SubType>
-    </Page>
-    <Page Update="views\labs\ForLabsPage.xaml">
-      <SubType>Designer</SubType>
-    </Page>
-    <Page Update="views\labs\MyUserControl.xaml">
-      <SubType>Designer</SubType>
-    </Page>
-    <Page Update="views\labs\MyWindow.xaml">
       <SubType>Designer</SubType>
     </Page>
     <Page Update="views\master\AsMasterPage.xaml">
