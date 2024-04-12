@@ -1,4 +1,5 @@
-﻿using Microsoft.Win32;
+﻿using Microsoft.EntityFrameworkCore;
+using Microsoft.Win32;
 using Prism.Commands;
 using System;
 using System.Collections.Generic;
@@ -119,7 +120,7 @@ namespace GlumHub
             }
         }
 
-        private DelegateCommand _saveChangesCommand;
+        /*private DelegateCommand _saveChangesCommand;
         public ICommand SaveChangesCommand
         {
             get
@@ -128,9 +129,86 @@ namespace GlumHub
                     _saveChangesCommand = new DelegateCommand(SaveChanges);
                 return _saveChangesCommand;
             }
+        }*/
+
+        private DelegateCommand _saveChangesCommand;
+        public ICommand SaveChangesCommand
+        {
+            get
+            {
+                if (_saveChangesCommand == null)
+                    _saveChangesCommand = new DelegateCommand(async () => await SaveChangesAsync());
+                return _saveChangesCommand;
+            }
         }
 
-        public void SaveChanges()
+
+        public async Task SaveChangesAsync()
+        {
+            using (ApplicationContextDB db = new ApplicationContextDB())
+            {
+                using (var transaction = await db.Database.BeginTransactionAsync())
+                {
+                    try
+                    {
+                        User userToChange = await db.Users.FirstOrDefaultAsync(u => u.Id == User.Id);
+                        if (userToChange != null)
+                        {
+                            userToChange.ProfileImage = ProfileImage;
+
+                            MasterInfo masterInfo;
+                            bool isThereMasterInfo = await db.MasterInfos.AnyAsync(i => i.UserId == User.Id);
+
+                            if (isThereMasterInfo)
+                            {
+                                masterInfo = await db.MasterInfos.FirstOrDefaultAsync(i => i.UserId == User.Id);
+                                if (masterInfo != null)
+                                {
+                                    masterInfo.Bio = Bio;
+                                    masterInfo.BusinessAddress = BusinessAddress;
+                                }
+                            }
+                            else
+                            {
+                                masterInfo = new MasterInfo(Bio, BusinessAddress, userToChange.Id);
+                                db.MasterInfos.Add(masterInfo);
+                            }
+
+                            await db.SaveChangesAsync();
+
+                            // Присваиваем обновленный MasterInfo пользователю
+                            userToChange.MasterInfo = masterInfo;
+
+                            // Сохраняем изменения
+                            await db.SaveChangesAsync();
+
+                            // Фиксируем транзакцию
+                            await transaction.CommitAsync();
+
+                            // Обновляем ресурс "User"
+                            Application.Current.Resources["User"] = userToChange;
+
+                            // Навигация на главную страницу
+                            Frame mainFrame = Application.Current.Resources["MainFrame"] as Frame;
+                            mainFrame.Navigate(new MainPage());
+                        }
+                        else
+                        {
+                            MessageBox.Show("Пользователь не найден.");
+                        }
+                    }
+                    catch (Exception ex)
+                    {
+                        // Откатываем транзакцию в случае ошибки
+                        await transaction.RollbackAsync();
+                        MessageBox.Show($"Ошибка при сохранении изменений: {ex.Message}");
+                    }
+                }
+            }
+        }
+
+
+        /*public void SaveChanges()
         {
             //TODO Devide this method to smaller methods
 
@@ -162,7 +240,7 @@ namespace GlumHub
             }
             mainFrame = Application.Current.Resources["MainFrame"] as Frame;
             mainFrame.Navigate(new MainPage());
-        }
+        }*/
     }
 }
 
