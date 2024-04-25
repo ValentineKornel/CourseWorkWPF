@@ -7,6 +7,26 @@ using System.Threading.Tasks;
 
 namespace GlumHub
 {
+
+    class UserRelation
+    {
+        public long FollowerId { get; set; }
+        public User Follower { get; set; }
+
+        public long MasterId { get; set; }
+        public User Master { get; set; }
+
+        UserRelation() { }
+
+        public UserRelation(long followerId, User follower, long masterId, User master)
+        {
+            FollowerId = followerId;
+            Follower = follower;
+            MasterId = masterId;
+            Master = master;
+        }
+    }
+
     class ApplicationContextDB : DbContext
     {
 
@@ -14,6 +34,8 @@ namespace GlumHub
         public DbSet<User> Users { get; set; }
         public DbSet<MasterInfo> MasterInfos { get; set; }
         public DbSet<Booking> Bookings { get; set; }
+
+        public DbSet<UserRelation> UserRelations { get; set; }
 
         public ApplicationContextDB()
         {
@@ -37,6 +59,21 @@ namespace GlumHub
                 .HasOne(b => b.Master)
                 .WithMany()
                 .HasForeignKey(b => b.MasterId)
+                .OnDelete(DeleteBehavior.Restrict);
+
+            modelBuilder.Entity<UserRelation>()
+            .HasKey(ur => new { ur.FollowerId, ur.MasterId });
+
+            modelBuilder.Entity<UserRelation>()
+                .HasOne(ur => ur.Follower)
+                .WithMany(u => u.Masters)
+                .HasForeignKey(ur => ur.FollowerId)
+                .OnDelete(DeleteBehavior.Restrict);
+
+            modelBuilder.Entity<UserRelation>()
+                .HasOne(ur => ur.Master)
+                .WithMany(u => u.Followers)
+                .HasForeignKey(ur => ur.MasterId)
                 .OnDelete(DeleteBehavior.Restrict);
         }
 

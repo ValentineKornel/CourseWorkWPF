@@ -1,9 +1,11 @@
-﻿using Prism.Commands;
+﻿using Microsoft.EntityFrameworkCore;
+using Prism.Commands;
 using System;
 using System.Collections;
 using System.Collections.Generic;
 using System.Collections.ObjectModel;
 using System.ComponentModel;
+using System.Diagnostics.Metrics;
 using System.IO;
 using System.Linq;
 using System.Text;
@@ -44,8 +46,8 @@ namespace GlumHub
             }
         }
 
-        private ObservableCollection<UserWrapper> _searchedMasters;
-        public ObservableCollection<UserWrapper> SearchedMasters
+        private ObservableCollection<MasterWrapper> _searchedMasters;
+        public ObservableCollection<MasterWrapper> SearchedMasters
         {
             get { return _searchedMasters; }
             set
@@ -57,7 +59,7 @@ namespace GlumHub
 
         public SearchPageVM()
         {
-            _searchedMasters = new ObservableCollection<UserWrapper>();
+            _searchedMasters = new ObservableCollection<MasterWrapper>();
             _user = Application.Current.Resources["User"] as User;
             SearchCity = "";
         }
@@ -87,23 +89,30 @@ namespace GlumHub
             {
                 SearchedMasters.Clear();
 
-                ObservableCollection<UserWrapper> temp = new ObservableCollection<UserWrapper>();
+                ObservableCollection<MasterWrapper> temp = new ObservableCollection<MasterWrapper>();
 
-                foreach (User u in db.Users.Where(
+                _user = db.Users.Include(u => u.MasterInfo).Include(u => u.Masters).FirstOrDefault(u => u.Id == _user.Id);
+
+                foreach (User master in db.Users.Include(u => u.MasterInfo).Where(
                     u => (u.Username.Contains(SearchText) || u.Firstname.Contains(SearchText) || u.Secondname.Contains(SearchText))
                     && u.MasterInfo != null && u.Role == ROLES.MASTER && u.Id != _user.Id))
                 {
-                    temp.Add(new UserWrapper(u, MasterPageRedirectCommand));
+
+                    
+                    //UserRelation relation = db.UserRelations.Include(r => r.Master).Include(u => u.Follower).FirstOrDefault(r => r.MasterId == master.Id && r.FollowerId == _user.Id);
+                    if (_user.Masters.FirstOrDefault(r => r.MasterId == master.Id && r.FollowerId == _user.Id) != null)
+                    {
+                        temp.Add(new MasterWrapper(master, MasterPageRedirectCommand, "Visible"));
+                    }
+                    else
+                    {
+                        temp.Add(new MasterWrapper(master, MasterPageRedirectCommand, "Hidden"));
+                    }
                 }
-                foreach (UserWrapper u in temp)
+                foreach (MasterWrapper master in temp.Where(master => master.master.MasterInfo.BusinessAddress.ToLower().Contains(SearchCity.ToLower())))
                 {
-                    u.user.MasterInfo = db.MasterInfos.FirstOrDefault(i => i.UserId == u.user.Id);
+                    SearchedMasters.Add(master);
                 }
-                foreach (UserWrapper u in temp.Where(u => u.user.MasterInfo.BusinessAddress.ToLower().Contains(SearchCity.ToLower())))
-                {
-                    SearchedMasters.Add(u);
-                }
-                //SearchedMasters = new ObservableCollection<UserWrapper>(SearchedMasters.Where(i => i.user.MasterInfo.BusinessAddress.Contains(SearchCity)));
 
             }
         }
@@ -131,15 +140,17 @@ namespace GlumHub
 
 
 
-        public class UserWrapper
+        public class MasterWrapper
         {
-            public User user { get; set; }
+            public User master { get; set; }
+            public string SubscribeTickVisibility { get; set; }
             public ICommand MasterPageRedirectCommand { get; set; }
 
-            public UserWrapper(User user, ICommand masterPageRedirectCommand)
+            public MasterWrapper(User user, ICommand masterPageRedirectCommand, string subscribeTickVisibility)
             {
-                this.user = user;
+                this.master = user;
                 MasterPageRedirectCommand = masterPageRedirectCommand;
+                this.SubscribeTickVisibility = subscribeTickVisibility;
             }
         }
     }

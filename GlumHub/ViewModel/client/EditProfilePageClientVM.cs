@@ -11,6 +11,7 @@ using System.Threading.Tasks;
 using System.Windows;
 using System.Windows.Controls;
 using System.Windows.Input;
+using System.Windows.Media;
 
 namespace GlumHub
 {
@@ -28,7 +29,8 @@ namespace GlumHub
                 OnPropertyChanged(nameof(User));
             }
         }
-
+        
+        
         byte[] _profileImage;
         public byte[] ProfileImage
         {
@@ -89,6 +91,9 @@ namespace GlumHub
                     byte[] imageData = new byte[fs.Length];
                     fs.Read(imageData, 0, imageData.Length);
                     ProfileImage = imageData;
+
+                    /*ImageBrush profilePhoto = Application.Current.Resources["ProfilePhoto"] as ImageBrush;
+                    profilePhoto.ImageSource = */
                 }
             }
         }

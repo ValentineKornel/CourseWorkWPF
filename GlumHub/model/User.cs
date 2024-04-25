@@ -46,7 +46,9 @@ namespace GlumHub
         public MasterInfo? MasterInfo { get; set; }
 
 
-        public ICollection<User> Masters { get; set; }
+        public ICollection<UserRelation> Masters { get; set; }
+
+        public ICollection<UserRelation> Followers { get; set; }
 
         public User() { }
 
@@ -57,6 +59,8 @@ namespace GlumHub
             Secondname = secondtname;
             Email = email;
             Tel = tel;
+            Masters = new List<UserRelation>();
+            Followers = new List<UserRelation>();
         }
     }
 }

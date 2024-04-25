@@ -128,6 +128,24 @@ namespace GlumHub
         }
 
 
+        private DelegateCommand _myMastersPageRedirectCommand;
+        public ICommand MyMastersPageRedirectCommand
+        {
+            get
+            {
+                if (_myMastersPageRedirectCommand == null)
+                    _myMastersPageRedirectCommand = new DelegateCommand(MyMastersPageRedirect);
+                return _myMastersPageRedirectCommand;
+            }
+        }
+
+        private void MyMastersPageRedirect()
+        {
+            homePageFrame = Application.Current.Resources["HomePageFrame"] as Frame;
+            homePageFrame.Navigate(new MyMastersPage());
+        }
+
+
         private DelegateCommand _searchPageRedirectCommand;
         public ICommand SearchPageRedirectCommand
         {

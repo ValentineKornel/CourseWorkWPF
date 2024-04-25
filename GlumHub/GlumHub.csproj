@@ -22,6 +22,7 @@
     <None Remove="files\logoG.jpg" />
     <None Remove="files\MyCursor.cur" />
     <None Remove="files\MyCursor.png" />
+    <None Remove="files\subscribed.png" />
     <None Remove="MyCursor.cur" />
   </ItemGroup>
 
@@ -43,6 +44,7 @@
     <Resource Include="files\defaultUser.png" />
     <Resource Include="files\home.png" />
     <Resource Include="files\logoG.jpg" />
+    <Resource Include="files\subscribed.png" />
   </ItemGroup>
 
 </Project>

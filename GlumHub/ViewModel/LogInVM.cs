@@ -68,7 +68,7 @@ namespace GlumHub
                 Credentials cred = db.Credentials.FirstOrDefault(c => c.Username == _username);
 
                 if (cred != null && cred.CheckPassword(_password)) {
-                    User user = db.Users.Include(u => u.MasterInfo).FirstOrDefault(u => u.Username == _username);
+                    User user = db.Users.Include(u => u.MasterInfo).Include(u => u.Masters).FirstOrDefault(u => u.Username == _username);
 
                     bool isThrereMasterInfo = db.MasterInfos.Any(i => i.UserId == user.Id);
                     if (isThrereMasterInfo)

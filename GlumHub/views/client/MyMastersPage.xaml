@@ -1,0 +1,55 @@
+﻿<Page x:Class="GlumHub.MyMastersPage"
+      xmlns="http://schemas.microsoft.com/winfx/2006/xaml/presentation"
+      xmlns:x="http://schemas.microsoft.com/winfx/2006/xaml"
+      xmlns:mc="http://schemas.openxmlformats.org/markup-compatibility/2006" 
+      xmlns:d="http://schemas.microsoft.com/expression/blend/2008" 
+      xmlns:local="clr-namespace:GlumHub"
+      mc:Ignorable="d" 
+      d:DesignHeight="1080" d:DesignWidth="1560" Background="White"
+      Title="MyMastersPage">
+
+    <Page.DataContext>
+        <local:MyMastersPageVM></local:MyMastersPageVM>
+    </Page.DataContext>
+    <Grid>
+        <StackPanel Margin="20,0,0,0">
+            <StackPanel Width="auto" Height="auto" Margin="0, 10, 0, 0">
+                <RichTextBox Height="40" Width="730" HorizontalAlignment="Center">
+                    <FlowDocument>
+                        <Paragraph>
+                            <Run Text="{Binding SearchText}"/>
+                        </Paragraph>
+                    </FlowDocument>
+                </RichTextBox>
+                <Button Command="{Binding SearchCommand}" Width="40" Height="40" HorizontalAlignment="Center" Margin="0, -40, -770, 0"></Button>
+            </StackPanel>
+            <StackPanel Height="1000" Margin="0, 20, 0, 0" Width="auto">
+                <ListView ItemsSource="{Binding MyMasters}" BorderThickness="0" Width="auto">
+                    <ListView.ItemTemplate>
+                        <DataTemplate>
+                            <Button Command="{Binding MasterPageRedirectCommand}" CommandParameter="{Binding user.Id}"
+                        Width="auto" Height="auto" Style="{StaticResource SecondaryButtonStyle}">
+                                <StackPanel Grid.Column="1" Orientation="Horizontal" Width="1210" Height="150" Margin="0, 0, 0, 0">
+                                    <Border Style="{StaticResource BigCircularImageBorder}" Margin="20, 10, 0, 0" Height="120" Width="120" VerticalAlignment="Top">
+                                        <Border.Background>
+                                            <ImageBrush ImageSource="{Binding user.ProfileImage, Converter={StaticResource ByteArrayToImageConverter}}"/>
+                                        </Border.Background>
+                                    </Border>
+                                    <StackPanel Width="auto" Height="auto" VerticalAlignment="Top" Margin="0, 10, 0, 0">
+                                        <StackPanel Width="auto" Height="auto" Orientation="Horizontal" HorizontalAlignment="Left" Margin="10, 0, 0, 0">
+                                            <Label Width="auto" Height="40" Content="{Binding user.Firstname}" FontSize="24"></Label>
+                                            <Label Width="auto" Height="40" Content="{Binding user.Secondname}" FontSize="24"></Label>
+                                        </StackPanel>
+                                        <Label Height="30" Width="auto" FontSize="18" Content="{Binding user.Username}" FontStyle="Oblique" Padding="10, 0, 10, 0" Margin="10, 0, 0, 0"></Label>
+                                        <Label Height="35" FontSize="18" Content="{Binding user.MasterInfo.BusinessAddress}" Margin="10, 0, 0, 0"></Label>
+                                    </StackPanel>
+                                </StackPanel>
+                            </Button>
+                        </DataTemplate>
+                    </ListView.ItemTemplate>
+                </ListView>
+                   
+            </StackPanel>
+        </StackPanel>
+    </Grid>
+</Page>

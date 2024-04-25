@@ -4,11 +4,13 @@ using System;
 using System.Collections.Generic;
 using System.Collections.ObjectModel;
 using System.ComponentModel;
+using System.Diagnostics.Metrics;
 using System.IO;
 using System.Linq;
 using System.Text;
 using System.Threading.Tasks;
 using System.Windows;
+using System.Windows.Controls;
 using System.Windows.Input;
 using static GlumHub.FreeBookingPageVM;
 
@@ -49,6 +51,17 @@ namespace GlumHub
             }
         }
 
+        private string _subscribeButtonContent;
+        public string SubscriptionButtonContent
+        {
+            get { return _subscribeButtonContent; }
+            set
+            {
+                _subscribeButtonContent = value;
+                OnPropertyChanged(nameof(SubscriptionButtonContent));
+            }
+        }
+
         private ObservableCollection<BookingWrapper> _freeBookings;
         public ObservableCollection<BookingWrapper> FreeBookings
         {
@@ -66,14 +79,28 @@ namespace GlumHub
             User = Application.Current.Resources["User"] as User;
             using (ApplicationContextDB db = new ApplicationContextDB())
             {
-
+                
                 MasterId = Application.Current.Resources["MasterId"] as long?;
-                User user = db.Users.FirstOrDefault(u => u.Id == MasterId);
-                if (user.MasterInfo == null)
+                User master = db.Users.FirstOrDefault(u => u.Id == MasterId);
+                if (master.MasterInfo == null)
                 {
-                    user.MasterInfo = db.MasterInfos.FirstOrDefault(i => i.UserId == MasterId);
+                    master.MasterInfo = db.MasterInfos.FirstOrDefault(i => i.UserId == MasterId);
                 }
-                Master = user;
+                Master = master;
+
+
+                User = db.Users.Include(u => u.MasterInfo).Include(u => u.Masters).FirstOrDefault(u => u.Id == User.Id);
+                UserRelation relation = db.UserRelations.Include(u => u.Master).Include(u => u.Follower).FirstOrDefault(u => u.MasterId == Master.Id && u.FollowerId == User.Id);
+                if (db.UserRelations.Contains(relation))
+                {
+                    SubscriptionButtonContent = "Unsubscribe";
+                }
+                else
+                {
+                    SubscriptionButtonContent = "Subscribe";
+                }
+
+
                 //Application.Current.Resources.Remove("MasterId");
             }
             FreeBookings = new ObservableCollection<BookingWrapper>();
@@ -86,6 +113,46 @@ namespace GlumHub
             PropertyChanged?.Invoke(this, new PropertyChangedEventArgs(propertyName));
         }
 
+
+
+
+        private DelegateCommand _subscribeUnsubscribeCommand;
+        public ICommand SubscribeUnsubscribeCommand
+        {
+            get
+            {
+                if (_subscribeUnsubscribeCommand == null)
+                    _subscribeUnsubscribeCommand = new DelegateCommand(SubscribeUnsubscribe);
+                return _subscribeUnsubscribeCommand;
+            }
+        }
+
+        private void SubscribeUnsubscribe()
+        {
+            Button btn = Application.Current.Resources["SubscribeUnsubscribeCommand"] as Button;
+            
+            using (ApplicationContextDB db = new ApplicationContextDB())
+            {
+                User masterToChange = db.Users.Include(m => m.MasterInfo).FirstOrDefault(u => u.Id == MasterId);
+                User userToChange = db.Users.Include(u => u.MasterInfo).Include(u => u.Masters).FirstOrDefault(u => u.Id == User.Id);
+                if (SubscriptionButtonContent == "Subscribe")
+                {
+                    btn.Content = "Unsubscribe";
+                    //userToChange.Masters.Add(masterToChange);
+                    userToChange.Masters.Add(new UserRelation(userToChange.Id, userToChange, masterToChange.Id, masterToChange));
+                }
+                else
+                {
+                    btn.Content = "Subscribe";
+                    //userToChange.Masters.Remove(masterToChange);
+                    UserRelation relation = db.UserRelations.Include(u => u.Master).Include(u => u.Follower).FirstOrDefault(u => u.MasterId == Master.Id && u.FollowerId == User.Id);
+                    userToChange.Masters.Remove(relation);
+                }
+                db.SaveChanges();
+
+                User = db.Users.Include(u => u.MasterInfo).Include(u => u.Masters).FirstOrDefault(u => u.Id == User.Id);
+            }
+        }
 
 
 

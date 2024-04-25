@@ -23,6 +23,14 @@ namespace GlumHub
         public EditProfilePageClient()
         {
             InitializeComponent();
+            if (Application.Current.Resources["ProfilePhoto"] == null)
+            {
+                Application.Current.Resources.Add("ProfilePhoto", profilePhoto);
+            }
+            else
+            {
+                Application.Current.Resources["ProfilePhoto"] = profilePhoto;
+            }
         }
     }
 }

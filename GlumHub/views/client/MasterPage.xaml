@@ -32,6 +32,8 @@
                 <StackPanel Width="auto" Height="80" Orientation="Horizontal" HorizontalAlignment="Left" Margin="10, 0, 0, 0">
                     <Label Width="auto" Height="40" Content="{Binding Master.Firstname}" FontSize="24"></Label>
                     <Label Width="auto" Height="40" Content="{Binding Master.Secondname}" FontSize="24"></Label>
+                    <Button x:Name="subscribeUnsubscribeCommand" Command="{Binding SubscribeUnsubscribeCommand}" Content="{Binding SubscriptionButtonContent, Mode=TwoWay}"  FontSize="12" Width="auto" Height="30" Padding="20, 0, 20, 0" Visibility="Visible"></Button>
+                    
                 </StackPanel>
                 <StackPanel Width="auto" Height="80" HorizontalAlignment="Left" Margin="10, 0, 0, 0">
                     <Label Height="35" FontSize="18" Content="{Binding Master.MasterInfo.BusinessAddress}"></Label>

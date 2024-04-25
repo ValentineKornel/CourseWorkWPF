@@ -16,6 +16,9 @@
     <Compile Update="views\client\MsterServicePage.xaml.cs">
       <SubType>Code</SubType>
     </Compile>
+    <Compile Update="views\client\MyMastersPage.xaml.cs">
+      <SubType>Code</SubType>
+    </Compile>
     <Compile Update="views\master\AsMasterPage.xaml.cs">
       <SubType>Code</SubType>
     </Compile>
@@ -85,6 +88,9 @@
       <SubType>Designer</SubType>
     </Page>
     <Page Update="views\client\MsterServicePage.xaml">
+      <SubType>Designer</SubType>
+    </Page>
+    <Page Update="views\client\MyMastersPage.xaml">
       <SubType>Designer</SubType>
     </Page>
     <Page Update="views\master\AsMasterPage.xaml">

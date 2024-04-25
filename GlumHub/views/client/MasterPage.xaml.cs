@@ -27,6 +27,13 @@ namespace GlumHub
                 Application.Current.Resources.Add("MasterPageForClientFrame", this.masterPageForClientFrame);
             else
                 Application.Current.Resources["MasterPageForClientFrame"] = this.masterPageForClientFrame;
+            if (Application.Current.Resources["MasterPageForClientFrame"] == null)
+
+                Application.Current.Resources.Add("SubscribeUnsubscribeCommand", this.subscribeUnsubscribeCommand);
+            else
+                Application.Current.Resources["SubscribeUnsubscribeCommand"] = this.subscribeUnsubscribeCommand;
+            
+
             masterPageForClientFrame.Navigate(new MsterServicePage());
         }
     }
