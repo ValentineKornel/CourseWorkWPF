@@ -8,24 +8,7 @@ using System.Threading.Tasks;
 namespace GlumHub
 {
 
-    class UserRelation
-    {
-        public long FollowerId { get; set; }
-        public User Follower { get; set; }
-
-        public long MasterId { get; set; }
-        public User Master { get; set; }
-
-        UserRelation() { }
-
-        public UserRelation(long followerId, User follower, long masterId, User master)
-        {
-            FollowerId = followerId;
-            Follower = follower;
-            MasterId = masterId;
-            Master = master;
-        }
-    }
+    
 
     class ApplicationContextDB : DbContext
     {
@@ -34,11 +17,14 @@ namespace GlumHub
         public DbSet<User> Users { get; set; }
         public DbSet<MasterInfo> MasterInfos { get; set; }
         public DbSet<Booking> Bookings { get; set; }
+        public DbSet<Request> Requests { get; set; }
+        public DbSet<Notification> Notifications { get; set; }
 
         public DbSet<UserRelation> UserRelations { get; set; }
 
         public ApplicationContextDB()
         {
+            //Database.EnsureDeleted();
             Database.EnsureCreated();
         }
 

@@ -3,28 +3,32 @@
   "WorkspaceRootPath": "D:\\Study\\CourseWork\\GlumHub\\",
   "Documents": [
     {
-      "AbsoluteMoniker": "D:0:0:{3EA0330D-57CB-4EDD-A566-416BC8F779DB}|GlumHub\\GlumHub.csproj|d:\\study\\coursework\\glumhub\\glumhub\\viewmodel\\client\\searchpagevm.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
-      "RelativeMoniker": "D:0:0:{3EA0330D-57CB-4EDD-A566-416BC8F779DB}|GlumHub\\GlumHub.csproj|solutionrelative:glumhub\\viewmodel\\client\\searchpagevm.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
-    },
-    {
-      "AbsoluteMoniker": "D:0:0:{3EA0330D-57CB-4EDD-A566-416BC8F779DB}|GlumHub\\GlumHub.csproj|d:\\study\\coursework\\glumhub\\glumhub\\views\\client\\searchpage.xaml||{F11ACC28-31D1-4C80-A34B-F4E09D3D753C}",
-      "RelativeMoniker": "D:0:0:{3EA0330D-57CB-4EDD-A566-416BC8F779DB}|GlumHub\\GlumHub.csproj|solutionrelative:glumhub\\views\\client\\searchpage.xaml||{F11ACC28-31D1-4C80-A34B-F4E09D3D753C}"
-    },
-    {
       "AbsoluteMoniker": "D:0:0:{3EA0330D-57CB-4EDD-A566-416BC8F779DB}|GlumHub\\GlumHub.csproj|d:\\study\\coursework\\glumhub\\glumhub\\viewmodel\\client\\masterpagevm.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
       "RelativeMoniker": "D:0:0:{3EA0330D-57CB-4EDD-A566-416BC8F779DB}|GlumHub\\GlumHub.csproj|solutionrelative:glumhub\\viewmodel\\client\\masterpagevm.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
     },
     {
-      "AbsoluteMoniker": "D:0:0:{3EA0330D-57CB-4EDD-A566-416BC8F779DB}|GlumHub\\GlumHub.csproj|d:\\study\\coursework\\glumhub\\glumhub\\viewmodel\\client\\mymasterspagevm.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
-      "RelativeMoniker": "D:0:0:{3EA0330D-57CB-4EDD-A566-416BC8F779DB}|GlumHub\\GlumHub.csproj|solutionrelative:glumhub\\viewmodel\\client\\mymasterspagevm.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
+      "AbsoluteMoniker": "D:0:0:{3EA0330D-57CB-4EDD-A566-416BC8F779DB}|GlumHub\\GlumHub.csproj|d:\\study\\coursework\\glumhub\\glumhub\\model\\notification.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
+      "RelativeMoniker": "D:0:0:{3EA0330D-57CB-4EDD-A566-416BC8F779DB}|GlumHub\\GlumHub.csproj|solutionrelative:glumhub\\model\\notification.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
     },
     {
-      "AbsoluteMoniker": "D:0:0:{3EA0330D-57CB-4EDD-A566-416BC8F779DB}|GlumHub\\GlumHub.csproj|d:\\study\\coursework\\glumhub\\glumhub\\views\\mainpage.xaml||{F11ACC28-31D1-4C80-A34B-F4E09D3D753C}",
-      "RelativeMoniker": "D:0:0:{3EA0330D-57CB-4EDD-A566-416BC8F779DB}|GlumHub\\GlumHub.csproj|solutionrelative:glumhub\\views\\mainpage.xaml||{F11ACC28-31D1-4C80-A34B-F4E09D3D753C}"
+      "AbsoluteMoniker": "D:0:0:{3EA0330D-57CB-4EDD-A566-416BC8F779DB}|GlumHub\\GlumHub.csproj|d:\\study\\coursework\\glumhub\\glumhub\\viewmodel\\loginvm.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
+      "RelativeMoniker": "D:0:0:{3EA0330D-57CB-4EDD-A566-416BC8F779DB}|GlumHub\\GlumHub.csproj|solutionrelative:glumhub\\viewmodel\\loginvm.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
     },
     {
-      "AbsoluteMoniker": "D:0:0:{3EA0330D-57CB-4EDD-A566-416BC8F779DB}|GlumHub\\GlumHub.csproj|d:\\study\\coursework\\glumhub\\glumhub\\views\\client\\mymasterspage.xaml||{F11ACC28-31D1-4C80-A34B-F4E09D3D753C}",
-      "RelativeMoniker": "D:0:0:{3EA0330D-57CB-4EDD-A566-416BC8F779DB}|GlumHub\\GlumHub.csproj|solutionrelative:glumhub\\views\\client\\mymasterspage.xaml||{F11ACC28-31D1-4C80-A34B-F4E09D3D753C}"
+      "AbsoluteMoniker": "D:0:0:{3EA0330D-57CB-4EDD-A566-416BC8F779DB}|GlumHub\\GlumHub.csproj|d:\\study\\coursework\\glumhub\\glumhub\\model\\booking.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
+      "RelativeMoniker": "D:0:0:{3EA0330D-57CB-4EDD-A566-416BC8F779DB}|GlumHub\\GlumHub.csproj|solutionrelative:glumhub\\model\\booking.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
+    },
+    {
+      "AbsoluteMoniker": "D:0:0:{3EA0330D-57CB-4EDD-A566-416BC8F779DB}|GlumHub\\GlumHub.csproj|d:\\study\\coursework\\glumhub\\glumhub\\viewmodel\\registervm.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
+      "RelativeMoniker": "D:0:0:{3EA0330D-57CB-4EDD-A566-416BC8F779DB}|GlumHub\\GlumHub.csproj|solutionrelative:glumhub\\viewmodel\\registervm.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
+    },
+    {
+      "AbsoluteMoniker": "D:0:0:{3EA0330D-57CB-4EDD-A566-416BC8F779DB}|GlumHub\\GlumHub.csproj|d:\\study\\coursework\\glumhub\\glumhub\\viewmodel\\admin\\userpagevm.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
+      "RelativeMoniker": "D:0:0:{3EA0330D-57CB-4EDD-A566-416BC8F779DB}|GlumHub\\GlumHub.csproj|solutionrelative:glumhub\\viewmodel\\admin\\userpagevm.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
+    },
+    {
+      "AbsoluteMoniker": "D:0:0:{3EA0330D-57CB-4EDD-A566-416BC8F779DB}|GlumHub\\GlumHub.csproj|d:\\study\\coursework\\glumhub\\glumhub\\views\\admin\\userpage.xaml||{F11ACC28-31D1-4C80-A34B-F4E09D3D753C}",
+      "RelativeMoniker": "D:0:0:{3EA0330D-57CB-4EDD-A566-416BC8F779DB}|GlumHub\\GlumHub.csproj|solutionrelative:glumhub\\views\\admin\\userpage.xaml||{F11ACC28-31D1-4C80-A34B-F4E09D3D753C}"
     }
   ],
   "DocumentGroupContainers": [
@@ -34,7 +38,7 @@
       "DocumentGroups": [
         {
           "DockedHeight": 200,
-          "SelectedChildIndex": 5,
+          "SelectedChildIndex": 3,
           "Children": [
             {
               "$type": "Bookmark",
@@ -43,76 +47,91 @@
             {
               "$type": "Document",
               "DocumentIndex": 2,
-              "Title": "MasterPageVM.cs",
-              "DocumentMoniker": "D:\\Study\\CourseWork\\GlumHub\\GlumHub\\ViewModel\\client\\MasterPageVM.cs",
-              "RelativeDocumentMoniker": "GlumHub\\ViewModel\\client\\MasterPageVM.cs",
-              "ToolTip": "D:\\Study\\CourseWork\\GlumHub\\GlumHub\\ViewModel\\client\\MasterPageVM.cs",
-              "RelativeToolTip": "GlumHub\\ViewModel\\client\\MasterPageVM.cs",
-              "ViewState": "AQIAAEAAAAAAAAAAAAAAAFsAAAAQAAAA",
+              "Title": "LogInVM.cs",
+              "DocumentMoniker": "D:\\Study\\CourseWork\\GlumHub\\GlumHub\\ViewModel\\LogInVM.cs",
+              "RelativeDocumentMoniker": "GlumHub\\ViewModel\\LogInVM.cs",
+              "ToolTip": "D:\\Study\\CourseWork\\GlumHub\\GlumHub\\ViewModel\\LogInVM.cs",
+              "RelativeToolTip": "GlumHub\\ViewModel\\LogInVM.cs",
+              "ViewState": "AQIAACgAAAAAAAAAAAAAAEAAAABHAAAA",
               "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
-              "WhenOpened": "2024-04-25T20:08:49.064Z",
-              "EditorCaption": ""
-            },
-            {
-              "$type": "Document",
-              "DocumentIndex": 1,
-              "Title": "SearchPage.xaml",
-              "DocumentMoniker": "D:\\Study\\CourseWork\\GlumHub\\GlumHub\\views\\client\\SearchPage.xaml",
-              "RelativeDocumentMoniker": "GlumHub\\views\\client\\SearchPage.xaml",
-              "ToolTip": "D:\\Study\\CourseWork\\GlumHub\\GlumHub\\views\\client\\SearchPage.xaml",
-              "RelativeToolTip": "GlumHub\\views\\client\\SearchPage.xaml",
-              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.003549|",
-              "WhenOpened": "2024-04-25T19:56:10.457Z",
-              "EditorCaption": ""
-            },
-            {
-              "$type": "Document",
-              "DocumentIndex": 4,
-              "Title": "MainPage.xaml",
-              "DocumentMoniker": "D:\\Study\\CourseWork\\GlumHub\\GlumHub\\views\\MainPage.xaml",
-              "RelativeDocumentMoniker": "GlumHub\\views\\MainPage.xaml",
-              "ToolTip": "D:\\Study\\CourseWork\\GlumHub\\GlumHub\\views\\MainPage.xaml",
-              "RelativeToolTip": "GlumHub\\views\\MainPage.xaml",
-              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.003549|",
-              "WhenOpened": "2024-04-25T19:55:33.913Z",
+              "WhenOpened": "2024-04-27T11:00:32.422Z",
               "EditorCaption": ""
             },
             {
               "$type": "Document",
               "DocumentIndex": 3,
-              "Title": "MyMastersPageVM.cs",
-              "DocumentMoniker": "D:\\Study\\CourseWork\\GlumHub\\GlumHub\\ViewModel\\client\\MyMastersPageVM.cs",
-              "RelativeDocumentMoniker": "GlumHub\\ViewModel\\client\\MyMastersPageVM.cs",
-              "ToolTip": "D:\\Study\\CourseWork\\GlumHub\\GlumHub\\ViewModel\\client\\MyMastersPageVM.cs",
-              "RelativeToolTip": "GlumHub\\ViewModel\\client\\MyMastersPageVM.cs",
-              "ViewState": "AQIAAEcAAAAAAAAAAAAAAFYAAAANAAAA",
+              "Title": "Booking.cs",
+              "DocumentMoniker": "D:\\Study\\CourseWork\\GlumHub\\GlumHub\\model\\Booking.cs",
+              "RelativeDocumentMoniker": "GlumHub\\model\\Booking.cs",
+              "ToolTip": "D:\\Study\\CourseWork\\GlumHub\\GlumHub\\model\\Booking.cs",
+              "RelativeToolTip": "GlumHub\\model\\Booking.cs",
+              "ViewState": "AQIAAAAAAAAAAAAAAAAAABQAAAATAAAA",
               "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
-              "WhenOpened": "2024-04-25T19:17:46.552Z",
+              "WhenOpened": "2024-04-27T10:54:03.562Z",
               "EditorCaption": ""
             },
             {
               "$type": "Document",
               "DocumentIndex": 0,
-              "Title": "SearchPageVM.cs",
-              "DocumentMoniker": "D:\\Study\\CourseWork\\GlumHub\\GlumHub\\ViewModel\\client\\SearchPageVM.cs",
-              "RelativeDocumentMoniker": "GlumHub\\ViewModel\\client\\SearchPageVM.cs",
-              "ToolTip": "D:\\Study\\CourseWork\\GlumHub\\GlumHub\\ViewModel\\client\\SearchPageVM.cs",
-              "RelativeToolTip": "GlumHub\\ViewModel\\client\\SearchPageVM.cs",
-              "ViewState": "AQIAACwAAAAAAAAAAAAAADQAAAAPAAAA",
+              "Title": "MasterPageVM.cs",
+              "DocumentMoniker": "D:\\Study\\CourseWork\\GlumHub\\GlumHub\\ViewModel\\client\\MasterPageVM.cs",
+              "RelativeDocumentMoniker": "GlumHub\\ViewModel\\client\\MasterPageVM.cs",
+              "ToolTip": "D:\\Study\\CourseWork\\GlumHub\\GlumHub\\ViewModel\\client\\MasterPageVM.cs",
+              "RelativeToolTip": "GlumHub\\ViewModel\\client\\MasterPageVM.cs",
+              "ViewState": "AQIAAKUAAAAAAAAAAAAAALsAAABDAAAA",
               "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
-              "WhenOpened": "2024-04-25T19:43:09.378Z",
+              "WhenOpened": "2024-04-27T10:47:18.637Z",
+              "EditorCaption": ""
+            },
+            {
+              "$type": "Document",
+              "DocumentIndex": 4,
+              "Title": "RegisterVM.cs",
+              "DocumentMoniker": "D:\\Study\\CourseWork\\GlumHub\\GlumHub\\ViewModel\\RegisterVM.cs",
+              "RelativeDocumentMoniker": "GlumHub\\ViewModel\\RegisterVM.cs",
+              "ToolTip": "D:\\Study\\CourseWork\\GlumHub\\GlumHub\\ViewModel\\RegisterVM.cs",
+              "RelativeToolTip": "GlumHub\\ViewModel\\RegisterVM.cs",
+              "ViewState": "AQIAAAAAAAAAAAAAAAAAACAAAAAAAAAA",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
+              "WhenOpened": "2024-04-27T10:25:59.559Z",
+              "EditorCaption": ""
+            },
+            {
+              "$type": "Document",
+              "DocumentIndex": 1,
+              "Title": "Notification.cs",
+              "DocumentMoniker": "D:\\Study\\CourseWork\\GlumHub\\GlumHub\\model\\Notification.cs",
+              "RelativeDocumentMoniker": "GlumHub\\model\\Notification.cs",
+              "ToolTip": "D:\\Study\\CourseWork\\GlumHub\\GlumHub\\model\\Notification.cs",
+              "RelativeToolTip": "GlumHub\\model\\Notification.cs",
+              "ViewState": "AQIAAHQAAAAAAAAAAAAAAIsAAAAAAAAA",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
+              "WhenOpened": "2024-04-27T10:15:24.226Z",
               "EditorCaption": ""
             },
             {
               "$type": "Document",
               "DocumentIndex": 5,
-              "Title": "MyMastersPage.xaml",
-              "DocumentMoniker": "D:\\Study\\CourseWork\\GlumHub\\GlumHub\\views\\client\\MyMastersPage.xaml",
-              "RelativeDocumentMoniker": "GlumHub\\views\\client\\MyMastersPage.xaml",
-              "ToolTip": "D:\\Study\\CourseWork\\GlumHub\\GlumHub\\views\\client\\MyMastersPage.xaml",
-              "RelativeToolTip": "GlumHub\\views\\client\\MyMastersPage.xaml",
+              "Title": "UserPageVM.cs",
+              "DocumentMoniker": "D:\\Study\\CourseWork\\GlumHub\\GlumHub\\ViewModel\\admin\\UserPageVM.cs",
+              "RelativeDocumentMoniker": "GlumHub\\ViewModel\\admin\\UserPageVM.cs",
+              "ToolTip": "D:\\Study\\CourseWork\\GlumHub\\GlumHub\\ViewModel\\admin\\UserPageVM.cs",
+              "RelativeToolTip": "GlumHub\\ViewModel\\admin\\UserPageVM.cs",
+              "ViewState": "AQIAACcAAAAAAAAAAAAAADQAAAAJAAAA",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
+              "WhenOpened": "2024-04-27T07:12:22.073Z",
+              "EditorCaption": ""
+            },
+            {
+              "$type": "Document",
+              "DocumentIndex": 6,
+              "Title": "UserPage.xaml",
+              "DocumentMoniker": "D:\\Study\\CourseWork\\GlumHub\\GlumHub\\views\\admin\\UserPage.xaml",
+              "RelativeDocumentMoniker": "GlumHub\\views\\admin\\UserPage.xaml",
+              "ToolTip": "D:\\Study\\CourseWork\\GlumHub\\GlumHub\\views\\admin\\UserPage.xaml",
+              "RelativeToolTip": "GlumHub\\views\\admin\\UserPage.xaml",
               "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.003549|",
-              "WhenOpened": "2024-04-25T19:13:21.425Z",
+              "WhenOpened": "2024-04-27T07:08:20.215Z",
               "EditorCaption": ""
             }
           ]

@@ -1,9 +1,12 @@
-﻿using Prism.Commands;
+﻿using MailKit.Net.Smtp;
+using MimeKit;
+using Prism.Commands;
 using System;
 using System.Collections.Generic;
 using System.ComponentModel;
 using System.IO;
 using System.Linq;
+using System.Net;
 using System.Text;
 using System.Text.RegularExpressions;
 using System.Threading.Tasks;
@@ -130,6 +133,15 @@ namespace GlumHub
 
                 if (ValidateAll())
                 {
+                    try
+                    {
+                        Notification.SendEmailNotification(Email, "Thank you for registration", "plain");
+                    }catch(Exception ex)
+                    {
+                        Application.Current.Dispatcher.Invoke(() => Message = "You shuld fill existinig email address");
+                        return;
+                    }
+
                     using(FileStream fs = new FileStream("D:\\Study\\CourseWork\\GlumHub\\GlumHub\\files\\defaultUser.png", FileMode.Open))
                     {
                         byte[] imageData = new byte[fs.Length];
@@ -150,6 +162,7 @@ namespace GlumHub
                     Application.Current.Dispatcher.Invoke(() => Message = "You shuld fill all information correcty");
                 }
             }
+            
         }
 
         private DelegateCommand _loginRedirectCommand;
@@ -251,5 +264,8 @@ namespace GlumHub
             return validateUsername() && validateFirstName() && validateSecondName()
                 && validateEmail() && validateTel();
         }
+
+
+        
     }
 }

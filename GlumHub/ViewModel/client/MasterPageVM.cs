@@ -171,14 +171,48 @@ namespace GlumHub
         {
             using (ApplicationContextDB db = new ApplicationContextDB())
             {
-                Booking bookingToBook = db.Bookings.FirstOrDefault(b => b.Id == BookingId);
-                bookingToBook.Client = User;
+                Booking bookingToBook = db.Bookings.Include(b => b.Client).Include(b => b.Master).Include(b => b.Master.MasterInfo).FirstOrDefault(b => b.Id == BookingId);
+                //bookingToBook.Client = User;
                 bookingToBook.Clientid = User.Id;
                 bookingToBook.Booked = true;
                 db.SaveChanges();
+
+
+                bookingToBook = db.Bookings.Include(b => b.Client).Include(b => b.Master).Include(b => b.Master.MasterInfo).FirstOrDefault(b => b.Id == BookingId);
+
+                string googleCalendarUrlForClient = Notification.GenerateGoogleCalendarUrlForClient(bookingToBook);
+                string messageHtmlForClient = $@"
+                <h2>Thank you for booking!</h2>
+                <p>Event Details:</p>
+                <ul>
+                    <li>Date & Time: {bookingToBook.Date_Time}</li>
+                    <li>Service: {bookingToBook.Service}</li>
+                    <li>Master: {bookingToBook.Master.Firstname} {bookingToBook.Master.Secondname}</li>
+                </ul>
+                <p><a href=""{googleCalendarUrlForClient}"">Add to Google Calendar</a></p>
+                ";
+                Notification.SendEmailNotification(bookingToBook.Client.Id, messageHtmlForClient, "html");
+
+
+                string googleCalendarUrlForMaster = Notification.GenerateGoogleCalendarUrlForMaster(bookingToBook);
+                string messageHtmlForMaster = $@"
+                <h2>You have new booking!</h2>
+                <p>Event Details:</p>
+                <ul>
+                    <li>Date & Time: {bookingToBook.Date_Time}</li>
+                    <li>Service: {bookingToBook.Service}</li>
+                    <li>Client: {bookingToBook.Client.Firstname} {bookingToBook.Client.Secondname}</li>
+                </ul>
+                <p><a href=""{googleCalendarUrlForMaster}"">Add to Google Calendar</a></p>
+                ";
+                Notification.SendEmailNotification(bookingToBook.Master.Id, messageHtmlForMaster, "html");
             }
+
+            
             UpdateFreeBookings();
         }
+
+        
 
 
         private void UpdateFreeBookings()

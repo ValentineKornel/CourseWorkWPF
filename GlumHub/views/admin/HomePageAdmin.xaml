@@ -1,0 +1,62 @@
+﻿<Page x:Class="GlumHub.HomePageAdmin"
+      xmlns="http://schemas.microsoft.com/winfx/2006/xaml/presentation"
+      xmlns:x="http://schemas.microsoft.com/winfx/2006/xaml"
+      xmlns:mc="http://schemas.openxmlformats.org/markup-compatibility/2006" 
+      xmlns:d="http://schemas.microsoft.com/expression/blend/2008" 
+      xmlns:local="clr-namespace:GlumHub"
+      mc:Ignorable="d" 
+      d:DesignHeight="800" d:DesignWidth="1240" Background="White"
+      Title="HomePageAdmin">
+
+    <Page.DataContext>
+        <local:HomePageAdminVM></local:HomePageAdminVM>
+    </Page.DataContext>
+    <Grid>
+        <StackPanel Height="1000" Margin="0, 20, 0, 0" Width="auto">
+            <ListView ItemsSource="{Binding Requests}" BorderThickness="0" Width="auto">
+                <ListView.ItemTemplate>
+                    <DataTemplate>
+                        <Button Command="{Binding UserPageRedirectCommand}" CommandParameter="{Binding request.Id}"
+                    Width="1230" Height="auto" Style="{StaticResource SecondaryButtonStyle}">
+                            <StackPanel Grid.Column="1" Orientation="Horizontal" Width="1210" Height="150" Margin="0, 0, 0, 0">
+                                <Border Style="{StaticResource BigCircularImageBorder}" Margin="20, 10, 0, 0" Height="120" Width="120" VerticalAlignment="Top">
+                                    <Border.Background>
+                                        <ImageBrush ImageSource="{Binding request.Client.ProfileImage, Converter={StaticResource ByteArrayToImageConverter}}"/>
+                                    </Border.Background>
+                                </Border>
+                                <StackPanel Width="auto" Height="auto" VerticalAlignment="Top" Margin="0, 10, 0, 0">
+                                    <StackPanel Width="auto" Height="auto" Orientation="Horizontal" HorizontalAlignment="Left" Margin="10, 0, 0, 0">
+                                        <Label Width="auto" Height="40" Content="{Binding request.Client.Firstname}" FontSize="24"></Label>
+                                        <Label Width="auto" Height="40" Content="{Binding request.Client.Secondname}" FontSize="24"></Label>
+                                    </StackPanel>
+                                    <Label Height="30" Width="auto" FontSize="18" Content="{Binding request.Client.Username}" FontStyle="Oblique" Padding="10, 0, 10, 0" Margin="10, 0, 0, 0"></Label>
+                                    <Label Height="35" FontSize="18" Content="{Binding request.AttachmentLetter}" Margin="10, 0, 0, 0"></Label>
+                                </StackPanel>
+                            </StackPanel>
+                        </Button>
+                    </DataTemplate>
+                </ListView.ItemTemplate>
+            </ListView>
+
+            <!--<Button Command="{Binding MasterPageRedirectCommand}" CommandParameter="{Binding user.Id}"
+                    Width="auto" Height="auto" Style="{StaticResource SecondaryButtonStyle}">
+                <StackPanel Grid.Column="1" Orientation="Horizontal" Width="1210" Height="150" Margin="0, 0, 0, 0">
+                    <Border Style="{StaticResource BigCircularImageBorder}" Margin="20, 10, 0, 0" Height="120" Width="120" VerticalAlignment="Top">
+                        <Border.Background>
+                            <ImageBrush ImageSource="{Binding user.ProfileImage, Converter={StaticResource ByteArrayToImageConverter}}"/>
+                        </Border.Background>
+                    </Border>
+                    <StackPanel Width="auto" Height="auto" VerticalAlignment="Top" Margin="0, 10, 0, 0">
+                        <StackPanel Width="auto" Height="auto" Orientation="Horizontal" HorizontalAlignment="Left" Margin="10, 0, 0, 0">
+                            <Label Width="auto" Height="40" Content="Firstname" FontSize="24"></Label>
+                            <Label Width="auto" Height="40" Content="Secondname" FontSize="24"></Label>
+                        </StackPanel>
+                        <Label Height="30" Width="auto" FontSize="18" Content="Username" FontStyle="Oblique" Padding="10, 0, 10, 0" Margin="10, 0, 0, 0"></Label>
+                        <Label Height="35" FontSize="18" Content="Attachment Letter" Margin="10, 0, 0, 0"></Label>
+                    </StackPanel>
+                </StackPanel>
+            </Button>-->
+
+        </StackPanel>
+    </Grid>
+</Page>

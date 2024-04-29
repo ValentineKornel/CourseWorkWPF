@@ -31,6 +31,7 @@
                 <Button Command="{Binding ChangeProfileImageCommand}" Content="{DynamicResource ChangePhotoButton}" FontSize="18" Width="auto" Height="50" Padding="20, 0, 20, 0" Margin="0, -150, 0, 0" HorizontalAlignment="Right"></Button>
             </StackPanel>
             <Button Command="{Binding SaveChangesCommand}" Content="{DynamicResource SaveChangesButton}" FontSize="18" Width="200" Height="50"></Button>
+            <Button Command="{Binding ApplyToMasterRedirectCommand}" Content="Become a master" FontSize="18" Width="200" Height="50" Margin="0, 10, 0, 0"></Button>
         </StackPanel>
     </Grid>
 </Page>

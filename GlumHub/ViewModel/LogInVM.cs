@@ -11,7 +11,6 @@ using System.Threading.Channels;
 using System.Threading.Tasks;
 using System.Windows;
 using System.Windows.Controls;
-using System.Windows.Forms;
 using System.Windows.Input;
 using System.Windows.Threading;
 using Application = System.Windows.Application;
@@ -83,7 +82,14 @@ namespace GlumHub
                         Application.Current.Resources["User"] = user;
 
                     var mainFrame = Application.Current.Resources["MainFrame"] as Frame;
-                    mainFrame.Navigate(new MainPage());
+                    if(user.Role == ROLES.ADMIN)
+                    {
+                        mainFrame.Navigate(new MainPageAdmin());
+                    }
+                    else
+                    {
+                        mainFrame.Navigate(new MainPage());
+                    }
                 }
                 else
                 {

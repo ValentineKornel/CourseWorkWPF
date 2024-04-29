@@ -51,7 +51,6 @@ namespace GlumHub
             using (ApplicationContextDB db = new ApplicationContextDB())
             {
 
-
                 foreach (UserRelation relation in db.UserRelations.Where(r => r.Follower.Id == _user.Id).Include(r => r.Master).Include(r => r.Master.MasterInfo).OrderBy(r => r.Master.Secondname))
                 {
                     MyMasters.Add(new UserWrapper(relation.Master, MasterPageRedirectCommand));
@@ -59,8 +58,6 @@ namespace GlumHub
 
                 
             }
-
-                
         }
 
         public event PropertyChangedEventHandler PropertyChanged;

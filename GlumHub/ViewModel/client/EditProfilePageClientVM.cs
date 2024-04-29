@@ -12,6 +12,7 @@ using System.Windows;
 using System.Windows.Controls;
 using System.Windows.Input;
 using System.Windows.Media;
+using System.Windows.Media.Imaging;
 
 namespace GlumHub
 {
@@ -92,9 +93,10 @@ namespace GlumHub
                     fs.Read(imageData, 0, imageData.Length);
                     ProfileImage = imageData;
 
-                    /*ImageBrush profilePhoto = Application.Current.Resources["ProfilePhoto"] as ImageBrush;
-                    profilePhoto.ImageSource = */
+                    ImageBrush profilePhoto = Application.Current.Resources["ProfilePhoto"] as ImageBrush;
+                    profilePhoto.ImageSource = LoadImageFromBytes(imageData);
                 }
+                
             }
         }
 
@@ -121,6 +123,44 @@ namespace GlumHub
             }
             mainFrame = Application.Current.Resources["MainFrame"] as Frame;
             mainFrame.Navigate(new MainPage());
+        }
+
+
+        private DelegateCommand _applyToMasterRedirectCommand;
+        public ICommand ApplyToMasterRedirectCommand
+        {
+            get
+            {
+                if (_applyToMasterRedirectCommand == null)
+                    _applyToMasterRedirectCommand = new DelegateCommand(ApplyToMasterRedirect);
+                return _applyToMasterRedirectCommand;
+            }
+        }
+
+        public void ApplyToMasterRedirect()
+        {
+            Frame homePageFrame = Application.Current.Resources["HomePageFrame"] as Frame;
+            homePageFrame.Navigate(new ApplyToMasterPage());
+        }
+
+
+
+
+        private BitmapImage LoadImageFromBytes(byte[] imageData)
+        {
+            BitmapImage bitmap = new BitmapImage();
+
+            using (MemoryStream stream = new MemoryStream(imageData))
+            {
+                stream.Position = 0;
+                bitmap.BeginInit();
+                bitmap.CacheOption = BitmapCacheOption.OnLoad;
+                bitmap.StreamSource = stream;
+                bitmap.EndInit();
+                bitmap.Freeze();
+            }
+
+            return bitmap;
         }
     }
 }

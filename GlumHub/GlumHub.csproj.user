@@ -7,6 +7,24 @@
     </ApplicationDefinition>
   </ItemGroup>
   <ItemGroup>
+    <Compile Update="views\admin\HomePageAdmin.xaml.cs">
+      <SubType>Code</SubType>
+    </Compile>
+    <Compile Update="views\admin\MainPageAdmin.xaml.cs">
+      <SubType>Code</SubType>
+    </Compile>
+    <Compile Update="views\admin\RequestPage.xaml.cs">
+      <SubType>Code</SubType>
+    </Compile>
+    <Compile Update="views\admin\SearchPageAdmin.xaml.cs">
+      <SubType>Code</SubType>
+    </Compile>
+    <Compile Update="views\admin\UserPage.xaml.cs">
+      <SubType>Code</SubType>
+    </Compile>
+    <Compile Update="views\client\ApplyToMasterPage.xaml.cs">
+      <SubType>Code</SubType>
+    </Compile>
     <Compile Update="views\client\HistoryPageClient.xaml.cs">
       <SubType>Code</SubType>
     </Compile>
@@ -17,6 +35,9 @@
       <SubType>Code</SubType>
     </Compile>
     <Compile Update="views\client\MyMastersPage.xaml.cs">
+      <SubType>Code</SubType>
+    </Compile>
+    <Compile Update="views\client\NotificationsPage.xaml.cs">
       <SubType>Code</SubType>
     </Compile>
     <Compile Update="views\master\AsMasterPage.xaml.cs">
@@ -81,6 +102,24 @@
     <Page Update="files\RussianDictionary.xaml">
       <SubType>Designer</SubType>
     </Page>
+    <Page Update="views\admin\HomePageAdmin.xaml">
+      <SubType>Designer</SubType>
+    </Page>
+    <Page Update="views\admin\MainPageAdmin.xaml">
+      <SubType>Designer</SubType>
+    </Page>
+    <Page Update="views\admin\RequestPage.xaml">
+      <SubType>Designer</SubType>
+    </Page>
+    <Page Update="views\admin\SearchPageAdmin.xaml">
+      <SubType>Designer</SubType>
+    </Page>
+    <Page Update="views\admin\UserPage.xaml">
+      <SubType>Designer</SubType>
+    </Page>
+    <Page Update="views\client\ApplyToMasterPage.xaml">
+      <SubType>Designer</SubType>
+    </Page>
     <Page Update="views\client\HistoryPageClient.xaml">
       <SubType>Designer</SubType>
     </Page>
@@ -91,6 +130,9 @@
       <SubType>Designer</SubType>
     </Page>
     <Page Update="views\client\MyMastersPage.xaml">
+      <SubType>Designer</SubType>
+    </Page>
+    <Page Update="views\client\NotificationsPage.xaml">
       <SubType>Designer</SubType>
     </Page>
     <Page Update="views\master\AsMasterPage.xaml">

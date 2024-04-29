@@ -18,10 +18,13 @@
   <ItemGroup>
     <None Remove="files\cursor.cur" />
     <None Remove="files\defaultUser.png" />
+    <None Remove="files\dot.png" />
     <None Remove="files\home.png" />
+    <None Remove="files\imagePlaceholder.png" />
     <None Remove="files\logoG.jpg" />
     <None Remove="files\MyCursor.cur" />
     <None Remove="files\MyCursor.png" />
+    <None Remove="files\placeholder-image.png" />
     <None Remove="files\subscribed.png" />
     <None Remove="MyCursor.cur" />
   </ItemGroup>
@@ -29,6 +32,7 @@
   <ItemGroup>
     <PackageReference Include="BCrypt.Net" Version="0.1.0" />
     <PackageReference Include="Extended.Wpf.Toolkit" Version="4.6.0" />
+    <PackageReference Include="MailKit" Version="4.5.0" />
     <PackageReference Include="Microsoft.EntityFrameworkCore" Version="8.0.3" />
     <PackageReference Include="Microsoft.EntityFrameworkCore.SqlServer" Version="8.0.3" />
     <PackageReference Include="Microsoft.EntityFrameworkCore.Tools" Version="8.0.3">
@@ -42,8 +46,11 @@
   <ItemGroup>
     <Resource Include="files\cursor.cur" />
     <Resource Include="files\defaultUser.png" />
+    <Resource Include="files\dot.png" />
     <Resource Include="files\home.png" />
+    <Resource Include="files\imagePlaceholder.png" />
     <Resource Include="files\logoG.jpg" />
+    <Resource Include="files\placeholder-image.png" />
     <Resource Include="files\subscribed.png" />
   </ItemGroup>
 

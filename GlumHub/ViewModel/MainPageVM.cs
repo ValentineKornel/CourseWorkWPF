@@ -146,6 +146,24 @@ namespace GlumHub
         }
 
 
+        private DelegateCommand _notificationsPageRedirectCommand;
+        public ICommand NotificationsPageRedirectCommand
+        {
+            get
+            {
+                if (_notificationsPageRedirectCommand == null)
+                    _notificationsPageRedirectCommand = new DelegateCommand(NotificationsPageRedirect);
+                return _notificationsPageRedirectCommand;
+            }
+        }
+
+        private void NotificationsPageRedirect()
+        {
+            homePageFrame = Application.Current.Resources["HomePageFrame"] as Frame;
+            homePageFrame.Navigate(new NotificationsPage());
+        }
+
+
         private DelegateCommand _searchPageRedirectCommand;
         public ICommand SearchPageRedirectCommand
         {
