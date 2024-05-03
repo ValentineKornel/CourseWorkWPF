@@ -40,6 +40,7 @@
                     </Paragraph>
                 </FlowDocument>
             </RichTextBox>
+            <PasswordBox x:Name="passwordBox" Height="40"></PasswordBox>
 
             <Button Content="{DynamicResource RegisterButton}" Command="{Binding RegisterRedirectCommand}" Height="30" Width="auto" HorizontalAlignment="Left" Margin="0, 10, 0, 0" Style="{StaticResource SecondaryButtonStyle}"/>
             <Button Content="{DynamicResource LoginButton}" Command="{Binding LogInCommand}" Height="30" Width="70" HorizontalAlignment="Right" Margin="0, -30, 0, 0"/>

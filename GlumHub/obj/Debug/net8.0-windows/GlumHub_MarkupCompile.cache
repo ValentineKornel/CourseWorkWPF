@@ -16,5 +16,5 @@ D:\Study\CourseWork\GlumHub\GlumHub\App.xaml
 250-1892079765
 files\DarkAppearanceDictionary.xaml;files\EnglishDictionary.xaml;files\LIghtAppearanceDictionary.xaml;files\RussianDictionary.xaml;views\admin\HomePageAdmin.xaml;views\admin\MainPageAdmin.xaml;views\admin\RequestPage.xaml;views\admin\SearchPageAdmin.xaml;views\admin\UserPage.xaml;views\client\ApplyToMasterPage.xaml;views\client\EditProfilePageClient.xaml;views\client\HistoryPageClient.xaml;views\client\HomePageClient.xaml;views\client\MasterPage.xaml;views\client\MsterServicePage.xaml;views\client\MyMastersPage.xaml;views\client\MyProfilePageClient.xaml;views\client\NotificationsPage.xaml;views\client\SearchPage.xaml;views\LoginPage.xaml;views\MainPage.xaml;views\MainWindow.xaml;views\master\AsMasterPage.xaml;views\master\EditProfilePageMaster.xaml;views\master\FreeBookingPage.xaml;views\master\HistoryPageMaster.xaml;views\master\HomePageMaster.xaml;views\master\MyProfilePageMaster.xaml;views\master\NewBookingPage.xaml;views\master\UpcomingBookingPage.xaml;views\RegisterPage.xaml;views\SettingsPage.xaml;
 
-False
+True
 

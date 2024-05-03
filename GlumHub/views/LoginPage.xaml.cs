@@ -23,6 +23,16 @@ namespace GlumHub
         public LoginPage()
         {
             InitializeComponent();
+
+            /*if (Application.Current.Resources["Passwordbox"] != null)
+            {
+                Application.Current.Resources.Add("PasswordBox", this.passwordBox);
+            }
+            else
+            {
+                Application.Current.Resources["PasswordBox"] = this.passwordBox);
+            }*/
         }
+       
     }
 }

@@ -53,7 +53,6 @@ namespace GlumHub
                 db.SaveChanges();
             }
             SendEmailNotification(receiverId, message, "plain");
-
         }
 
         public static void SendEmailNotification(long receiverId, string message, string bodyType)
