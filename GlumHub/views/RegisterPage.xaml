@@ -25,10 +25,10 @@
         </Grid.RowDefinitions>
         <StackPanel Grid.Column="1" MaxWidth="450" Grid.Row="1">
             <Label Content="{DynamicResource RegisterLabel}" FontSize="20" HorizontalAlignment="Center" Height="37" Width="82"/>
-            <Button Content="{DynamicResource LoginButton}" Command="{Binding LoginRedirectCommand}" Style="{StaticResource SecondaryButtonStyle}" HorizontalAlignment="Left" Height="30" Width="50" Margin="0,-30, 0,10" VerticalAlignment="Bottom" Grid.Column="1"/>
+            <Button Content="{DynamicResource LoginButton}" FontSize="16" Command="{Binding LoginRedirectCommand}" Style="{StaticResource SecondaryButtonStyle}" HorizontalAlignment="Left" Height="30" Width="50" Margin="0,-30, 0,10" VerticalAlignment="Bottom" Grid.Column="1"/>
             
-            <Label Content="{DynamicResource UsernameLabel}"/>
-            <RichTextBox Height="40">
+            <Label FontSize="18" Content="{DynamicResource UsernameLabel}"/>
+            <RichTextBox Height="40" FontSize="16" Padding="0, 5, 0, 0">
                 <RichTextBox.Style>
                     <Style TargetType="RichTextBox">
                         <Style.Triggers>
@@ -45,40 +45,40 @@
                     </Paragraph>
                 </FlowDocument>
             </RichTextBox>
-            <Label Content="{DynamicResource FirstNameLabel}"/>
-            <RichTextBox Height="40">
+            <Label FontSize="18" Content="{DynamicResource FirstNameLabel}"/>
+            <RichTextBox Height="40" FontSize="16" Padding="0, 5, 0, 0">
                 <FlowDocument>
                     <Paragraph>
                         <Run Text="{Binding FirstName}"/>
                     </Paragraph>
                 </FlowDocument>
             </RichTextBox>
-            <Label Content="{DynamicResource SecondNameLabel}"/>
-            <RichTextBox Height="40">
+            <Label FontSize="18" Content="{DynamicResource SecondNameLabel}"/>
+            <RichTextBox Height="40" FontSize="16" Padding="0, 5, 0, 0">
                 <FlowDocument>
                     <Paragraph>
                         <Run Text="{Binding SecondName}"/>
                     </Paragraph>
                 </FlowDocument>
             </RichTextBox>
-            <Label Content="{DynamicResource PasswordLabel}"/>
-            <RichTextBox Height="40">
+            <Label FontSize="18" Content="{DynamicResource PasswordLabel}"/>
+            <RichTextBox Height="40" FontSize="16" Padding="0, 5, 0, 0">
                 <FlowDocument>
                     <Paragraph>
                         <Run Text="{Binding Password}"/>
                     </Paragraph>
                 </FlowDocument>
             </RichTextBox>
-            <Label Content="{DynamicResource EmailLabel}"/>
-            <RichTextBox Height="40">
+            <Label FontSize="18" Content="{DynamicResource EmailLabel}"/>
+            <RichTextBox Height="40" FontSize="16" Padding="0, 5, 0, 0">
                 <FlowDocument>
                     <Paragraph>
                         <Run Text="{Binding Email}"/>
                     </Paragraph>
                 </FlowDocument>
             </RichTextBox>
-            <Label Content="{DynamicResource TelLabel}"/>
-            <RichTextBox Height="40">
+            <Label FontSize="18" Content="{DynamicResource TelLabel}"/>
+            <RichTextBox Height="40" FontSize="16" Padding="0, 5, 0, 0">
                 <FlowDocument>
                     <Paragraph>
                         <Run Text="{Binding Tel}"/>

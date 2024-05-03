@@ -60,6 +60,44 @@ namespace GlumHub
         }
 
 
+        private DelegateCommand _postsPageRedirectCommand;
+        public ICommand PostsPageRedirectCommand
+        {
+            get
+            {
+                if (_postsPageRedirectCommand == null)
+                    _postsPageRedirectCommand = new DelegateCommand(PostsPageRedirect);
+                return _postsPageRedirectCommand;
+            }
+        }
+
+        private void PostsPageRedirect()
+        {
+            myProfilePageMasterFrame = Application.Current.Resources["MyProfilePageMasterFrame"] as Frame;
+            myProfilePageMasterFrame.Navigate(new PostsPage());
+
+        }
+
+
+        private DelegateCommand _statisticPageRedirectCommand;
+        public ICommand StatisticPageRedirectCommand
+        {
+            get
+            {
+                if (_statisticPageRedirectCommand == null)
+                    _statisticPageRedirectCommand = new DelegateCommand(StatisticPageRedirect);
+                return _statisticPageRedirectCommand;
+            }
+        }
+
+        private void StatisticPageRedirect()
+        {
+            myProfilePageMasterFrame = Application.Current.Resources["MyProfilePageMasterFrame"] as Frame;
+            myProfilePageMasterFrame.Navigate(new StatisticPage());
+
+        }
+
+
         private DelegateCommand _historyAsMasterPageRedirectCommand;
         public ICommand HistoryAsMasterPageRedirectCommand
         {

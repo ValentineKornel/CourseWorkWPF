@@ -216,3 +216,7 @@ D:\Study\CourseWork\GlumHub\GlumHub\obj\Debug\net8.0-windows\views\admin\UserPag
 D:\Study\CourseWork\GlumHub\GlumHub\bin\Debug\net8.0-windows\BouncyCastle.Cryptography.dll
 D:\Study\CourseWork\GlumHub\GlumHub\bin\Debug\net8.0-windows\MailKit.dll
 D:\Study\CourseWork\GlumHub\GlumHub\bin\Debug\net8.0-windows\MimeKit.dll
+D:\Study\CourseWork\GlumHub\GlumHub\obj\Debug\net8.0-windows\views\master\StatisticPage.g.cs
+D:\Study\CourseWork\GlumHub\GlumHub\obj\Debug\net8.0-windows\views\master\StatisticPage.baml
+D:\Study\CourseWork\GlumHub\GlumHub\obj\Debug\net8.0-windows\views\master\PostsPage.g.cs
+D:\Study\CourseWork\GlumHub\GlumHub\obj\Debug\net8.0-windows\views\master\PostsPage.baml

@@ -27,6 +27,8 @@ namespace GlumHub
                 Application.Current.Resources.Add("MyProfilePageMasterFrame", this.myProfilePageMasterFrame);
             else
                 Application.Current.Resources["MyProfilePageMasterFrame"] = this.myProfilePageMasterFrame;
+
+            myProfilePageMasterFrame.Navigate(new PostsPage());
         }
     }
 }

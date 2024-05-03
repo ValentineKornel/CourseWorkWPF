@@ -13,6 +13,7 @@
     </Page.DataContext>
     <Grid>
         <StackPanel Height="1000" Margin="0, 20, 0, 0" Width="auto">
+            <Label Content="Requests:" FontSize="20" HorizontalAlignment="Center"></Label>
             <ListView ItemsSource="{Binding Requests}" BorderThickness="0" Width="auto">
                 <ListView.ItemTemplate>
                     <DataTemplate>
@@ -38,24 +39,6 @@
                 </ListView.ItemTemplate>
             </ListView>
 
-            <!--<Button Command="{Binding MasterPageRedirectCommand}" CommandParameter="{Binding user.Id}"
-                    Width="auto" Height="auto" Style="{StaticResource SecondaryButtonStyle}">
-                <StackPanel Grid.Column="1" Orientation="Horizontal" Width="1210" Height="150" Margin="0, 0, 0, 0">
-                    <Border Style="{StaticResource BigCircularImageBorder}" Margin="20, 10, 0, 0" Height="120" Width="120" VerticalAlignment="Top">
-                        <Border.Background>
-                            <ImageBrush ImageSource="{Binding user.ProfileImage, Converter={StaticResource ByteArrayToImageConverter}}"/>
-                        </Border.Background>
-                    </Border>
-                    <StackPanel Width="auto" Height="auto" VerticalAlignment="Top" Margin="0, 10, 0, 0">
-                        <StackPanel Width="auto" Height="auto" Orientation="Horizontal" HorizontalAlignment="Left" Margin="10, 0, 0, 0">
-                            <Label Width="auto" Height="40" Content="Firstname" FontSize="24"></Label>
-                            <Label Width="auto" Height="40" Content="Secondname" FontSize="24"></Label>
-                        </StackPanel>
-                        <Label Height="30" Width="auto" FontSize="18" Content="Username" FontStyle="Oblique" Padding="10, 0, 10, 0" Margin="10, 0, 0, 0"></Label>
-                        <Label Height="35" FontSize="18" Content="Attachment Letter" Margin="10, 0, 0, 0"></Label>
-                    </StackPanel>
-                </StackPanel>
-            </Button>-->
 
         </StackPanel>
     </Grid>

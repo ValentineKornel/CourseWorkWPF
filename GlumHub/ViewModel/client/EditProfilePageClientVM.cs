@@ -82,7 +82,7 @@ namespace GlumHub
         public void ChangeProfileImage()
         {
             OpenFileDialog openFileDialog = new OpenFileDialog();
-            openFileDialog.Filter = "Image files (*.jpg, *.jpeg, *.png)|*.jpg;*.jpeg;*.png|All files (*.*)|*.*";
+            openFileDialog.Filter = "All files (*.*)|*.*|Image files (*.jpg, *.jpeg, *.png)|*.jpg;*.jpeg;*.png";
 
             
             if (openFileDialog.ShowDialog() == true)

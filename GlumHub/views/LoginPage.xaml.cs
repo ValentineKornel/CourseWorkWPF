@@ -24,15 +24,18 @@ namespace GlumHub
         {
             InitializeComponent();
 
-            /*if (Application.Current.Resources["Passwordbox"] != null)
+        }
+
+        private void PasswordBox_PasswordChanged(object sender, RoutedEventArgs e)
+        {
+            if(Application.Current.Resources["Password"] == null)
             {
-                Application.Current.Resources.Add("PasswordBox", this.passwordBox);
+                Application.Current.Resources.Add("Password", this.passwordBox.Password);
             }
             else
             {
-                Application.Current.Resources["PasswordBox"] = this.passwordBox);
-            }*/
+                Application.Current.Resources["Password"] = this.passwordBox.Password;
+            }
         }
-       
     }
 }

@@ -11,6 +11,8 @@ using System.Threading.Tasks;
 using System.Windows;
 using System.Windows.Controls;
 using System.Windows.Input;
+using System.Windows.Media;
+using System.Windows.Media.Imaging;
 
 namespace GlumHub
 {
@@ -106,7 +108,7 @@ namespace GlumHub
         public void ChangeProfileImage()
         {
             OpenFileDialog openFileDialog = new OpenFileDialog();
-            openFileDialog.Filter = "Image files (*.jpg, *.jpeg, *.png)|*.jpg;*.jpeg;*.png|All files (*.*)|*.*";
+            openFileDialog.Filter = "All files (*.*)|*.*|Image files (*.jpg, *.jpeg, *.png)|*.jpg;*.jpeg;*.png";
 
 
             if (openFileDialog.ShowDialog() == true)
@@ -116,6 +118,9 @@ namespace GlumHub
                     byte[] imageData = new byte[fs.Length];
                     fs.Read(imageData, 0, imageData.Length);
                     ProfileImage = imageData;
+
+                    ImageBrush profilePhoto = Application.Current.Resources["ProfilePhoto"] as ImageBrush;
+                    profilePhoto.ImageSource = LoadImageFromBytes(imageData);
                 }
             }
         }
@@ -164,6 +169,25 @@ namespace GlumHub
             }
             mainFrame = Application.Current.Resources["MainFrame"] as Frame;
             mainFrame.Navigate(new MainPage());
+        }
+
+
+
+        private BitmapImage LoadImageFromBytes(byte[] imageData)
+        {
+            BitmapImage bitmap = new BitmapImage();
+
+            using (MemoryStream stream = new MemoryStream(imageData))
+            {
+                stream.Position = 0;
+                bitmap.BeginInit();
+                bitmap.CacheOption = BitmapCacheOption.OnLoad;
+                bitmap.StreamSource = stream;
+                bitmap.EndInit();
+                bitmap.Freeze();
+            }
+
+            return bitmap;
         }
     }
 }

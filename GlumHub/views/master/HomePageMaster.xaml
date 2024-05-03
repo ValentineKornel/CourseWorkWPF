@@ -11,20 +11,22 @@
     <Page.DataContext>
         <local:HomePageMasterVM></local:HomePageMasterVM>
     </Page.DataContext>
+    <ScrollViewer VerticalScrollBarVisibility="Hidden">
         <Grid>
-        <Grid.ColumnDefinitions>
-            <ColumnDefinition></ColumnDefinition>
-        </Grid.ColumnDefinitions>
-        <Grid.RowDefinitions>
-            <RowDefinition></RowDefinition>
-        </Grid.RowDefinitions>
-        <WrapPanel Width="1240" Height="52" HorizontalAlignment="Left" VerticalAlignment="Top">
-            <Button Command="{Binding AsMasterPageRedirectCommand}" Content="As Master" FontSize="20" Height="50" Width="620"  Style="{StaticResource SecondaryButtonStyle}"></Button>
-            <Button Command="{Binding AsClientPageRedirectCommand}" Content="As Client" FontSize="20" Height="50" Width="620" Style="{StaticResource SecondaryButtonStyle}"></Button>
-            <Border BorderBrush="Black" BorderThickness="2" Width="1220" Margin="10, 0, 10, 0"></Border>
-        </WrapPanel>
-        <Frame x:Name="homePageMasterFrame" Margin="0, 52, 0, 0">
-            
-        </Frame>
-    </Grid>
+            <Grid.ColumnDefinitions>
+                <ColumnDefinition></ColumnDefinition>
+            </Grid.ColumnDefinitions>
+            <Grid.RowDefinitions>
+                <RowDefinition></RowDefinition>
+            </Grid.RowDefinitions>
+            <WrapPanel Width="1240" Height="52" HorizontalAlignment="Left" VerticalAlignment="Top">
+                <Button Command="{Binding AsMasterPageRedirectCommand}" Content="As Master" FontSize="20" Height="50" Width="620"  Style="{StaticResource SecondaryButtonStyle}"></Button>
+                <Button Command="{Binding AsClientPageRedirectCommand}" Content="As Client" FontSize="20" Height="50" Width="620" Style="{StaticResource SecondaryButtonStyle}"></Button>
+                <Border BorderBrush="Black" BorderThickness="2" Width="1220" Margin="10, 0, 10, 0"></Border>
+            </WrapPanel>
+            <Frame x:Name="homePageMasterFrame" Margin="0, 52, 0, 0">
+
+            </Frame>
+        </Grid>
+    </ScrollViewer>
 </Page>
