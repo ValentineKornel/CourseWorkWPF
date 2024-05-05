@@ -117,6 +117,11 @@ namespace GlumHub
                 Application.Current.Resources.Add("UserId", UserId);
             else
                 Application.Current.Resources["UserId"] = UserId;
+
+            if (Application.Current.Resources["MasterId"] == null)
+                Application.Current.Resources.Add("MasterId", UserId);
+            else
+                Application.Current.Resources["MasterId"] = UserId;
             homePageFrame.Navigate(new UserPage());
         }
 

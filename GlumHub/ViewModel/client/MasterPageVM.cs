@@ -229,6 +229,42 @@ namespace GlumHub
         }
 
 
+        private DelegateCommand _serviceRedirectCommand;
+        public ICommand ServicePageRedirectCommand
+        {
+            get
+            {
+                if (_serviceRedirectCommand == null)
+                    _serviceRedirectCommand = new DelegateCommand(ServicePageRedirect);
+                return _serviceRedirectCommand;
+            }
+        }
+
+        public void ServicePageRedirect()
+        {
+            Frame myProfilePageMasterFrame = Application.Current.Resources["MasterPageForClientFrame"] as Frame;
+            myProfilePageMasterFrame.Navigate(new MasterServicePage());
+        }
+
+
+        private DelegateCommand _postsPageRedirectCommand;
+        public ICommand PostsPageRedirectCommand
+        {
+            get
+            {
+                if (_postsPageRedirectCommand == null)
+                    _postsPageRedirectCommand = new DelegateCommand(PostsPageRedirect);
+                return _postsPageRedirectCommand;
+            }
+        }
+
+        public void PostsPageRedirect()
+        {
+            Frame myProfilePageMasterFrame = Application.Current.Resources["MasterPageForClientFrame"] as Frame;
+            myProfilePageMasterFrame.Navigate(new PostsPage());
+        }
+
+
         public class BookingWrapper
         {
             public Booking booking { get; set; }

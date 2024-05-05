@@ -17,6 +17,16 @@ namespace GlumHub
 
 
 
+
+        public HomePageMasterVM()
+        {
+            User master = Application.Current.Resources["User"] as User;
+            if (Application.Current.Resources["MasterId"] == null)
+                Application.Current.Resources.Add("MasterId", master.Id);
+            else
+                Application.Current.Resources["MasterId"] = master.Id;
+        }
+
         public event PropertyChangedEventHandler PropertyChanged;
         protected virtual void OnPropertyChanged(string propertyName)
         {

@@ -118,7 +118,7 @@ namespace GlumHub
             }
         }
 
-
+/*
         private void SearchAsAdmin()
         {
             using (ApplicationContextDB db = new ApplicationContextDB())
@@ -135,7 +135,7 @@ namespace GlumHub
                     SearchedMasters.Add(new MasterWrapper(master, MasterPageRedirectCommand, "Hidden"));
                 }
             }
-        }
+        }*/
 
         private DelegateCommand<long?> _masterPageRedirectCommand;
         public ICommand MasterPageRedirectCommand

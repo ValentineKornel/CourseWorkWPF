@@ -7,18 +7,18 @@ using System.Threading.Tasks;
 
 namespace GlumHub
 {
-
     
-
     class ApplicationContextDB : DbContext
     {
-
         public DbSet<Credentials> Credentials { get; set; }
         public DbSet<User> Users { get; set; }
         public DbSet<MasterInfo> MasterInfos { get; set; }
         public DbSet<Booking> Bookings { get; set; }
         public DbSet<Request> Requests { get; set; }
         public DbSet<Notification> Notifications { get; set; }
+        public DbSet<Post> Posts { get; set; }
+
+
 
         public DbSet<UserRelation> UserRelations { get; set; }
 

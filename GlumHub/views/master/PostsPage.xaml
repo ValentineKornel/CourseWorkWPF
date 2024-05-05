@@ -5,7 +5,7 @@
       xmlns:d="http://schemas.microsoft.com/expression/blend/2008" 
       xmlns:local="clr-namespace:GlumHub"
       mc:Ignorable="d" 
-      d:DesignHeight="450" d:DesignWidth="1240" Background="{DynamicResource PageBackground}"
+      d:DesignHeight="600" d:DesignWidth="1240" Background="{DynamicResource PageBackground}"
       Title="PostsPage">
 
     <Page.DataContext>
@@ -20,9 +20,23 @@
         <Grid.RowDefinitions>
             <RowDefinition></RowDefinition>
         </Grid.RowDefinitions>
-        <StackPanel Grid.Column="1" Width="auto">
-            <Label>Posts page</Label>
-        </StackPanel>
+        <Button Command="{Binding AddNewPostRedirectCommand}" Visibility="{Binding AddNewPostButtonVisibility}" Width="70" Height="30" VerticalAlignment="Top" Margin="0, 10, 0, 0">new post</Button>
+        
+        <ListView ItemsSource="{Binding Posts}" BorderThickness="0" HorizontalAlignment="Left" Width="auto" Grid.Column="1">
+            <ListView.ItemsPanel>
+                <ItemsPanelTemplate>
+                    <WrapPanel Width = "900"/>
+                </ItemsPanelTemplate >
+            </ListView.ItemsPanel >
+            <ListView.ItemTemplate>
+                <DataTemplate>
+                    <Button Command="{Binding PostPageRedirectCommand}" CommandParameter="{Binding post.Id}" Width="210" Height="210" Background="Transparent" Margin="0, 0, 0, 0" >
+                        <Image Width="210" Height="210" Source="{Binding post.PostImage}"></Image>
+                    </Button>
+                </DataTemplate>
+            </ListView.ItemTemplate>
+        </ListView>
+        
 
     </Grid>
 </Page>

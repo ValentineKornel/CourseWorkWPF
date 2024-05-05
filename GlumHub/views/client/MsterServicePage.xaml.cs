@@ -18,9 +18,9 @@ namespace GlumHub
     /// <summary>
     /// Логика взаимодействия для MsterServicePage.xaml
     /// </summary>
-    public partial class MsterServicePage : Page
+    public partial class MasterServicePage : Page
     {
-        public MsterServicePage()
+        public MasterServicePage()
         {
             InitializeComponent();
         }

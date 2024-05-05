@@ -36,8 +36,8 @@ namespace GlumHub
             using(ApplicationContextDB db = new ApplicationContextDB())
             {
                 User = db.Users.Include(u => u.MasterInfo).FirstOrDefault(u => u.Id == userId);
-
             }
+
         }
 
 

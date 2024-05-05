@@ -35,5 +35,23 @@ namespace GlumHub
             //throw new NotSupportedException();
             return DependencyProperty.UnsetValue;
         }
+
+
+        public static BitmapImage LoadImageFromBytes(byte[] imageData)
+        {
+            BitmapImage bitmap = new BitmapImage();
+
+            using (MemoryStream stream = new MemoryStream(imageData))
+            {
+                stream.Position = 0;
+                bitmap.BeginInit();
+                bitmap.CacheOption = BitmapCacheOption.OnLoad;
+                bitmap.StreamSource = stream;
+                bitmap.EndInit();
+                bitmap.Freeze();
+            }
+
+            return bitmap;
+        }
     }
 }

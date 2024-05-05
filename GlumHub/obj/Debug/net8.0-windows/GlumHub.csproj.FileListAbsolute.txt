@@ -220,3 +220,5 @@ D:\Study\CourseWork\GlumHub\GlumHub\obj\Debug\net8.0-windows\views\master\Statis
 D:\Study\CourseWork\GlumHub\GlumHub\obj\Debug\net8.0-windows\views\master\StatisticPage.baml
 D:\Study\CourseWork\GlumHub\GlumHub\obj\Debug\net8.0-windows\views\master\PostsPage.g.cs
 D:\Study\CourseWork\GlumHub\GlumHub\obj\Debug\net8.0-windows\views\master\PostsPage.baml
+D:\Study\CourseWork\GlumHub\GlumHub\obj\Debug\net8.0-windows\views\master\AddNewPostPage.g.cs
+D:\Study\CourseWork\GlumHub\GlumHub\obj\Debug\net8.0-windows\views\master\AddNewPostPage.baml

@@ -45,8 +45,8 @@
         <StackPanel Grid.Column="1" Grid.Row="1">
             <Border BorderBrush="Black" BorderThickness="1" Width="auto" Height="1"/>
             <StackPanel Height="50" Width="auto" HorizontalAlignment="Center" Orientation="Horizontal">
-                <Button Width="auto" Height="40" FontSize="18" Content="Service" Padding="10, 0, 10, 0" Margin="20, 0, 20, 0" Style="{StaticResource SecondaryButtonStyle}"></Button>
-                <Button Width="auto" Height="40" FontSize="18" Content="{DynamicResource PoststButton}" Padding="10, 0, 10, 0" Margin="20, 0, 20, 0" Style="{StaticResource SecondaryButtonStyle}"></Button>
+                <Button Command="{Binding ServicePageRedirectCommand}" Width="auto" Height="40" FontSize="18" Content="Service" Padding="10, 0, 10, 0" Margin="20, 0, 20, 0" Style="{StaticResource SecondaryButtonStyle}"></Button>
+                <Button Command="{Binding PostsPageRedirectCommand}" Width="auto" Height="40" FontSize="18" Content="{DynamicResource PoststButton}" Padding="10, 0, 10, 0" Margin="20, 0, 20, 0" Style="{StaticResource SecondaryButtonStyle}"></Button>
             </StackPanel>
             <Frame x:Name="masterPageForClientFrame" Height="690"/>
 

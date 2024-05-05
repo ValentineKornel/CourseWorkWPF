@@ -43,7 +43,7 @@
         </StackPanel>
         <StackPanel Grid.Column="1" Grid.Row="1">
             <Border BorderBrush="Black" BorderThickness="1" Width="auto" Height="1"/>
-            <Frame x:Name="masterPageForClientFrame" Height="690"/>
+            <Frame x:Name="userPageForAdminFrame" Height="690"/>
         </StackPanel>
     </Grid>
 </Page>
