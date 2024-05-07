@@ -7,6 +7,7 @@ using System.ComponentModel;
 using System.IO;
 using System.Linq;
 using System.Text;
+using System.Text.RegularExpressions;
 using System.Threading.Tasks;
 using System.Windows;
 using System.Windows.Controls;
@@ -21,13 +22,13 @@ namespace GlumHub
         Frame mainFrame;
 
         private User _user;
-        public User User
+        public User user
         {
             get { return _user; }
             set
             {
                 _user = value;
-                OnPropertyChanged(nameof(User));
+                OnPropertyChanged(nameof(user));
             }
         }
 
@@ -64,6 +65,54 @@ namespace GlumHub
             }
         }
 
+        string _firstName;
+        public string FirstName
+        {
+            get { return _firstName; }
+            set
+            {
+                _firstName = value;
+                OnPropertyChanged(nameof(FirstName));
+                validateFirstName();
+            }
+        }
+
+        string _secondName;
+        public string SecondName
+        {
+            get { return _secondName; }
+            set
+            {
+                _secondName = value;
+                OnPropertyChanged(nameof(SecondName));
+                validateSecondName();
+            }
+        }
+
+        string _email;
+        public string Email
+        {
+            get { return _email; }
+            set
+            {
+                _email = value;
+                OnPropertyChanged(nameof(Email));
+                validateEmail();
+            }
+        }
+
+        string _tel;
+        public string Tel
+        {
+            get { return _tel; }
+            set
+            {
+                _tel = value;
+                OnPropertyChanged(nameof(Tel));
+                validateTel();
+            }
+        }
+
         private string _message;
         public string Message
         {
@@ -77,13 +126,17 @@ namespace GlumHub
 
         public EditProfilePageMasterVM()
         {
-            _user = Application.Current.Resources["User"] as User;
-            _profileImage = User.ProfileImage;
-            if(User.MasterInfo != null)
+            user = Application.Current.Resources["User"] as User;
+            ProfileImage = user.ProfileImage;
+            if(user.MasterInfo != null)
             {
-                _bio = User.MasterInfo.Bio;
-                _businessAddress = User.MasterInfo.BusinessAddress;
+                Bio = user.MasterInfo.Bio;
+                BusinessAddress = user.MasterInfo.BusinessAddress;
             }
+            FirstName = user.Firstname;
+            SecondName = user.Secondname;
+            Email = user.Email;
+            Tel = user.Tel;
         }
 
 
@@ -120,7 +173,7 @@ namespace GlumHub
                     ProfileImage = imageData;
 
                     ImageBrush profilePhoto = Application.Current.Resources["ProfilePhoto"] as ImageBrush;
-                    profilePhoto.ImageSource = LoadImageFromBytes(imageData);
+                    profilePhoto.ImageSource = ByteArrayToImageConverter.LoadImageFromBytes(imageData);
                 }
             }
         }
@@ -139,55 +192,126 @@ namespace GlumHub
 
         public void SaveChanges()
         {
-            //TODO Devide this method to smaller methods
 
-
-            using (ApplicationContextDB db = new ApplicationContextDB())
+            if (ValidateAll())
             {
-                User userToChage = db.Users.FirstOrDefault(u => u.Id == User.Id);
-                userToChage.ProfileImage = ProfileImage;
-
-                MasterInfo masterInfo;
-                bool isThrereMasterInfo = db.MasterInfos.Any(i => i.UserId == User.Id);
-                if (isThrereMasterInfo)
+                using (ApplicationContextDB db = new ApplicationContextDB())
                 {
-                    masterInfo = db.MasterInfos.FirstOrDefault(i => i.UserId == User.Id);
-                    masterInfo.Bio = Bio;
-                    masterInfo.BusinessAddress = BusinessAddress;
+                    User userToChage = db.Users.Include(u => u.MasterInfo).FirstOrDefault(u => u.Id == user.Id);
+                    userToChage.ProfileImage = ProfileImage;
+                    userToChage.Firstname = FirstName;
+                    userToChage.Secondname = SecondName;
+                    userToChage.Email = Email;
+                    userToChage.Tel = Tel;
+                    if(userToChage.MasterInfo != null)
+                    {
+                        userToChage.MasterInfo.Bio = Bio;
+                        userToChage.MasterInfo.BusinessAddress = BusinessAddress;
+                    }
+                    else
+                    {
+                        userToChage.MasterInfo = new MasterInfo(Bio, BusinessAddress, userToChage.Id);
+                    }
+
+                    db.SaveChanges();
+
+                    Application.Current.Resources["User"] = userToChage;
                 }
-                else
-                {
-                    masterInfo = new MasterInfo(Bio, BusinessAddress, userToChage.Id);
-                    db.MasterInfos.Add(masterInfo);
-                }
-
-                db.SaveChanges();
-
-                userToChage.MasterInfo = masterInfo;
-
-                Application.Current.Resources["User"] = userToChage;
+                mainFrame = Application.Current.Resources["MainFrame"] as Frame;
+                mainFrame.Navigate(new MainPage());
             }
-            mainFrame = Application.Current.Resources["MainFrame"] as Frame;
-            mainFrame.Navigate(new MainPage());
         }
 
-
-
-        private BitmapImage LoadImageFromBytes(byte[] imageData)
+        private bool validateBio()
         {
-            BitmapImage bitmap = new BitmapImage();
-
-            using (MemoryStream stream = new MemoryStream(imageData))
+            if (string.IsNullOrWhiteSpace(Bio))
             {
-                stream.Position = 0;
-                bitmap.BeginInit();
-                bitmap.CacheOption = BitmapCacheOption.OnLoad;
-                bitmap.StreamSource = stream;
-                bitmap.EndInit();
-                bitmap.Freeze();
+                Application.Current.Dispatcher.Invoke(() => Message = "First name cannot be empty");
+                return false;
             }
+            Application.Current.Dispatcher.Invoke(() => Message = "");
+            return true;
+        }
 
-            return bitmap;
+        private bool validateBusinessAddress()
+        {
+            if (string.IsNullOrWhiteSpace(BusinessAddress))
+            {
+                Application.Current.Dispatcher.Invoke(() => Message = "First name cannot be empty");
+                return false;
+            }
+            Application.Current.Dispatcher.Invoke(() => Message = "");
+            return true;
+        }
+
+        private bool validateFirstName()
+        {
+            if (string.IsNullOrWhiteSpace(FirstName))
+            {
+                Application.Current.Dispatcher.Invoke(() => Message = "First name cannot be empty");
+                return false;
+            }
+            else if (!Regex.IsMatch(FirstName, @"^[a-zA-Zа-яА-Я]+$"))
+            {
+                Application.Current.Dispatcher.Invoke(() => Message = "First name can only contain letters");
+                return false;
+            }
+            Application.Current.Dispatcher.Invoke(() => Message = "");
+            return true;
+        }
+
+        private bool validateSecondName()
+        {
+            if (string.IsNullOrWhiteSpace(SecondName))
+            {
+                Application.Current.Dispatcher.Invoke(() => Message = "Second name cannot be empty");
+                return false;
+            }
+            else if (!Regex.IsMatch(SecondName, @"^[a-zA-Zа-яА-Я]+$"))
+            {
+                Application.Current.Dispatcher.Invoke(() => Message = "Second name can only contain letters");
+                return false;
+            }
+            Application.Current.Dispatcher.Invoke(() => Message = "");
+            return true;
+        }
+
+        private bool validateEmail()
+        {
+            if (string.IsNullOrWhiteSpace(Email))
+            {
+                Application.Current.Dispatcher.Invoke(() => Message = "Email cannot be empty");
+                return false;
+            }
+            else if (!Regex.IsMatch(Email, @"^[a-zA-Z0-9._%+-]+@[a-zA-Z0-9.-]+\.[a-zA-Z]{2,}$"))
+            {
+                Application.Current.Dispatcher.Invoke(() => Message = "Invalid email format");
+                return false;
+            }
+            Application.Current.Dispatcher.Invoke(() => Message = "");
+            return true;
+        }
+
+        private bool validateTel()
+        {
+            if (string.IsNullOrWhiteSpace(Tel))
+            {
+                Application.Current.Dispatcher.Invoke(() => Message = "Ielephone number cannot be empty");
+                return false;
+            }
+            else if (!Regex.IsMatch(Tel, @"^\+?[0-9]{1,3}[\s-]?\(?[0-9]{3}\)?[\s-]?[0-9]{3}[\s-]?[0-9]{2}[\s-]?[0-9]{2}$"))
+            {
+                Application.Current.Dispatcher.Invoke(() => Message = "IInvalid telephone number format");
+                return false;
+            }
+            Application.Current.Dispatcher.Invoke(() => Message = "");
+            return true;
+        }
+
+        private bool ValidateAll()
+        {
+            return validateBio() && validateBusinessAddress() && validateFirstName() && validateSecondName()
+                && validateEmail() && validateTel();
         }
     }
 }

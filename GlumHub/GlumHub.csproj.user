@@ -46,6 +46,9 @@
     <Compile Update="views\master\AsMasterPage.xaml.cs">
       <SubType>Code</SubType>
     </Compile>
+    <Compile Update="views\master\CertainPostPage.xaml.cs">
+      <SubType>Code</SubType>
+    </Compile>
     <Compile Update="views\master\EditProfilePageMaster.xaml.cs">
       <SubType>Code</SubType>
     </Compile>
@@ -148,6 +151,9 @@
       <SubType>Designer</SubType>
     </Page>
     <Page Update="views\master\AsMasterPage.xaml">
+      <SubType>Designer</SubType>
+    </Page>
+    <Page Update="views\master\CertainPostPage.xaml">
       <SubType>Designer</SubType>
     </Page>
     <Page Update="views\master\EditProfilePageMaster.xaml">

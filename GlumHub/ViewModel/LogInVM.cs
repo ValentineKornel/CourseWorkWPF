@@ -64,20 +64,14 @@ namespace GlumHub
         {
             using (ApplicationContextDB db = new ApplicationContextDB())
             {
-                Credentials cred = db.Credentials.FirstOrDefault(c => c.Username == _username);
+                Credentials cred = db.Credentials.FirstOrDefault(c => c.Username == Username);
 
 
                 Password = Application.Current.Resources["Password"] as string;
 
                 if (cred != null && cred.CheckPassword(Password)) {
-                    User user = db.Users.Include(u => u.MasterInfo).Include(u => u.Masters).FirstOrDefault(u => u.Username == _username);
+                    User user = db.Users.Include(u => u.MasterInfo).Include(u => u.Masters).FirstOrDefault(u => u.Username == Username);
 
-                    bool isThrereMasterInfo = db.MasterInfos.Any(i => i.UserId == user.Id);
-                    if (isThrereMasterInfo)
-                    {
-                        MasterInfo masterInfo = db.MasterInfos.FirstOrDefault(i => i.UserId == user.Id);
-                        user.MasterInfo = masterInfo;
-                    }
 
                     if (Application.Current.Resources["User"] == null)
                         Application.Current.Resources.Add("User", user);
@@ -87,10 +81,12 @@ namespace GlumHub
                     var mainFrame = Application.Current.Resources["MainFrame"] as Frame;
                     if(user.Role == ROLES.ADMIN)
                     {
+                        db.Dispose();
                         mainFrame.Navigate(new MainPageAdmin());
                     }
                     else
                     {
+                        db.Dispose();
                         mainFrame.Navigate(new MainPage());
                     }
                 }
@@ -101,12 +97,6 @@ namespace GlumHub
             }
         }
 
-        private void PasswordBox_PasswordChanged(object sender, RoutedEventArgs e)
-        {
-
-            //if (this.DataContext != null)
-            //{ ((dynamic)this.DataContext).Password = ((PasswordBox)sender).Password; }
-        }
 
         private DelegateCommand _registerRedirectCommand;
         public ICommand RegisterRedirectCommand

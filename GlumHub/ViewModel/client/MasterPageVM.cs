@@ -242,8 +242,8 @@ namespace GlumHub
 
         public void ServicePageRedirect()
         {
-            Frame myProfilePageMasterFrame = Application.Current.Resources["MasterPageForClientFrame"] as Frame;
-            myProfilePageMasterFrame.Navigate(new MasterServicePage());
+            Frame masterPageForClientFrame = Application.Current.Resources["MasterPageForClientFrame"] as Frame;
+            masterPageForClientFrame.Navigate(new MasterServicePage());
         }
 
 
@@ -260,8 +260,8 @@ namespace GlumHub
 
         public void PostsPageRedirect()
         {
-            Frame myProfilePageMasterFrame = Application.Current.Resources["MasterPageForClientFrame"] as Frame;
-            myProfilePageMasterFrame.Navigate(new PostsPage());
+            Frame masterPageForClientFrame = Application.Current.Resources["MasterPageForClientFrame"] as Frame;
+            masterPageForClientFrame.Navigate(new PostsPage());
         }
 
 

@@ -222,3 +222,5 @@ D:\Study\CourseWork\GlumHub\GlumHub\obj\Debug\net8.0-windows\views\master\PostsP
 D:\Study\CourseWork\GlumHub\GlumHub\obj\Debug\net8.0-windows\views\master\PostsPage.baml
 D:\Study\CourseWork\GlumHub\GlumHub\obj\Debug\net8.0-windows\views\master\AddNewPostPage.g.cs
 D:\Study\CourseWork\GlumHub\GlumHub\obj\Debug\net8.0-windows\views\master\AddNewPostPage.baml
+D:\Study\CourseWork\GlumHub\GlumHub\obj\Debug\net8.0-windows\views\master\CertainPostPage.g.cs
+D:\Study\CourseWork\GlumHub\GlumHub\obj\Debug\net8.0-windows\views\master\CertainPostPage.baml

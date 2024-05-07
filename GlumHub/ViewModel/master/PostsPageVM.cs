@@ -105,7 +105,39 @@ namespace GlumHub
         private void PostRedirect(long? PostId)
         {
             //myProfilePageMasterFrame.Navigate(new AddNewPostPage());
-            MessageBox.Show("Post page redirect to post with id: " + PostId.ToString());
+            if (Application.Current.Resources["PostId"] == null)
+            {
+                Application.Current.Resources.Add("PostId", PostId);
+            }
+            else
+            {
+                Application.Current.Resources["PostId"] = PostId;
+            }
+
+            Frame masterPageForClientFrame = Application.Current.Resources["MasterPageForClientFrame"] as Frame;
+            Frame userpageForAdminFrame = Application.Current.Resources["UserPageForAdminFrame"] as Frame;
+
+
+            switch (User.Role)
+            {
+                case ROLES.MASTER:
+                    {
+                        myProfilePageMasterFrame.Navigate(new CertainPostPage());
+                        break;
+                    }
+                case ROLES.CLIENT:
+                    {
+                        masterPageForClientFrame.Navigate(new CertainPostPage());
+                        break;
+                    }
+                case ROLES.ADMIN:
+                    {
+                        userpageForAdminFrame.Navigate(new CertainPostPage());
+                        break;
+                    }
+                default: break;
+            }
+
         }
 
         public class PostWrapper
