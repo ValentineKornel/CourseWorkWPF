@@ -40,7 +40,7 @@
 
             <Button Content="{DynamicResource RegisterButton}" FontSize="16" Command="{Binding RegisterRedirectCommand}" Height="30" Width="auto" HorizontalAlignment="Left" Margin="0, 10, 0, 0" Style="{StaticResource SecondaryButtonStyle}"/>
             <Button Content="{DynamicResource LoginButton}" FontSize="18" Command="{Binding LogInCommand}" Height="auto" Width="auto" HorizontalAlignment="Right" Padding="15, 5, 15, 5" Margin="0, -30, 0, 0"/>
-            <Label x:Name="messageLabel" Content="{Binding Message}" FontSize="18" Width="200" Height="30" HorizontalAlignment="Center" />
+            <Label x:Name="messageLabel" Content="{Binding Message}" Foreground="red" FontSize="18" Width="auto" Height="40" HorizontalAlignment="Center" />
         </StackPanel>
 
     </Grid>

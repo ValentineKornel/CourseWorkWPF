@@ -7,11 +7,10 @@
     <Application.Resources>
         <ResourceDictionary>
             <ResourceDictionary.MergedDictionaries>
-                <ResourceDictionary Source="files/EnglishDictionary.xaml"/>
+                <ResourceDictionary Source="files/RussianDictionary.xaml"/>
                 <ResourceDictionary Source="files/LightAppearanceDictionary.xaml"/>
                 <ResourceDictionary Source="Themes/Core.xaml"/>
                 <ResourceDictionary Source="Themes/Brushes.xaml"/>
-                <ResourceDictionary Source="Themes/Icons.xaml"/>
             </ResourceDictionary.MergedDictionaries>
 
 

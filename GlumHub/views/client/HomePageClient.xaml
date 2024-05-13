@@ -21,7 +21,7 @@
             <RowDefinition></RowDefinition>
         </Grid.RowDefinitions>
         <StackPanel Grid.Column="1" Width="auto">
-            <Label Content="Upcoming Booking:" FontSize="20" HorizontalAlignment="Center"></Label>
+            <Label Content="Предстоящие записи:" FontSize="20" HorizontalAlignment="Center"></Label>
             <ListView ItemsSource="{Binding BookedBookings}" BorderThickness="0" Width="auto">
                 <ListView.ItemTemplate>
                     <DataTemplate>

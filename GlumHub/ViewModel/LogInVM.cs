@@ -92,7 +92,7 @@ namespace GlumHub
                 }
                 else
                 {
-                    Application.Current.Dispatcher.Invoke(() => Message = "Incorrect username or password");
+                    Application.Current.Dispatcher.Invoke(() => Message = "Неверный пароль или имя пользователя");
                 }
             }
         }

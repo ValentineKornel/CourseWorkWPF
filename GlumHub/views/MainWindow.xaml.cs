@@ -22,7 +22,7 @@ namespace GlumHub
             InitializeComponent();
             Application.Current.Resources.Add("MainFrame", this.frame);
             frame.Navigate(new LoginPage());
-            Application.Current.Resources.Add("Language", "En");
+            Application.Current.Resources.Add("Language", "Ru");
             Application.Current.Resources.Add("Appearance", "Light");
         }
 

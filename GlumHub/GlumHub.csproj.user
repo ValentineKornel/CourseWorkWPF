@@ -94,6 +94,9 @@
     <Compile Update="views\master\UpcomingBookingPage.xaml.cs">
       <SubType>Code</SubType>
     </Compile>
+    <Compile Update="views\MyMessageBox.xaml.cs">
+      <SubType>Code</SubType>
+    </Compile>
     <Compile Update="views\RegisterPage.xaml.cs">
       <SubType>Code</SubType>
     </Compile>
@@ -205,6 +208,9 @@
       <SubType>Designer</SubType>
     </Page>
     <Page Update="views\master\UpcomingBookingPage.xaml">
+      <SubType>Designer</SubType>
+    </Page>
+    <Page Update="views\MyMessageBox.xaml">
       <SubType>Designer</SubType>
     </Page>
     <Page Update="views\RegisterPage.xaml">

@@ -23,7 +23,7 @@
             <RowDefinition></RowDefinition>
         </Grid.RowDefinitions>
         <StackPanel x:Name="st" Grid.Column="1" Width="auto">
-            <Label Content="Service" FontSize="18" Margin="0, 15, 0, 0"></Label>
+            <Label Content="Услуги" FontSize="18" Margin="0, 15, 0, 0"></Label>
             <ui:SimpleStackPanel>
             </ui:SimpleStackPanel>
             <RichTextBox Height="40">
@@ -33,10 +33,10 @@
                     </Paragraph>
                 </FlowDocument>
             </RichTextBox>
-            <Label Content="Date/time" FontSize="18" Margin="0, 10, 0, 0"></Label>
-            <ext:DateTimePicker Background="#EAD8C0" Value="{Binding Date_Time}" Height="30" FontSize="18"></ext:DateTimePicker>
+            <Label Content="Дата/время" FontSize="18" Margin="0, 10, 0, 0"></Label>
+            <ext:DateTimePicker Background="#EAD8C0" Value="{Binding Date_Time}" Height="30" FontSize="18"/>
 
-            <Button Command="{Binding AddBookingCommand}" Content="Add" FontSize="20" Width="auto" Height="40" Padding="100, 0, 100, 0" Margin="0, 10, 0, 0" HorizontalAlignment="Center"></Button>
+            <Button Command="{Binding AddBookingCommand}" Content="Добавить" FontSize="20" Width="auto" Height="40" Padding="100, 0, 100, 0" Margin="0, 10, 0, 0" HorizontalAlignment="Center"></Button>
         </StackPanel>
 
     </Grid>

@@ -21,7 +21,7 @@
             <RowDefinition></RowDefinition>
         </Grid.RowDefinitions>
         <StackPanel Grid.Column="1" Width="auto">
-            <Button Command="{Binding NewBookingPageRedirectCommand}" Content="New Booking" Width="auto" Height="50" Padding="200, 0, 200, 0" HorizontalAlignment="Center" FontSize="18"></Button>
+            <Button Command="{Binding NewBookingPageRedirectCommand}" Content="Новая запись" Width="auto" Height="50" Padding="200, 0, 200, 0" HorizontalAlignment="Center" FontSize="18"></Button>
 
             <ListView ItemsSource="{Binding FreeBookings}" BorderThickness="0" Width="auto">
                 <ListView.ItemTemplate>

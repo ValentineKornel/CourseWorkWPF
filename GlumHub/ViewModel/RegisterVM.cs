@@ -1,4 +1,5 @@
-﻿using MailKit.Net.Smtp;
+﻿using GlumHub.views;
+using MailKit.Net.Smtp;
 using MimeKit;
 using Prism.Commands;
 using System;
@@ -121,13 +122,14 @@ namespace GlumHub
 
         private void Register()
         {
+            new MyMessageBox("LJ:LJ:L").Show();
             User user = new User(Username, FirstName, SecondName, Email, Tel);
             using (ApplicationContextDB db = new ApplicationContextDB())
             {
                 bool isUsernameTaken = db.Users.Any(u => u.Username == Username);
                 if (isUsernameTaken)
                 {
-                    Application.Current.Dispatcher.Invoke(() => Message = "This username is already taken");
+                    Application.Current.Dispatcher.Invoke(() => Message = "Данное имя пользователя уже занято");
                     return;
                 }
 
@@ -150,7 +152,7 @@ namespace GlumHub
                     }
                     db.Users.Add(user);
                     db.SaveChanges();
-                    Application.Current.Dispatcher.Invoke(() => Message = "You have been registred");
+                    Application.Current.Dispatcher.Invoke(() => Message = "Вы были успешно зарегистрированы");
 
                     string hashedPassword = BCrypt.Net.BCrypt.HashPassword(Password);
                     Credentials credentials = new Credentials(user.Username, hashedPassword, user.Id);
@@ -159,7 +161,7 @@ namespace GlumHub
                 }
                 else
                 {
-                    Application.Current.Dispatcher.Invoke(() => Message = "You shuld fill all information correcty");
+                    Application.Current.Dispatcher.Invoke(() => Message = "Вы должны коррекнтно заполнить тербуемую информацию");
                 }
             }
             
@@ -187,7 +189,7 @@ namespace GlumHub
         {
             if (string.IsNullOrWhiteSpace(Username))
             {
-                Application.Current.Dispatcher.Invoke(() => Message = "Username cannot be empty");
+                Application.Current.Dispatcher.Invoke(() => Message = "Имя ползователя не может быть пустым");
                 return false;
             }
             Application.Current.Dispatcher.Invoke(() => Message = "");
@@ -199,12 +201,12 @@ namespace GlumHub
         {
             if (string.IsNullOrWhiteSpace(FirstName))
             {
-                Application.Current.Dispatcher.Invoke(() => Message = "First name cannot be empty");
+                Application.Current.Dispatcher.Invoke(() => Message = "Имя не может быть пустым");
                 return false;
             }
             else if (!Regex.IsMatch(FirstName, @"^[a-zA-Zа-яА-Я]+$"))
             {
-                Application.Current.Dispatcher.Invoke(() => Message = "First name can only contain letters");
+                Application.Current.Dispatcher.Invoke(() => Message = "Имя должно содержать только буквы");
                 return false;
             }
             Application.Current.Dispatcher.Invoke(() => Message = "");
@@ -220,7 +222,7 @@ namespace GlumHub
             }
             else if (!Regex.IsMatch(SecondName, @"^[a-zA-Zа-яА-Я]+$"))
             {
-                Application.Current.Dispatcher.Invoke(() => Message = "Second name can only contain letters");
+                Application.Current.Dispatcher.Invoke(() => Message = "Фамилия не может быть путой");
                 return false;
             }
             Application.Current.Dispatcher.Invoke(() => Message = "");
@@ -231,12 +233,12 @@ namespace GlumHub
         {
             if (string.IsNullOrWhiteSpace(Email))
             {
-                Application.Current.Dispatcher.Invoke(() => Message = "Email cannot be empty");
+                Application.Current.Dispatcher.Invoke(() => Message = "Email не моежт быть пустым");
                 return false;
             }
             else if (!Regex.IsMatch(Email, @"^[a-zA-Z0-9._%+-]+@[a-zA-Z0-9.-]+\.[a-zA-Z]{2,}$"))
             {
-                Application.Current.Dispatcher.Invoke(() => Message = "Invalid email format");
+                Application.Current.Dispatcher.Invoke(() => Message = "Неверый формат emal почты");
                 return false;
             }
             Application.Current.Dispatcher.Invoke(() => Message = "");
@@ -247,12 +249,12 @@ namespace GlumHub
         {
             if (string.IsNullOrWhiteSpace(Tel))
             {
-                Application.Current.Dispatcher.Invoke(() => Message = "Ielephone number cannot be empty");
+                Application.Current.Dispatcher.Invoke(() => Message = "Номер телефона не может быть пустым");
                 return false;
             }
             else if (!Regex.IsMatch(Tel, @"^\+?[0-9]{1,3}[\s-]?\(?[0-9]{3}\)?[\s-]?[0-9]{3}[\s-]?[0-9]{2}[\s-]?[0-9]{2}$"))
             {
-                Application.Current.Dispatcher.Invoke(() => Message = "IInvalid telephone number format");
+                Application.Current.Dispatcher.Invoke(() => Message = "Неверный формат номера телефона");
                 return false;
             }
             Application.Current.Dispatcher.Invoke(() => Message = "");

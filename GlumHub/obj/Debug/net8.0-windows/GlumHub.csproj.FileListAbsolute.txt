@@ -358,5 +358,6 @@ D:\Study\CourseWork\GlumHub\GlumHub\bin\Debug\net8.0-windows\vi-VN\ModernWpf.Con
 D:\Study\CourseWork\GlumHub\GlumHub\bin\Debug\net8.0-windows\vi-VN\ModernWpf.resources.dll
 D:\Study\CourseWork\GlumHub\GlumHub\obj\Debug\net8.0-windows\Themes\Brushes.baml
 D:\Study\CourseWork\GlumHub\GlumHub\obj\Debug\net8.0-windows\Themes\Core.baml
-D:\Study\CourseWork\GlumHub\GlumHub\obj\Debug\net8.0-windows\Themes\Icons.baml
 D:\Study\CourseWork\GlumHub\GlumHub\obj\Debug\net8.0-windows\Themes\Core.g.cs
+D:\Study\CourseWork\GlumHub\GlumHub\obj\Debug\net8.0-windows\views\MyMessageBox.g.cs
+D:\Study\CourseWork\GlumHub\GlumHub\obj\Debug\net8.0-windows\views\MyMessageBox.baml

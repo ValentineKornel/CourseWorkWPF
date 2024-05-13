@@ -52,7 +52,7 @@ namespace DarkBlue {
                 return;
             }
             _contentLoaded = true;
-            System.Uri resourceLocater = new System.Uri("/GlumHub;component/themes/core.xaml", System.UriKind.Relative);
+            System.Uri resourceLocater = new System.Uri("/GlumHub;V1.0.0.0;component/themes/core.xaml", System.UriKind.Relative);
             
             #line 1 "..\..\..\..\Themes\Core.xaml"
             System.Windows.Application.LoadComponent(this, resourceLocater);
