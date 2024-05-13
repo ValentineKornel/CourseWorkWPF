@@ -18,13 +18,10 @@ namespace GlumHub
         public DbSet<Notification> Notifications { get; set; }
         public DbSet<Post> Posts { get; set; }
 
-
-
         public DbSet<UserRelation> UserRelations { get; set; }
 
         public ApplicationContextDB()
         {
-            //Database.EnsureDeleted();
             Database.EnsureCreated();
         }
 
@@ -62,6 +59,5 @@ namespace GlumHub
                 .HasForeignKey(ur => ur.MasterId)
                 .OnDelete(DeleteBehavior.Restrict);
         }
-
     }
 }

@@ -7,7 +7,7 @@ using System.Linq;
 
 namespace GlumHub
 {
-    internal class NotificationsPageVM
+    internal class NotificationsPageVM : INotifyPropertyChanged
     {
 
         User _user;
@@ -22,7 +22,7 @@ namespace GlumHub
                 OnPropertyChanged(nameof(Notifications));
             }
         }
-
+            
         public NotificationsPageVM()
         {
             _user = Application.Current.Resources["User"] as User;

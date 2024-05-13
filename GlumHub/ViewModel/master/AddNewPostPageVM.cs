@@ -14,7 +14,7 @@ using System.Windows.Media.Imaging;
 
 namespace GlumHub
 {
-    class AddNewPostPageVM
+    class AddNewPostPageVM : INotifyPropertyChanged
     {
 
         private User _user;
@@ -56,7 +56,7 @@ namespace GlumHub
 
 
 
-        private DelegateCommand _loadImageCommand;
+        private DelegateCommand _loadImageCommand;  
         public ICommand LoadImageCommand
         {
             get

@@ -5,7 +5,7 @@
       xmlns:d="http://schemas.microsoft.com/expression/blend/2008" 
       xmlns:local="clr-namespace:GlumHub"
       mc:Ignorable="d" 
-      d:DesignHeight="1080" d:DesignWidth="1560" Background="{DynamicResource PageBackground}"
+      d:DesignHeight="1080" d:DesignWidth="1560"
       Title="SearchPage">
 
     <Page.DataContext>
@@ -18,7 +18,7 @@
         </Grid.ColumnDefinitions>
         <StackPanel Margin="20,0,0,0">
             <StackPanel Width="auto" Height="auto" Margin="0, 10, 0, 0">
-                <RichTextBox Height="40" Width="730" HorizontalAlignment="Left">
+                <RichTextBox Height="40" Width="730" FontSize="18" HorizontalAlignment="Left">
                     <FlowDocument>
                         <Paragraph>
                             <Run Text="{Binding SearchText}"/>

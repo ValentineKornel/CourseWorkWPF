@@ -11,7 +11,7 @@ using static GlumHub.SearchPageVM;
 
 namespace GlumHub
 {
-    class PostsPageVM
+    class PostsPageVM : INotifyPropertyChanged
     {
 
         Frame myProfilePageMasterFrame;
@@ -58,7 +58,6 @@ namespace GlumHub
             long? MasterId = Application.Current.Resources["MasterId"] as long?;
             using (ApplicationContextDB db = new ApplicationContextDB())
             {
-                //if(db.Users.FirstOrDefault(u => u.Id == MasterId).Role == ROLES.CLIENT) { return; }
 
                 foreach(Post post in db.Posts.Where(p => p.Masterid == MasterId))
                 {
@@ -104,7 +103,6 @@ namespace GlumHub
 
         private void PostRedirect(long? PostId)
         {
-            //myProfilePageMasterFrame.Navigate(new AddNewPostPage());
             if (Application.Current.Resources["PostId"] == null)
             {
                 Application.Current.Resources.Add("PostId", PostId);

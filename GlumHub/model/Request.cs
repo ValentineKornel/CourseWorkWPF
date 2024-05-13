@@ -29,9 +29,7 @@ namespace GlumHub
         private string? _attachmentLetter;
         public string? AttachmentLetter { get { return _attachmentLetter; } set { _attachmentLetter = value; } }
 
-
         public Request() { }
-
 
         public Request(long clientid, byte[] attachmentImage, string? attachmentLetter)
         {

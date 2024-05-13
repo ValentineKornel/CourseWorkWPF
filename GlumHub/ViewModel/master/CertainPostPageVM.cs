@@ -11,7 +11,7 @@ using System.Windows.Input;
 
 namespace GlumHub
 {
-    internal class CertainPostPageVM
+    internal class CertainPostPageVM : INotifyPropertyChanged
     {
 
         private User _user;
@@ -27,6 +27,8 @@ namespace GlumHub
             }
         }
 
+        private long? PostId;
+
         private string _deleteButttonVisibilitiProperty;
         public string DeleteButtonVisibilityProperty
         {
@@ -38,22 +40,11 @@ namespace GlumHub
             }
         }
 
-        private string _editButttonVisibilitiProperty;
-        public string EditButtonVisibilityProperty
-        {
-            get { return _editButttonVisibilitiProperty; }
-            set
-            {
-                _editButttonVisibilitiProperty = value;
-                OnPropertyChanged(nameof(EditButtonVisibilityProperty));
-            }
-        }
-
         public CertainPostPageVM()
         {
             _user = Application.Current.Resources["User"] as User;
 
-            long? PostId = Application.Current.Resources["PostId"] as long?;
+            PostId = Application.Current.Resources["PostId"] as long?;
 
             using (ApplicationContextDB db = new ApplicationContextDB())
             {
@@ -66,19 +57,16 @@ namespace GlumHub
                 case ROLES.MASTER:
                     {
                         DeleteButtonVisibilityProperty = "Visible";
-                        EditButtonVisibilityProperty = "Visible";
                         break;
                     }
                 case ROLES.CLIENT:
                     {
                         DeleteButtonVisibilityProperty = "Hidden";
-                        EditButtonVisibilityProperty = "Hidden";
                         break;
                     }
                 case ROLES.ADMIN:
                     {
                         DeleteButtonVisibilityProperty = "Visible";
-                        EditButtonVisibilityProperty = "Hidden";
                         break;
                     }
                 default: break;
@@ -106,23 +94,24 @@ namespace GlumHub
 
         public void DeletePost()
         {
-            MessageBox.Show("Deleting post");
-        }
-
-        private DelegateCommand _editPostRedirectCommand;
-        public ICommand EditPostRedirectCommand
-        {
-            get
+            using (ApplicationContextDB db = new ApplicationContextDB())
             {
-                if (_editPostRedirectCommand == null)
-                    _editPostRedirectCommand = new DelegateCommand(DeletePost);
-                return _editPostRedirectCommand;
+                post = db.Posts.FirstOrDefault(p => p.Id == PostId);
+                db.Posts.Remove(post);
+                db.SaveChanges();
             }
-        }
 
-        public void EditPostRedirect()
-        {
-            MessageBox.Show("Edit post redirecting");
+            if(_user.Role == ROLES.ADMIN)
+            {
+                Notification.SendNotification(post.Masterid, "Ваш пост '" + post.Description + "' был удален");
+                Frame userpageForAdminFrame = Application.Current.Resources["UserPageForAdminFrame"] as Frame;
+                userpageForAdminFrame.Navigate(new PostsPage());
+            }
+            else
+            {
+                Frame myProfilePageMasterFrame = Application.Current.Resources["MyProfilePageMasterFrame"] as Frame;
+                myProfilePageMasterFrame.Navigate(new PostsPage());
+            }
         }
     }
 }

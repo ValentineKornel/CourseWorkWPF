@@ -13,7 +13,7 @@ using System.Windows.Input;
 
 namespace GlumHub
 {
-    class NewBookingPageVM
+    class NewBookingPageVM : INotifyPropertyChanged
     {
 
         Frame homePageMasterFrame;
@@ -52,23 +52,6 @@ namespace GlumHub
         }
 
 
-
-        private DelegateCommand _newBookingPageRedirectCommand;
-        public ICommand NewBookingPageRedirectCommand
-        {
-            get
-            {
-                if (_newBookingPageRedirectCommand == null)
-                    _newBookingPageRedirectCommand = new DelegateCommand(NewBookingPageRedirect);
-                return _newBookingPageRedirectCommand;
-            }
-        }
-
-        private void NewBookingPageRedirect()
-        {
-            homePageMasterFrame = Application.Current.Resources["HomePageMasterFrame"] as Frame;
-            homePageMasterFrame.Navigate(new NewBookingPage());
-        }
 
 
         private DelegateCommand _addBookingCommand;

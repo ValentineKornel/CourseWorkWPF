@@ -13,7 +13,7 @@ using System.Windows.Input;
 
 namespace GlumHub
 {
-    internal class UpcomingBookingPageVM
+    internal class UpcomingBookingPageVM : INotifyPropertyChanged
     {
         User Master;
 

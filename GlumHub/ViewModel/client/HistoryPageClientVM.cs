@@ -12,7 +12,7 @@ using System.Windows.Input;
 
 namespace GlumHub
 {
-    internal class HistoryPageClientVM
+    internal class HistoryPageClientVM : INotifyPropertyChanged
     {
         User user;
 

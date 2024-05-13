@@ -14,7 +14,7 @@ using System.Windows.Input;
 
 namespace GlumHub
 {
-    internal class UserPageVM
+    internal class UserPageVM : INotifyPropertyChanged
     {
 
         private User _user;

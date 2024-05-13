@@ -24,5 +24,10 @@ namespace GlumHub
         {
             InitializeComponent();
         }
+
+        private void StatisticBar_Loaded(object sender, RoutedEventArgs e)
+        {
+
+        }
     }
 }

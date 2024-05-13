@@ -16,7 +16,7 @@ using System.Windows.Input;
 
 namespace GlumHub
 {
-    class SearchPageVM
+    class SearchPageVM : INotifyPropertyChanged
     {
         Frame homePageFrame;
         private User _user;
@@ -118,24 +118,6 @@ namespace GlumHub
             }
         }
 
-/*
-        private void SearchAsAdmin()
-        {
-            using (ApplicationContextDB db = new ApplicationContextDB())
-            {
-                SearchedMasters.Clear();
-
-
-                _user = db.Users.Include(u => u.MasterInfo).Include(u => u.Masters).FirstOrDefault(u => u.Id == _user.Id);
-
-                foreach (User master in db.Users.Include(u => u.MasterInfo).Where(
-                    u => (u.Username.Contains(SearchText) || u.Firstname.Contains(SearchText) || u.Secondname.Contains(SearchText))
-                    && u.Id != _user.Id))
-                {
-                    SearchedMasters.Add(new MasterWrapper(master, MasterPageRedirectCommand, "Hidden"));
-                }
-            }
-        }*/
 
         private DelegateCommand<long?> _masterPageRedirectCommand;
         public ICommand MasterPageRedirectCommand
@@ -151,7 +133,7 @@ namespace GlumHub
         private void MasterPageRedirect(long? MasterId)
         {
             homePageFrame = Application.Current.Resources["HomePageFrame"] as Frame;
-            if (Application.Current.Resources["MasterId"] == null)
+            if (Application.Current.Resources["MasterId"] == null)  
                 Application.Current.Resources.Add("MasterId", MasterId);
             else
                 Application.Current.Resources["MasterId"] = MasterId;

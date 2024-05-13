@@ -9,6 +9,7 @@ using System.Security.RightsManagement;
 using MimeKit;
 using MailKit.Net.Smtp;
 using System.Windows;
+using Microsoft.EntityFrameworkCore;
 
 namespace GlumHub
 {
@@ -52,7 +53,8 @@ namespace GlumHub
                 db.Notifications.Add(notification);
                 db.SaveChanges();
             }
-            SendEmailNotification(receiverId, message, "plain");
+             SendEmailNotification(receiverId, message, "plain");
+
         }
 
         public static void SendEmailNotification(long receiverId, string message, string bodyType)
@@ -84,7 +86,41 @@ namespace GlumHub
                 }
             }catch(Exception ex)
             {
+                Console.WriteLine($"Ошибка при отправке электронного письма: {ex.Message}");
+            }
+        }
 
+        public static async Task SendEmailNotificationAsync(long receiverId, string message, string bodyType)
+        {
+            try
+            {
+                User receiver;
+                using (ApplicationContextDB db = new ApplicationContextDB())
+                {
+                    receiver = await db.Users.FirstOrDefaultAsync(u => u.Id == receiverId);
+                }
+
+                using var emailMessage = new MimeMessage();
+
+                emailMessage.From.Add(new MailboxAddress("", "glumhub@gmail.com"));
+                emailMessage.To.Add(new MailboxAddress("", receiver.Email));
+                emailMessage.Subject = "Notification";
+                emailMessage.Body = new TextPart(bodyType)
+                {
+                    Text = message
+                };
+
+                using (var client = new SmtpClient())
+                {
+                    client.ConnectAsync("smtp.gmail.com", 587, MailKit.Security.SecureSocketOptions.StartTls);
+                    client.AuthenticateAsync("glumhub@gmail.com", "erhc mmig kqdq kzsj");
+                    client.SendAsync(emailMessage);
+                    client.DisconnectAsync(true);
+                }
+            }
+            catch (Exception ex)
+            {
+                Console.WriteLine($"Ошибка при отправке электронного письма: {ex.Message}");
             }
         }
 
@@ -113,7 +149,36 @@ namespace GlumHub
                 }
             }catch (Exception ex)
             {
+                Console.WriteLine($"Ошибка при отправке электронного письма: {ex.Message}");
+            }
+        }
 
+        public static async Task SendEmailNotificationAsync(string address, string message, string bodyType)
+        {
+
+            try
+            {
+                using var emailMessage = new MimeMessage();
+
+                emailMessage.From.Add(new MailboxAddress("", "glumhub@gmail.com"));
+                emailMessage.To.Add(new MailboxAddress("", address));
+                emailMessage.Subject = "Notification";
+                emailMessage.Body = new TextPart(bodyType)
+                {
+                    Text = message
+                };
+
+                using (var client = new SmtpClient())
+                {
+                    client.ConnectAsync("smtp.gmail.com", 587, MailKit.Security.SecureSocketOptions.StartTls);
+                    client.AuthenticateAsync("glumhub@gmail.com", "erhc mmig kqdq kzsj");
+                    client.SendAsync(emailMessage);
+                    client.DisconnectAsync(true);
+                }
+            }
+            catch (Exception ex)
+            {
+                Console.WriteLine($"Ошибка при отправке электронного письма: {ex.Message}");
             }
         }
 

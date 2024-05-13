@@ -10,7 +10,7 @@ using System.Windows.Media.Imaging;
 
 namespace GlumHub
 {
-    internal class RequestPageVM
+    internal class RequestPageVM : INotifyPropertyChanged
     {
 
         private Request _request;
@@ -45,18 +45,15 @@ namespace GlumHub
                 _request = db.Requests.Include(r => r.Client).FirstOrDefault(r => r.Id == requestId);
             }
 
-            AttachmentImage = LoadImageFromBytes(_request.AttachmentImage);
+            AttachmentImage = ByteArrayToImageConverter.LoadImageFromBytes(_request.AttachmentImage);
             AttachmentLetter = _request.AttachmentLetter;
         }
-
 
         public event PropertyChangedEventHandler PropertyChanged;
         protected virtual void OnPropertyChanged(string propertyName)
         {
             PropertyChanged?.Invoke(this, new PropertyChangedEventArgs(propertyName));
         }
-
-
 
         private DelegateCommand _confirmCommand;
         public ICommand ConfirmCommand
@@ -75,7 +72,6 @@ namespace GlumHub
             {
                 Request req = db.Requests.FirstOrDefault(r => r.Id == _request.Id);
                 db.Requests.Remove(req);
-
 
                 User userToChange = db.Users.FirstOrDefault(u => u.Id ==  _request.Clientid);
                 userToChange.Role = ROLES.MASTER;
@@ -113,23 +109,6 @@ namespace GlumHub
         }
 
 
-
-        private BitmapImage LoadImageFromBytes(byte[] imageData)
-        {
-            BitmapImage bitmap = new BitmapImage();
-
-            using (MemoryStream stream = new MemoryStream(imageData))
-            {
-                stream.Position = 0;
-                bitmap.BeginInit();
-                bitmap.CacheOption = BitmapCacheOption.OnLoad;
-                bitmap.StreamSource = stream;
-                bitmap.EndInit();
-                bitmap.Freeze();
-            }
-
-            return bitmap;
-        }
 
     }
 }

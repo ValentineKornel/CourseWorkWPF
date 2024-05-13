@@ -14,7 +14,7 @@ using static GlumHub.SearchPageVM;
 
 namespace GlumHub
 {
-    internal class MyMastersPageVM
+    internal class MyMastersPageVM : INotifyPropertyChanged
     {
         Frame homePageFrame;
         private User _user;

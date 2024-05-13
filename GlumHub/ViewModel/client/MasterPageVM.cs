@@ -16,7 +16,7 @@ using static GlumHub.FreeBookingPageVM;
 
 namespace GlumHub
 {
-    class MasterPageVM
+    class MasterPageVM : INotifyPropertyChanged
     {
         private long? _masterId;
         public long? MasterId
@@ -101,7 +101,6 @@ namespace GlumHub
                 }
 
 
-                //Application.Current.Resources.Remove("MasterId");
             }
             FreeBookings = new ObservableCollection<BookingWrapper>();
             UpdateFreeBookings();
@@ -192,6 +191,7 @@ namespace GlumHub
                 <p><a href=""{googleCalendarUrlForClient}"">Add to Google Calendar</a></p>
                 ";
                 Notification.SendEmailNotification(bookingToBook.Client.Id, messageHtmlForClient, "html");
+
 
 
                 string googleCalendarUrlForMaster = Notification.GenerateGoogleCalendarUrlForMaster(bookingToBook);

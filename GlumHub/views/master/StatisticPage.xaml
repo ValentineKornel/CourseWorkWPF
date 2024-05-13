@@ -5,7 +5,7 @@
       xmlns:d="http://schemas.microsoft.com/expression/blend/2008" 
       xmlns:local="clr-namespace:GlumHub"
       mc:Ignorable="d" 
-      d:DesignHeight="450" d:DesignWidth="1240" Background="{DynamicResource PageBackground}"
+      d:DesignHeight="900" d:DesignWidth="1240"
       Title="StatisticPage">
 
     <Page.DataContext>
@@ -21,10 +21,14 @@
                 <RowDefinition></RowDefinition>
             </Grid.RowDefinitions>
             <StackPanel Grid.Column="1" Width="auto">
-                <StackPanel Orientation="Horizontal">
-                    <Label FontSize="20">Services completed:</Label>
-                    <Label FontSize="20" Content="{Binding ServicesComplitedTotalAmount}"></Label>
-                </StackPanel>
+            <StackPanel Orientation="Horizontal">
+                <Label FontSize="20">Services completed:</Label>
+                <Label FontSize="20" Content="{Binding ServicesComplitedTotalAmount}"></Label>
+            </StackPanel>
+            <Label FontSize="18">Statistic this year:</Label>
+            <Border BorderThickness="1" BorderBrush="Black" Padding="5, 5, 5, 5">
+                <local:StatisticBar Height="350"></local:StatisticBar>
+            </Border>
                 <Label FontSize="18" Margin="0, 20, 0, 0">Best clients:</Label>
             <ListView ItemsSource="{Binding BestClents}" BorderThickness="0" Width="auto">
                 <ListView.ItemTemplate>

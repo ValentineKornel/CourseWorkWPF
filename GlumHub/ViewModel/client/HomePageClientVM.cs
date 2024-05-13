@@ -13,7 +13,7 @@ using System.Windows.Input;
 
 namespace GlumHub
 {
-    internal class HomePageClientVM
+    internal class HomePageClientVM : INotifyPropertyChanged
     {
         User user;
 

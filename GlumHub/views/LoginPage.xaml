@@ -6,7 +6,7 @@
       xmlns:local="clr-namespace:GlumHub"
       mc:Ignorable="d" 
       d:DesignHeight="450" d:DesignWidth="800"
-      Title="LoginPage" Background="{DynamicResource PageBackground}"
+      Title="LoginPage"
       >
     <Page.DataContext>
         <local:LogInVM></local:LogInVM>

@@ -17,7 +17,7 @@ using System.Windows.Media.Imaging;
 
 namespace GlumHub
 {
-    class EditProfilePageMasterVM
+    class EditProfilePageMasterVM : INotifyPropertyChanged
     {
         Frame mainFrame;
 

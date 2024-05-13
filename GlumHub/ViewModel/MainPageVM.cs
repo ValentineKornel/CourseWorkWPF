@@ -11,7 +11,7 @@ using System.Windows.Input;
 
 namespace GlumHub
 {
-    class MainPageVM
+    class MainPageVM : INotifyPropertyChanged
     {
         Frame mainFrame;
         Frame homePageFrame;
@@ -111,7 +111,7 @@ namespace GlumHub
         public ICommand HomePageRedirectCommand
         {
             get
-            {
+            {   
                 if (_homeRedirectCommand == null)
                     _homeRedirectCommand = new DelegateCommand(HomePageRedirect);
                 return _homeRedirectCommand;

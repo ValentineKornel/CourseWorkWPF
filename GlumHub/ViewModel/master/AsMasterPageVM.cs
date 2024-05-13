@@ -11,8 +11,8 @@ using System.Windows.Input;
 
 namespace GlumHub
 {
-    class AsMasterPageVM
-    {
+    class AsMasterPageVM : INotifyPropertyChanged
+    {   
         Frame asMasterPageFrame;
 
 

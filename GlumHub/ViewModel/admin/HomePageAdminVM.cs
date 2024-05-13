@@ -14,7 +14,7 @@ using System.Windows.Input;
 
 namespace GlumHub
 {
-    internal class HomePageAdminVM
+    internal class HomePageAdminVM : INotifyPropertyChanged
     {
         Frame homePageFrame;
 

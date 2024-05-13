@@ -5,7 +5,7 @@
       xmlns:d="http://schemas.microsoft.com/expression/blend/2008" 
       xmlns:local="clr-namespace:GlumHub"
       mc:Ignorable="d" 
-      d:DesignHeight="1080" d:DesignWidth="1920" Background="{DynamicResource PageBackground}"
+      d:DesignHeight="1080" d:DesignWidth="1920"
       Title="EditProfilePageMaster">
 
     <Page.DataContext>
@@ -31,7 +31,7 @@
                 <Button Command="{Binding ChangeProfileImageCommand}" Content="{DynamicResource ChangePhotoButton}" FontSize="18" Width="auto" Height="50" Padding="20, 0, 20, 0" Margin="0, -150, 0, 0" HorizontalAlignment="Right"></Button>
             </StackPanel>
             <Label Content="{DynamicResource BioLabel}" FontSize="18"/>
-            <RichTextBox Height="80">
+            <RichTextBox Height="80" FontSize="16">
                 <FlowDocument>
                     <Paragraph>
                         <Run Text="{Binding Bio}"/>

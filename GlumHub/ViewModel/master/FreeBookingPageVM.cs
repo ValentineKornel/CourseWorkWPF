@@ -14,7 +14,7 @@ using System.Windows.Input;
 
 namespace GlumHub
 {
-    class FreeBookingPageVM
+    class FreeBookingPageVM : INotifyPropertyChanged
     {
         User Master;
         Frame homePageMasterFrame;

@@ -11,7 +11,7 @@ using System.Windows.Input;
 
 namespace GlumHub
 {
-    class MyProfilePageMesterVM
+    class MyProfilePageMesterVM : INotifyPropertyChanged
     {
         Frame homePageFrame;
         Frame myProfilePageMasterFrame;

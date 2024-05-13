@@ -13,7 +13,7 @@ using System.Windows.Input;
 
 namespace GlumHub
 {
-    internal class SearchPageAdminVM
+    internal class SearchPageAdminVM : INotifyPropertyChanged
     {
         Frame homePageFrame;
         private User _user;

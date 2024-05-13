@@ -11,7 +11,7 @@ using System.Windows.Input;
 
 namespace GlumHub
 {
-    class SettigsPageVM
+    class SettigsPageVM : INotifyPropertyChanged
     {
         private ResourceDictionary englishDictionary;
         private ResourceDictionary russianDictionary;

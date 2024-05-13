@@ -10,7 +10,7 @@ using System.Windows;
 
 namespace GlumHub
 {
-    class StatisticPageVM
+    class StatisticPageVM : INotifyPropertyChanged
     {
         User User;
 
@@ -45,7 +45,7 @@ namespace GlumHub
 
             using(ApplicationContextDB db  = new ApplicationContextDB())
             {
-                ServicesComplitedTotalAmount = db.Bookings.Where(b => b.MasterId == User.Id && b.Booked == true).Count();
+                ServicesComplitedTotalAmount = db.Bookings.Where(b => b.MasterId == User.Id && b.Booked == true && b.Date_Time < DateTime.Now).Count();
 
                 var query = (from b in db.Bookings.Include(b => b.Client)
                              where b.MasterId == User.Id && b.Booked == true

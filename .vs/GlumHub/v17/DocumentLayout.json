@@ -3,20 +3,44 @@
   "WorkspaceRootPath": "D:\\Study\\CourseWork\\GlumHub\\",
   "Documents": [
     {
-      "AbsoluteMoniker": "D:0:0:{3EA0330D-57CB-4EDD-A566-416BC8F779DB}|GlumHub\\GlumHub.csproj|d:\\study\\coursework\\glumhub\\glumhub\\viewmodel\\master\\editprofilepagemastervm.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
-      "RelativeMoniker": "D:0:0:{3EA0330D-57CB-4EDD-A566-416BC8F779DB}|GlumHub\\GlumHub.csproj|solutionrelative:glumhub\\viewmodel\\master\\editprofilepagemastervm.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
+      "AbsoluteMoniker": "D:0:0:{3EA0330D-57CB-4EDD-A566-416BC8F779DB}|GlumHub\\GlumHub.csproj|d:\\study\\coursework\\glumhub\\glumhub\\model\\notification.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
+      "RelativeMoniker": "D:0:0:{3EA0330D-57CB-4EDD-A566-416BC8F779DB}|GlumHub\\GlumHub.csproj|solutionrelative:glumhub\\model\\notification.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
     },
     {
-      "AbsoluteMoniker": "D:0:0:{3EA0330D-57CB-4EDD-A566-416BC8F779DB}|GlumHub\\GlumHub.csproj|d:\\study\\coursework\\glumhub\\glumhub\\views\\master\\editprofilepagemaster.xaml||{F11ACC28-31D1-4C80-A34B-F4E09D3D753C}",
-      "RelativeMoniker": "D:0:0:{3EA0330D-57CB-4EDD-A566-416BC8F779DB}|GlumHub\\GlumHub.csproj|solutionrelative:glumhub\\views\\master\\editprofilepagemaster.xaml||{F11ACC28-31D1-4C80-A34B-F4E09D3D753C}"
+      "AbsoluteMoniker": "D:0:0:{3EA0330D-57CB-4EDD-A566-416BC8F779DB}|GlumHub\\GlumHub.csproj|d:\\study\\coursework\\glumhub\\glumhub\\repository\\applicationcontextdb.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
+      "RelativeMoniker": "D:0:0:{3EA0330D-57CB-4EDD-A566-416BC8F779DB}|GlumHub\\GlumHub.csproj|solutionrelative:glumhub\\repository\\applicationcontextdb.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
     },
     {
-      "AbsoluteMoniker": "D:0:0:{3EA0330D-57CB-4EDD-A566-416BC8F779DB}|GlumHub\\GlumHub.csproj|d:\\study\\coursework\\glumhub\\glumhub\\views\\client\\editprofilepageclient.xaml||{F11ACC28-31D1-4C80-A34B-F4E09D3D753C}",
-      "RelativeMoniker": "D:0:0:{3EA0330D-57CB-4EDD-A566-416BC8F779DB}|GlumHub\\GlumHub.csproj|solutionrelative:glumhub\\views\\client\\editprofilepageclient.xaml||{F11ACC28-31D1-4C80-A34B-F4E09D3D753C}"
+      "AbsoluteMoniker": "D:0:0:{3EA0330D-57CB-4EDD-A566-416BC8F779DB}|GlumHub\\GlumHub.csproj|d:\\study\\coursework\\glumhub\\glumhub\\model\\request.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
+      "RelativeMoniker": "D:0:0:{3EA0330D-57CB-4EDD-A566-416BC8F779DB}|GlumHub\\GlumHub.csproj|solutionrelative:glumhub\\model\\request.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
     },
     {
-      "AbsoluteMoniker": "D:0:0:{3EA0330D-57CB-4EDD-A566-416BC8F779DB}|GlumHub\\GlumHub.csproj|d:\\study\\coursework\\glumhub\\glumhub\\viewmodel\\client\\editprofilepageclientvm.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
-      "RelativeMoniker": "D:0:0:{3EA0330D-57CB-4EDD-A566-416BC8F779DB}|GlumHub\\GlumHub.csproj|solutionrelative:glumhub\\viewmodel\\client\\editprofilepageclientvm.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
+      "AbsoluteMoniker": "D:0:0:{3EA0330D-57CB-4EDD-A566-416BC8F779DB}|GlumHub\\GlumHub.csproj|d:\\study\\coursework\\glumhub\\glumhub\\viewmodel\\admin\\requestpagevm.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
+      "RelativeMoniker": "D:0:0:{3EA0330D-57CB-4EDD-A566-416BC8F779DB}|GlumHub\\GlumHub.csproj|solutionrelative:glumhub\\viewmodel\\admin\\requestpagevm.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
+    },
+    {
+      "AbsoluteMoniker": "D:0:0:{3EA0330D-57CB-4EDD-A566-416BC8F779DB}|GlumHub\\GlumHub.csproj|d:\\study\\coursework\\glumhub\\glumhub\\views\\admin\\requestpage.xaml||{F11ACC28-31D1-4C80-A34B-F4E09D3D753C}",
+      "RelativeMoniker": "D:0:0:{3EA0330D-57CB-4EDD-A566-416BC8F779DB}|GlumHub\\GlumHub.csproj|solutionrelative:glumhub\\views\\admin\\requestpage.xaml||{F11ACC28-31D1-4C80-A34B-F4E09D3D753C}"
+    },
+    {
+      "AbsoluteMoniker": "D:0:0:{3EA0330D-57CB-4EDD-A566-416BC8F779DB}|GlumHub\\GlumHub.csproj|d:\\study\\coursework\\glumhub\\glumhub\\viewmodel\\client\\searchpagevm.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
+      "RelativeMoniker": "D:0:0:{3EA0330D-57CB-4EDD-A566-416BC8F779DB}|GlumHub\\GlumHub.csproj|solutionrelative:glumhub\\viewmodel\\client\\searchpagevm.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
+    },
+    {
+      "AbsoluteMoniker": "D:0:0:{3EA0330D-57CB-4EDD-A566-416BC8F779DB}|GlumHub\\GlumHub.csproj|d:\\study\\coursework\\glumhub\\glumhub\\viewmodel\\master\\postspagevm.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
+      "RelativeMoniker": "D:0:0:{3EA0330D-57CB-4EDD-A566-416BC8F779DB}|GlumHub\\GlumHub.csproj|solutionrelative:glumhub\\viewmodel\\master\\postspagevm.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
+    },
+    {
+      "AbsoluteMoniker": "D:0:0:{3EA0330D-57CB-4EDD-A566-416BC8F779DB}|GlumHub\\GlumHub.csproj|d:\\study\\coursework\\glumhub\\glumhub\\viewmodel\\master\\certainpostpagevm.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
+      "RelativeMoniker": "D:0:0:{3EA0330D-57CB-4EDD-A566-416BC8F779DB}|GlumHub\\GlumHub.csproj|solutionrelative:glumhub\\viewmodel\\master\\certainpostpagevm.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
+    },
+    {
+      "AbsoluteMoniker": "D:0:0:{3EA0330D-57CB-4EDD-A566-416BC8F779DB}|GlumHub\\GlumHub.csproj|d:\\study\\coursework\\glumhub\\glumhub\\viewmodel\\client\\applytomasterpagevm.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
+      "RelativeMoniker": "D:0:0:{3EA0330D-57CB-4EDD-A566-416BC8F779DB}|GlumHub\\GlumHub.csproj|solutionrelative:glumhub\\viewmodel\\client\\applytomasterpagevm.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
+    },
+    {
+      "AbsoluteMoniker": "D:0:0:{3EA0330D-57CB-4EDD-A566-416BC8F779DB}|GlumHub\\GlumHub.csproj|d:\\study\\coursework\\glumhub\\glumhub\\converters\\bytearraytoimageconverter.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
+      "RelativeMoniker": "D:0:0:{3EA0330D-57CB-4EDD-A566-416BC8F779DB}|GlumHub\\GlumHub.csproj|solutionrelative:glumhub\\converters\\bytearraytoimageconverter.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
     },
     {
       "AbsoluteMoniker": "D:0:0:{3EA0330D-57CB-4EDD-A566-416BC8F779DB}|GlumHub\\GlumHub.csproj|d:\\study\\coursework\\glumhub\\glumhub\\model\\user.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
@@ -30,7 +54,7 @@
       "DocumentGroups": [
         {
           "DockedHeight": 200,
-          "SelectedChildIndex": 2,
+          "SelectedChildIndex": 1,
           "Children": [
             {
               "$type": "Bookmark",
@@ -38,65 +62,144 @@
             },
             {
               "$type": "Document",
-              "DocumentIndex": 1,
-              "Title": "EditProfilePageMaster.xaml",
-              "DocumentMoniker": "D:\\Study\\CourseWork\\GlumHub\\GlumHub\\views\\master\\EditProfilePageMaster.xaml",
-              "RelativeDocumentMoniker": "GlumHub\\views\\master\\EditProfilePageMaster.xaml",
-              "ToolTip": "D:\\Study\\CourseWork\\GlumHub\\GlumHub\\views\\master\\EditProfilePageMaster.xaml",
-              "RelativeToolTip": "GlumHub\\views\\master\\EditProfilePageMaster.xaml",
-              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.003549|",
-              "WhenOpened": "2024-05-07T02:54:31.473Z",
-              "EditorCaption": ""
-            },
-            {
-              "$type": "Document",
               "DocumentIndex": 0,
-              "Title": "EditProfilePageMasterVM.cs",
-              "DocumentMoniker": "D:\\Study\\CourseWork\\GlumHub\\GlumHub\\ViewModel\\master\\EditProfilePageMasterVM.cs",
-              "RelativeDocumentMoniker": "GlumHub\\ViewModel\\master\\EditProfilePageMasterVM.cs",
-              "ToolTip": "D:\\Study\\CourseWork\\GlumHub\\GlumHub\\ViewModel\\master\\EditProfilePageMasterVM.cs",
-              "RelativeToolTip": "GlumHub\\ViewModel\\master\\EditProfilePageMasterVM.cs",
-              "ViewState": "AQIAAE8AAAAAAAAAAAAAAIQAAAAqAAAA",
+              "Title": "Notification.cs",
+              "DocumentMoniker": "D:\\Study\\CourseWork\\GlumHub\\GlumHub\\model\\Notification.cs",
+              "RelativeDocumentMoniker": "GlumHub\\model\\Notification.cs",
+              "ToolTip": "D:\\Study\\CourseWork\\GlumHub\\GlumHub\\model\\Notification.cs",
+              "RelativeToolTip": "GlumHub\\model\\Notification.cs",
+              "ViewState": "AQIAAC0AAAAAAAAAAAAAAEYAAAAAAAAA",
               "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
-              "WhenOpened": "2024-05-07T02:54:23.135Z",
+              "WhenOpened": "2024-05-13T16:19:15.405Z",
               "EditorCaption": ""
             },
             {
               "$type": "Document",
-              "DocumentIndex": 4,
-              "Title": "User.cs",
-              "DocumentMoniker": "D:\\Study\\CourseWork\\GlumHub\\GlumHub\\model\\User.cs",
-              "RelativeDocumentMoniker": "GlumHub\\model\\User.cs",
-              "ToolTip": "D:\\Study\\CourseWork\\GlumHub\\GlumHub\\model\\User.cs",
-              "RelativeToolTip": "GlumHub\\model\\User.cs",
-              "ViewState": "AQIAAAMAAAAAAAAAAAAAABQAAAAhAAAA",
+              "DocumentIndex": 1,
+              "Title": "ApplicationContextDB.cs",
+              "DocumentMoniker": "D:\\Study\\CourseWork\\GlumHub\\GlumHub\\repository\\ApplicationContextDB.cs",
+              "RelativeDocumentMoniker": "GlumHub\\repository\\ApplicationContextDB.cs",
+              "ToolTip": "D:\\Study\\CourseWork\\GlumHub\\GlumHub\\repository\\ApplicationContextDB.cs",
+              "RelativeToolTip": "GlumHub\\repository\\ApplicationContextDB.cs",
+              "ViewState": "AQIAAA8AAAAAAAAAAAAAACwAAAAzAAAA",
               "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
-              "WhenOpened": "2024-05-07T02:20:07.174Z",
-              "EditorCaption": ""
-            },
-            {
-              "$type": "Document",
-              "DocumentIndex": 3,
-              "Title": "EditProfilePageClientVM.cs",
-              "DocumentMoniker": "D:\\Study\\CourseWork\\GlumHub\\GlumHub\\ViewModel\\client\\EditProfilePageClientVM.cs",
-              "RelativeDocumentMoniker": "GlumHub\\ViewModel\\client\\EditProfilePageClientVM.cs",
-              "ToolTip": "D:\\Study\\CourseWork\\GlumHub\\GlumHub\\ViewModel\\client\\EditProfilePageClientVM.cs",
-              "RelativeToolTip": "GlumHub\\ViewModel\\client\\EditProfilePageClientVM.cs",
-              "ViewState": "AQIAALIAAAAAAAAAAAAAANIAAAAAAAAA",
-              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
-              "WhenOpened": "2024-05-07T02:19:48.578Z",
+              "WhenOpened": "2024-05-13T16:04:03.088Z",
               "EditorCaption": ""
             },
             {
               "$type": "Document",
               "DocumentIndex": 2,
-              "Title": "EditProfilePageClient.xaml",
-              "DocumentMoniker": "D:\\Study\\CourseWork\\GlumHub\\GlumHub\\views\\client\\EditProfilePageClient.xaml",
-              "RelativeDocumentMoniker": "GlumHub\\views\\client\\EditProfilePageClient.xaml",
-              "ToolTip": "D:\\Study\\CourseWork\\GlumHub\\GlumHub\\views\\client\\EditProfilePageClient.xaml",
-              "RelativeToolTip": "GlumHub\\views\\client\\EditProfilePageClient.xaml",
+              "Title": "Request.cs",
+              "DocumentMoniker": "D:\\Study\\CourseWork\\GlumHub\\GlumHub\\model\\Request.cs",
+              "RelativeDocumentMoniker": "GlumHub\\model\\Request.cs",
+              "ToolTip": "D:\\Study\\CourseWork\\GlumHub\\GlumHub\\model\\Request.cs",
+              "RelativeToolTip": "GlumHub\\model\\Request.cs",
+              "ViewState": "AQIAAAAAAAAAAAAAAAAAACkAAAAAAAAA",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
+              "WhenOpened": "2024-05-13T15:54:07.41Z",
+              "EditorCaption": ""
+            },
+            {
+              "$type": "Document",
+              "DocumentIndex": 4,
+              "Title": "RequestPage.xaml",
+              "DocumentMoniker": "D:\\Study\\CourseWork\\GlumHub\\GlumHub\\views\\admin\\RequestPage.xaml",
+              "RelativeDocumentMoniker": "GlumHub\\views\\admin\\RequestPage.xaml",
+              "ToolTip": "D:\\Study\\CourseWork\\GlumHub\\GlumHub\\views\\admin\\RequestPage.xaml",
+              "RelativeToolTip": "GlumHub\\views\\admin\\RequestPage.xaml",
               "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.003549|",
-              "WhenOpened": "2024-05-07T02:19:46.448Z",
+              "WhenOpened": "2024-05-13T15:48:59.699Z",
+              "EditorCaption": ""
+            },
+            {
+              "$type": "Document",
+              "DocumentIndex": 3,
+              "Title": "RequestPageVM.cs",
+              "DocumentMoniker": "D:\\Study\\CourseWork\\GlumHub\\GlumHub\\ViewModel\\admin\\RequestPageVM.cs",
+              "RelativeDocumentMoniker": "GlumHub\\ViewModel\\admin\\RequestPageVM.cs",
+              "ToolTip": "D:\\Study\\CourseWork\\GlumHub\\GlumHub\\ViewModel\\admin\\RequestPageVM.cs",
+              "RelativeToolTip": "GlumHub\\ViewModel\\admin\\RequestPageVM.cs",
+              "ViewState": "AQIAAAkAAAAAAAAAAAAAACEAAAANAAAA",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
+              "WhenOpened": "2024-05-13T15:47:40.309Z",
+              "EditorCaption": ""
+            },
+            {
+              "$type": "Document",
+              "DocumentIndex": 5,
+              "Title": "SearchPageVM.cs",
+              "DocumentMoniker": "D:\\Study\\CourseWork\\GlumHub\\GlumHub\\ViewModel\\client\\SearchPageVM.cs",
+              "RelativeDocumentMoniker": "GlumHub\\ViewModel\\client\\SearchPageVM.cs",
+              "ToolTip": "D:\\Study\\CourseWork\\GlumHub\\GlumHub\\ViewModel\\client\\SearchPageVM.cs",
+              "RelativeToolTip": "GlumHub\\ViewModel\\client\\SearchPageVM.cs",
+              "ViewState": "AQIAAAAAAAAAAAAAAAAAABwAAAANAAAA",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
+              "WhenOpened": "2024-05-13T15:46:19.6Z",
+              "EditorCaption": ""
+            },
+            {
+              "$type": "Document",
+              "DocumentIndex": 6,
+              "Title": "PostsPageVM.cs",
+              "DocumentMoniker": "D:\\Study\\CourseWork\\GlumHub\\GlumHub\\ViewModel\\master\\PostsPageVM.cs",
+              "RelativeDocumentMoniker": "GlumHub\\ViewModel\\master\\PostsPageVM.cs",
+              "ToolTip": "D:\\Study\\CourseWork\\GlumHub\\GlumHub\\ViewModel\\master\\PostsPageVM.cs",
+              "RelativeToolTip": "GlumHub\\ViewModel\\master\\PostsPageVM.cs",
+              "ViewState": "AQIAAFQAAAAAAAAAAAAAAGoAAAANAAAA",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
+              "WhenOpened": "2024-05-13T15:45:38.731Z",
+              "EditorCaption": ""
+            },
+            {
+              "$type": "Document",
+              "DocumentIndex": 7,
+              "Title": "CertainPostPageVM.cs",
+              "DocumentMoniker": "D:\\Study\\CourseWork\\GlumHub\\GlumHub\\ViewModel\\master\\CertainPostPageVM.cs",
+              "RelativeDocumentMoniker": "GlumHub\\ViewModel\\master\\CertainPostPageVM.cs",
+              "ToolTip": "D:\\Study\\CourseWork\\GlumHub\\GlumHub\\ViewModel\\master\\CertainPostPageVM.cs",
+              "RelativeToolTip": "GlumHub\\ViewModel\\master\\CertainPostPageVM.cs",
+              "ViewState": "AQIAAAAAAAAAAAAAAAAAACAAAAA0AAAA",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
+              "WhenOpened": "2024-05-13T15:45:25.93Z",
+              "EditorCaption": ""
+            },
+            {
+              "$type": "Document",
+              "DocumentIndex": 9,
+              "Title": "ByteArrayToImageConverter.cs",
+              "DocumentMoniker": "D:\\Study\\CourseWork\\GlumHub\\GlumHub\\converters\\ByteArrayToImageConverter.cs",
+              "RelativeDocumentMoniker": "GlumHub\\converters\\ByteArrayToImageConverter.cs",
+              "ToolTip": "D:\\Study\\CourseWork\\GlumHub\\GlumHub\\converters\\ByteArrayToImageConverter.cs",
+              "RelativeToolTip": "GlumHub\\converters\\ByteArrayToImageConverter.cs",
+              "ViewState": "AQIAAAAAAAAAAAAAAAAAABYAAAAmAAAA",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
+              "WhenOpened": "2024-05-13T15:35:20.529Z",
+              "EditorCaption": ""
+            },
+            {
+              "$type": "Document",
+              "DocumentIndex": 8,
+              "Title": "ApplyToMasterPageVM.cs",
+              "DocumentMoniker": "D:\\Study\\CourseWork\\GlumHub\\GlumHub\\ViewModel\\client\\ApplyToMasterPageVM.cs",
+              "RelativeDocumentMoniker": "GlumHub\\ViewModel\\client\\ApplyToMasterPageVM.cs",
+              "ToolTip": "D:\\Study\\CourseWork\\GlumHub\\GlumHub\\ViewModel\\client\\ApplyToMasterPageVM.cs",
+              "RelativeToolTip": "GlumHub\\ViewModel\\client\\ApplyToMasterPageVM.cs",
+              "ViewState": "AQIAAAAAAAAAAAAAAAAAACAAAAApAAAA",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
+              "WhenOpened": "2024-05-13T13:08:14.997Z",
+              "EditorCaption": ""
+            },
+            {
+              "$type": "Document",
+              "DocumentIndex": 10,
+              "Title": "User.cs",
+              "DocumentMoniker": "D:\\Study\\CourseWork\\GlumHub\\GlumHub\\model\\User.cs",
+              "RelativeDocumentMoniker": "GlumHub\\model\\User.cs",
+              "ToolTip": "D:\\Study\\CourseWork\\GlumHub\\GlumHub\\model\\User.cs",
+              "RelativeToolTip": "GlumHub\\model\\User.cs",
+              "ViewState": "AQIAAAAAAAAAAAAAAAAAAA4AAAAZAAAA",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
+              "WhenOpened": "2024-05-13T11:23:00.352Z",
               "EditorCaption": ""
             }
           ]

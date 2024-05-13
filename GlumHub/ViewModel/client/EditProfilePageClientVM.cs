@@ -18,7 +18,7 @@ using static System.Windows.Forms.VisualStyles.VisualStyleElement.StartPanel;
 
 namespace GlumHub
 {
-    class EditProfilePageClientVM
+    class EditProfilePageClientVM : INotifyPropertyChanged
     {
         Frame mainFrame;
 

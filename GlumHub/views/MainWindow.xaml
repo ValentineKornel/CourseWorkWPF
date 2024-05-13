@@ -6,8 +6,13 @@
         xmlns:local="clr-namespace:GlumHub"
         mc:Ignorable="d"
         Title="GlumHub" Height="459" Cursor="{StaticResource cursor}" Width="703"
-        WindowState="Maximized">
-    <Frame x:Name="frame" NavigationUIVisibility="Hidden" />
+        WindowState="Maximized" AllowDrop="True" Background="#FF898989">
+
+    <Frame x:Name="frame" NavigationUIVisibility="Hidden" Height="auto" >
+
+    </Frame>
+
+
 
 
 </Window>

@@ -5,7 +5,7 @@
       xmlns:d="http://schemas.microsoft.com/expression/blend/2008" 
       xmlns:local="clr-namespace:GlumHub"
       mc:Ignorable="d" 
-      d:DesignHeight="800" d:DesignWidth="1240" Background="{DynamicResource PageBackground}"
+      d:DesignHeight="800" d:DesignWidth="1240"
       Title="CertainPostPage">
 
     <Page.DataContext>
@@ -25,8 +25,7 @@
                 <Image x:Name="postImage" Width="500" Height="400" Source="{Binding post.PostImage}"></Image>
             </StackPanel>
             <Label Content="{Binding post.Description}" FontSize="18" Height="auto" MinHeight="40" HorizontalAlignment="Center"></Label>
-            <Button Command="{Binding DeletePostCommand}" Visibility="{Binding DeleteButtonVisibilityProperty}" Content="Delete" Background="PaleVioletRed" FontSize="18" Width="160" Height="40" Margin="-200, 10, 0, 0"></Button>
-            <Button Command="{Binding EditPostRedirectCommand}" Visibility="{Binding EditButtonVisibilityProperty}" Content="Edit" Background="LightSlateGray" FontSize="18" Width="160" Height="40" Margin="200, -40, 0, 0"></Button>
+            <Button Command="{Binding DeletePostCommand}" Visibility="{Binding DeleteButtonVisibilityProperty}" Content="Delete" Background="PaleVioletRed" FontSize="18" Width="160" Height="40" Margin="0, 10, 0, 0"></Button>
         </StackPanel>
     </Grid>
 </Page>

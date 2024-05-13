@@ -85,6 +85,9 @@
     <Compile Update="views\master\PostsPage.xaml.cs">
       <SubType>Code</SubType>
     </Compile>
+    <Compile Update="views\master\StatisticBar.xaml.cs">
+      <SubType>Code</SubType>
+    </Compile>
     <Compile Update="views\master\StatisticPage.xaml.cs">
       <SubType>Code</SubType>
     </Compile>
@@ -193,6 +196,9 @@
       <SubType>Designer</SubType>
     </Page>
     <Page Update="views\master\PostsPage.xaml">
+      <SubType>Designer</SubType>
+    </Page>
+    <Page Update="views\master\StatisticBar.xaml">
       <SubType>Designer</SubType>
     </Page>
     <Page Update="views\master\StatisticPage.xaml">

@@ -5,7 +5,7 @@
       xmlns:d="http://schemas.microsoft.com/expression/blend/2008" 
       xmlns:local="clr-namespace:GlumHub"
       mc:Ignorable="d" 
-      d:DesignHeight="1080" d:DesignWidth="1920" Background="{DynamicResource PageBackground}"
+      d:DesignHeight="1080" d:DesignWidth="1920"
       Title="MyProfilePageClient">
 
     <Page.DataContext>
@@ -41,8 +41,7 @@
         <StackPanel Grid.Column="1" Grid.Row="1">
             <Border BorderBrush="Black" BorderThickness="1" Width="auto" Height="1"/>
             <StackPanel Height="50" Width="auto" HorizontalAlignment="Center" Orientation="Horizontal">
-                <Button Width="auto" Height="40" FontSize="18" Content="{DynamicResource StatisticButton}" Padding="10, 0, 10, 0" Margin="10, 0, 10, 0" Style="{StaticResource SecondaryButtonStyle}"></Button>
-                <Button Command="{Binding HistoryPageRedirectCommand}" Width="auto" Height="40" FontSize="18" Content="{DynamicResource HistoryButton}" Padding="10, 0, 10, 0" Margin="10, 0, 10, 0" Style="{StaticResource SecondaryButtonStyle}"></Button>
+                <Button Command="{Binding HistoryPageRedirectCommand}" HorizontalAlignment="Center" Width="auto" Height="40" FontSize="18" Content="{DynamicResource HistoryButton}" Padding="10, 0, 10, 0" Margin="0, 0, 0, 0" Style="{StaticResource SecondaryButtonStyle}"></Button>
             </StackPanel>
             <Frame x:Name="myProfilePageClientFrame" Height="690"/>
 

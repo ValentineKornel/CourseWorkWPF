@@ -14,7 +14,7 @@ using System.Windows.Media.Imaging;
 
 namespace GlumHub
 {
-    internal class ApplyToMasterPageVM
+    internal class ApplyToMasterPageVM : INotifyPropertyChanged
     {
 
         private User _user;
