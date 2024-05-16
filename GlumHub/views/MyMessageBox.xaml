@@ -3,7 +3,7 @@
         xmlns:x="http://schemas.microsoft.com/winfx/2006/xaml"
         xmlns:d="http://schemas.microsoft.com/expression/blend/2008"
         xmlns:mc="http://schemas.openxmlformats.org/markup-compatibility/2006"
-        xmlns:local="clr-namespace:GlumHub.views" Background="#FFF2E1"
+        xmlns:local="clr-namespace:GlumHub.views" Background="{DynamicResource PageBackground}"
         mc:Ignorable="d" Height="150" Width="300" WindowStartupLocation="CenterScreen">
     <Grid>
         <Label x:Name="message" HorizontalAlignment="Center" VerticalAlignment="Center" Width="auto" FontSize="18">Message</Label>

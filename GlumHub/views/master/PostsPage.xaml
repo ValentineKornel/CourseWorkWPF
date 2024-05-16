@@ -5,7 +5,7 @@
       xmlns:d="http://schemas.microsoft.com/expression/blend/2008" 
       xmlns:local="clr-namespace:GlumHub"
       mc:Ignorable="d" 
-      d:DesignHeight="600" d:DesignWidth="1240"
+      d:DesignHeight="600" d:DesignWidth="1240" Background="{DynamicResource PageBackground}"
       Title="PostsPage">
 
     <Page.DataContext>
@@ -20,7 +20,7 @@
         <Grid.RowDefinitions>
             <RowDefinition></RowDefinition>
         </Grid.RowDefinitions>
-        <Button Command="{Binding AddNewPostRedirectCommand}" Visibility="{Binding AddNewPostButtonVisibility}" Width="70" Height="30" VerticalAlignment="Top" Margin="0, 10, 0, 0">new post</Button>
+        <Button Command="{Binding AddNewPostRedirectCommand}" Visibility="{Binding AddNewPostButtonVisibility}" Content="{DynamicResource NewPostButton}" Width="auto" Height="30" VerticalAlignment="Top" Margin="0, 10, 0, 0"></Button>
         
         <ListView ItemsSource="{Binding Posts}" BorderThickness="0" HorizontalAlignment="Left" Width="auto" Grid.Column="1">
             <ListView.ItemsPanel>

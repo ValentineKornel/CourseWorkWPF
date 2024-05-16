@@ -32,10 +32,12 @@
 
     <!-- MyProfileMaster page -->
     <v:String x:Key="PoststButton">Публикации</v:String>
+    <v:String x:Key="AsClienthistoryButton">История как клиент</v:String>
 
     <!-- EditProfileClient page -->
     <v:String x:Key="ChangePhotoButton">Изменить фото</v:String>
     <v:String x:Key="SaveChangesButton">Сохранить изменения</v:String>
+    <v:String x:Key="BecomeMasterButton">Стать мастером</v:String>
 
     <!-- EditProfileMaster page -->
     <v:String x:Key="BioLabel">Описание</v:String>
@@ -45,6 +47,63 @@
     <v:String x:Key="SwitchAppearanceButton">Сменить тему</v:String>
     <v:String x:Key="SwitchLanguageButton">Сменить язык</v:String>
 
+
+    <!-- HomePageAdmin page -->
+    <v:String x:Key="RequestsLabel">Запросы</v:String>
+
+    <!-- Requests page -->
+    <v:String x:Key="AttachmentImageLabel">Прикрепленное изображение</v:String>
+    <v:String x:Key="AttachmentLetterLabel">Прикрепленное сообщение</v:String>
+    <v:String x:Key="ConfirmButton">Одобрить</v:String>
+    <v:String x:Key="RejectButton">Отклонить</v:String>
+
+    <!-- SearchPageAdmin page -->
+    <v:String x:Key="CityLabel">Город</v:String>
+
+    <!-- User page -->
+    <v:String x:Key="DeleteUserButton">Удалить пользователя</v:String>
+
+    <!-- ApplyToMaster page -->
+    <v:String x:Key="LoadImageButton">Загрузить изображение</v:String>
+    <v:String x:Key="ApplyButton">Отправить</v:String>
+
+    <!-- HomePageClient page -->
+    <v:String x:Key="UpcomintBookingsClientLabel">Предстоящие записи:</v:String>
+
+    <!-- Master page -->
+    <v:String x:Key="ServiceButton">Записи</v:String>
+
+    <!-- AddNewPost page -->
+    <v:String x:Key="PostImageLabel">Фото</v:String>
+    <v:String x:Key="DescriptionLabel">Описание</v:String>
+    <v:String x:Key="AddNewPostButton">Добавить</v:String>
+
+    <!-- AsMaster page -->
+    <v:String x:Key="UpcomingBookingsLabel">Предстоящие записи</v:String>
+    <v:String x:Key="FreeBookingsLabel">Свободные записи</v:String>
+
+    <!-- CertainPost page -->
+    <v:String x:Key="DeleteButton">Удалить</v:String>
+
+    <!-- FreeBooking page -->
+    <v:String x:Key="NewBookingButton">Новая запись</v:String>
+
+    <!-- HomePageMaster page -->
+    <v:String x:Key="AsMasterLabel">Как мастер</v:String>
+    <v:String x:Key="AsClientLabel">Как клиент</v:String>
+
+    <!-- NewBooking page -->
+    <v:String x:Key="ServiceLabel">Услуги:</v:String>
+    <v:String x:Key="DateTimeLabel">Дата/время:</v:String>
+    <v:String x:Key="AddButton">Добавить</v:String>
+
+    <!-- Posts page -->
+    <v:String x:Key="NewPostButton">новая публикация</v:String>
+
+    <!-- Statistic page -->
+    <v:String x:Key="ServiceComplitedLabel">Клиентов обслужено:</v:String>
+    <v:String x:Key="ThisYearStatisticLabel">Статистика за этот год:</v:String>
+    <v:String x:Key="BestClientsLabel">Лучшие клиенты:</v:String>
 
 
 </ResourceDictionary>

@@ -5,7 +5,7 @@
       xmlns:d="http://schemas.microsoft.com/expression/blend/2008" 
       xmlns:local="clr-namespace:GlumHub"
       mc:Ignorable="d" 
-      d:DesignHeight="1080" d:DesignWidth="1240"
+      d:DesignHeight="1080" d:DesignWidth="1240" Background="{DynamicResource PageBackground}"
       Title="AsMasterPage">
 
     <Page.DataContext>
@@ -20,8 +20,8 @@
         </Grid.RowDefinitions>
         <StackPanel Margin="0, 10, 10, 0">
             <StackPanel Width="auto" Height="auto" VerticalAlignment="Top" Orientation="Horizontal">
-                <Button Command="{Binding UpcomingBookingPageRedirectCommand}" Content="Предстоящие записи" FontSize="20" Width="400" Height="50" Style="{StaticResource SecondaryButtonStyle}" Margin="220, 0, 0, 0"></Button>
-                <Button Command="{Binding FreeBookingPageRedirectCommand}" Content="Свободные записи" FontSize="20" Width="400" Height="50" Style="{StaticResource SecondaryButtonStyle}"></Button>
+                <Button Command="{Binding UpcomingBookingPageRedirectCommand}" Content="{DynamicResource UpcomingBookingsLabel}" FontSize="20" Width="400" Height="50" Style="{StaticResource SecondaryButtonStyle}" Margin="220, 0, 0, 0"></Button>
+                <Button Command="{Binding FreeBookingPageRedirectCommand}" Content="{DynamicResource FreeBookingsLabel}" FontSize="20" Width="400" Height="50" Style="{StaticResource SecondaryButtonStyle}"></Button>
             </StackPanel>
             <Frame x:Name="asMasterPageFrame" Height="1000" Margin="0, 10, 0, 0"/>
         </StackPanel>

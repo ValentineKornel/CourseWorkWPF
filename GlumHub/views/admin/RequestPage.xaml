@@ -5,7 +5,7 @@
       xmlns:d="http://schemas.microsoft.com/expression/blend/2008" 
       xmlns:local="clr-namespace:GlumHub"
       mc:Ignorable="d" 
-      d:DesignHeight="800" d:DesignWidth="1240"
+      d:DesignHeight="800" d:DesignWidth="1240" Background="{DynamicResource PageBackground}"
       Title="RequestPage">
 
     <Page.DataContext>
@@ -22,16 +22,16 @@
         </Grid.RowDefinitions>
         <StackPanel Grid.Column="1" Margin="0, 20, 0, 0">
             <StackPanel Height="auto">
-                <Label Content="Attachment Image" FontSize="18"></Label>
+                <Label Content="{DynamicResource AttachmentImageLabel}" FontSize="18"></Label>
                 <Image x:Name="attachmentImage" Width="750" Height="450" Source="{Binding AttachmentImage}"></Image>
             </StackPanel>
-            <Label Content="Attachment Later" FontSize="18" Margin="0, 10, 0, 10"/>
+            <Label Content="{DynamicResource AttachmentLetterLabel}" FontSize="18" Margin="0, 10, 0, 10"/>
             <Label Content="{Binding AttachmentLetter}" FontSize="18" Height="auto"></Label>
 
-            <Button Content="Confirm" Command="{Binding ConfirmCommand}" Width="150" Height="40" FontSize="16" 
+            <Button Content="{DynamicResource ConfirmButton}" Command="{Binding ConfirmCommand}" Width="150" Height="40" FontSize="16" 
                     Margin="-200, 0, 0, 0" Background="LightGreen"></Button>
             
-            <Button Content="reject" Command="{Binding RejectCommand}" Width="150" Height="40" FontSize="16"  Margin="130, -40, 0, 0" Background="PaleVioletRed"></Button>
+            <Button Content="{DynamicResource RejectButton}" Command="{Binding RejectCommand}" Width="150" Height="40" FontSize="16"  Margin="130, -40, 0, 0" Background="PaleVioletRed"></Button>
 
         </StackPanel>
     </Grid>

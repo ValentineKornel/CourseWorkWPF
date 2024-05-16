@@ -2,6 +2,6 @@
                     xmlns:x="http://schemas.microsoft.com/winfx/2006/xaml"
                     xmlns:v="clr-namespace:System;assembly=mscorlib">
 
-        
-    <SolidColorBrush x:Key="PageBackground">White</SolidColorBrush>
+
+    <SolidColorBrush x:Key="PageBackground">#FFF2E1</SolidColorBrush>
 </ResourceDictionary>

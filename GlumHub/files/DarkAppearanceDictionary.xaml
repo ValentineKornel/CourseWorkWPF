@@ -3,5 +3,5 @@
                     xmlns:v="clr-namespace:System;assembly=mscorlib">
 
 
-    <SolidColorBrush x:Key="PageBackground">LightSkyBlue</SolidColorBrush>
+    <SolidColorBrush x:Key="PageBackground">#EED3D9</SolidColorBrush>
 </ResourceDictionary>

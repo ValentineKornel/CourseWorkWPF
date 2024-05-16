@@ -5,7 +5,7 @@
       xmlns:d="http://schemas.microsoft.com/expression/blend/2008" 
       xmlns:local="clr-namespace:GlumHub"
       mc:Ignorable="d" 
-      d:DesignHeight="1080" d:DesignWidth="1920"
+      d:DesignHeight="1080" d:DesignWidth="1920" Background="{DynamicResource PageBackground}"
       Title="MasterPage">
 
     <Page.DataContext>
@@ -45,7 +45,7 @@
         <StackPanel Grid.Column="1" Grid.Row="1">
             <Border BorderBrush="Black" BorderThickness="1" Width="auto" Height="1"/>
             <StackPanel Height="50" Width="auto" HorizontalAlignment="Center" Orientation="Horizontal">
-                <Button Command="{Binding ServicePageRedirectCommand}" Width="auto" Height="40" FontSize="18" Content="Service" Padding="10, 0, 10, 0" Margin="20, 0, 20, 0" Style="{StaticResource SecondaryButtonStyle}"></Button>
+                <Button Command="{Binding ServicePageRedirectCommand}" Width="auto" Height="40" FontSize="18" Content="{DynamicResource ServiceButton}" Padding="10, 0, 10, 0" Margin="20, 0, 20, 0" Style="{StaticResource SecondaryButtonStyle}"></Button>
                 <Button Command="{Binding PostsPageRedirectCommand}" Width="auto" Height="40" FontSize="18" Content="{DynamicResource PoststButton}" Padding="10, 0, 10, 0" Margin="20, 0, 20, 0" Style="{StaticResource SecondaryButtonStyle}"></Button>
             </StackPanel>
             <Frame x:Name="masterPageForClientFrame" Height="690"/>

@@ -1,4 +1,5 @@
-﻿using Microsoft.Win32;
+﻿using GlumHub.views;
+using Microsoft.Win32;
 using Prism.Commands;
 using System;
 using System.Collections.Generic;
@@ -70,22 +71,40 @@ namespace GlumHub
 
         public void LoadImage()
         {
-            OpenFileDialog openFileDialog = new OpenFileDialog();
-            openFileDialog.Filter = "Image files (*.jpg, *.jpeg, *.png)|*.jpg;*.jpeg;*.png|All files (*.*)|*.*";
-
+            OpenFileDialog openFileDialog = new OpenFileDialog
+            {
+                Filter = "Image files (*.jpg, *.jpeg, *.png)|*.jpg;*.jpeg;*.png|All files (*.*)|*.*"
+            };
 
             if (openFileDialog.ShowDialog() == true)
             {
-                using (FileStream fs = new FileStream(openFileDialog.FileName, FileMode.Open))
+                try
                 {
-                    byte[] imageData = new byte[fs.Length];
-                    fs.Read(imageData, 0, imageData.Length);
+                    byte[] imageData;
+                    using (FileStream fs = new FileStream(openFileDialog.FileName, FileMode.Open, FileAccess.Read))
+                    {
+                        imageData = new byte[fs.Length];
+                        fs.Read(imageData, 0, imageData.Length);
+                    }
                     AttachmentImage = imageData;
+
+                    if (Application.Current.Resources["AttachmentImage"] is Image img)
+                    {
+                        img.Source = new BitmapImage(new Uri(openFileDialog.FileName));
+                    }
+                    else
+                    {
+                        throw new InvalidOperationException("Resource 'AttachmentImage' not found or not of type Image.");
+                    }
                 }
-                Image img = Application.Current.Resources["AttachmentImage"] as Image;
-                img.Source = new BitmapImage(new Uri(openFileDialog.FileName));
+                catch (Exception ex)
+                {
+                    // Логирование или обработка исключений
+                    new MyMessageBox("Error loading image: " + ex.Message);
+                }
             }
         }
+
 
 
         private DelegateCommand _applyCommand;

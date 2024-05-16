@@ -5,7 +5,7 @@
       xmlns:d="http://schemas.microsoft.com/expression/blend/2008" 
       xmlns:local="clr-namespace:GlumHub"
       mc:Ignorable="d" 
-      d:DesignHeight="450" d:DesignWidth="800"
+      d:DesignHeight="450" d:DesignWidth="800" Background="{DynamicResource PageBackground}"
       Title="HomePageClient">
 
     <Page.DataContext>
@@ -21,7 +21,7 @@
             <RowDefinition></RowDefinition>
         </Grid.RowDefinitions>
         <StackPanel Grid.Column="1" Width="auto">
-            <Label Content="Предстоящие записи:" FontSize="20" HorizontalAlignment="Center"></Label>
+            <Label Content="{DynamicResource UpcomintBookingsClientLabel}" FontSize="20" HorizontalAlignment="Center"></Label>
             <ListView ItemsSource="{Binding BookedBookings}" BorderThickness="0" Width="auto">
                 <ListView.ItemTemplate>
                     <DataTemplate>

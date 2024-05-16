@@ -37,6 +37,7 @@
     <!-- EditProfileClient page -->
     <v:String x:Key="ChangePhotoButton">Change photo</v:String>
     <v:String x:Key="SaveChangesButton">Save changes</v:String>
+    <v:String x:Key="BecomeMasterButton">Become a master</v:String>
 
     <!-- EditProfileMaster page -->
     <v:String x:Key="BioLabel">Bio</v:String>
