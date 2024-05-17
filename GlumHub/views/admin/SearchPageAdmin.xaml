@@ -5,73 +5,74 @@
       xmlns:d="http://schemas.microsoft.com/expression/blend/2008" 
       xmlns:local="clr-namespace:GlumHub"
       mc:Ignorable="d" 
-      d:DesignHeight="800" d:DesignWidth="1240" Background="{DynamicResource PageBackground}"
+      d:DesignHeight="1200" d:DesignWidth="1240" Background="{DynamicResource PageBackground}"
       Title="SearchPageAdmin">
 
     <Page.DataContext>
         <local:SearchPageAdminVM></local:SearchPageAdminVM>
     </Page.DataContext>
-    <Grid>
-        <Grid.ColumnDefinitions>
-            <ColumnDefinition Width="160*"></ColumnDefinition>
-            <ColumnDefinition Width="100*"></ColumnDefinition>
-        </Grid.ColumnDefinitions>
-        <StackPanel Margin="20,0,0,0">
-            <StackPanel Width="auto" Height="auto" Margin="0, 10, 0, 0">
-                <RichTextBox Height="40" Width="730" HorizontalAlignment="Left">
-                    <FlowDocument>
-                        <Paragraph>
-                            <Run Text="{Binding SearchText}"/>
-                        </Paragraph>
-                    </FlowDocument>
-                </RichTextBox>
-                <Button Command="{Binding SearchCommand}" Width="40" Height="40" HorizontalAlignment="Right" Margin="0, -40, 10, 0"></Button>
-            </StackPanel>
-            <ScrollViewer VerticalScrollBarVisibility="Hidden">
-                <StackPanel Height="1000" Margin="0, 20, 0, 0" Width="auto">
-                    <ListView ItemsSource="{Binding SearchedUsers}" BorderThickness="0" Width="auto">
-                        <ListView.ItemTemplate>
-                            <DataTemplate>
-                                <Button Command="{Binding UserPageRedirectCommand}" CommandParameter="{Binding user.Id}"
+    <ScrollViewer VerticalScrollBarVisibility="Visible">
+        <Grid>
+            <Grid.ColumnDefinitions>
+                <ColumnDefinition Width="160*"></ColumnDefinition>
+                <ColumnDefinition Width="100*"></ColumnDefinition>
+            </Grid.ColumnDefinitions>
+                <StackPanel Margin="20,0,0,0" Height="1200">
+                    <StackPanel Width="auto" Height="auto" Margin="0, 10, 0, 0">
+                        <RichTextBox Height="40" Width="730" FontSize="18" HorizontalAlignment="Left">
+                            <FlowDocument>
+                                <Paragraph>
+                                    <Run Text="{Binding SearchText}"/>
+                                </Paragraph>
+                            </FlowDocument>
+                        </RichTextBox>
+                    <Button Command="{Binding SearchCommand}" Visibility="Hidden" Style="{StaticResource SecondaryButtonStyle}" Width="40" Height="40" HorizontalAlignment="Right" Margin="0, -40, 10, 0"></Button>
+                    </StackPanel>
+
+                    <StackPanel Height="2000" Margin="0, 20, 0, 0" Width="auto">
+                        <ListView ItemsSource="{Binding SearchedUsers}" BorderThickness="0" Width="auto" Height="1200" SelectionChanged="ListView_SelectionChanged">
+                            <ListView.ItemTemplate>
+                                <DataTemplate>
+                                    <Button Command="{Binding UserPageRedirectCommand}" CommandParameter="{Binding user.Id}"
                 Width="auto" Height="auto" Style="{StaticResource SecondaryButtonStyle}">
-                                    <StackPanel Grid.Column="1" Orientation="Horizontal" Width="730" Height="150" Margin="0, 0, 0, 0">
-                                        <Border Style="{StaticResource BigCircularImageBorder}" Margin="20, 10, 0, 0" Height="120" Width="120" VerticalAlignment="Top">
-                                            <Border.Background>
-                                                <ImageBrush ImageSource="{Binding user.ProfileImage, Converter={StaticResource ByteArrayToImageConverter}}"/>
-                                            </Border.Background>
-                                        </Border>
-                                        <StackPanel Width="auto" Height="auto" VerticalAlignment="Top" Margin="0, 10, 0, 0">
-                                            <StackPanel Width="auto" Height="auto" Orientation="Horizontal" HorizontalAlignment="Left" Margin="10, 0, 0, 0">
-                                                <Label Width="auto" Height="40" Content="{Binding user.Firstname}" FontSize="24"></Label>
-                                                <Label Width="auto" Height="40" Content="{Binding user.Secondname}" FontSize="24"></Label>
-                                                <Image Source="/files/subscribed.png" Width="20" Height="20" Margin="10, 0, 0, 0" Visibility="{Binding SubscribeTickVisibility}"></Image>
+                                        <StackPanel Grid.Column="1" Orientation="Horizontal" Width="750" Height="150" Margin="0, 0, 0, 0">
+                                            <Border Style="{StaticResource BigCircularImageBorder}" Margin="20, 10, 0, 0" Height="120" Width="120" VerticalAlignment="Top">
+                                                <Border.Background>
+                                                    <ImageBrush ImageSource="{Binding user.ProfileImage, Converter={StaticResource ByteArrayToImageConverter}}"/>
+                                                </Border.Background>
+                                            </Border>
+                                            <StackPanel Width="auto" Height="auto" VerticalAlignment="Top" Margin="0, 10, 0, 0">
+                                                <StackPanel Width="auto" Height="auto" Orientation="Horizontal" HorizontalAlignment="Left" Margin="10, 0, 0, 0">
+                                                    <Label Width="auto" Height="40" Content="{Binding user.Firstname}" FontSize="24"></Label>
+                                                    <Label Width="auto" Height="40" Content="{Binding user.Secondname}" FontSize="24"></Label>
+                                                    <Image Source="/files/subscribed.png" Width="20" Height="20" Margin="10, 0, 0, 0" Visibility="{Binding SubscribeTickVisibility}"></Image>
+                                                </StackPanel>
+                                                <Label Height="30" Width="auto" FontSize="18" Content="{Binding user.Username}" FontStyle="Oblique" Padding="10, 0, 10, 0" Margin="10, 0, 0, 0"></Label>
+                                                <Label Height="40" FontSize="18" Content="{Binding user.MasterInfo.BusinessAddress}" Margin="10, 0, 0, 0"></Label>
                                             </StackPanel>
-                                            <Label Height="30" Width="auto" FontSize="18" Content="{Binding user.Username}" FontStyle="Oblique" Padding="10, 0, 10, 0" Margin="10, 0, 0, 0"></Label>
-                                            <Label Height="40" FontSize="18" Content="{Binding user.MasterInfo.BusinessAddress}" Margin="10, 0, 0, 0"></Label>
                                         </StackPanel>
-                                    </StackPanel>
-                                </Button>
-                            </DataTemplate>
-                        </ListView.ItemTemplate>
-                    </ListView>
+                                    </Button>
+                                </DataTemplate>
+                            </ListView.ItemTemplate>
+                        </ListView>
 
 
+                    </StackPanel>
                 </StackPanel>
-            </ScrollViewer>
-        </StackPanel>
-        <StackPanel Grid.Column="1" Orientation="Horizontal">
-            <Border BorderBrush="Black" BorderThickness="2" Width="1" Height="auto" Margin="0, 60, 0, 0"></Border>
-            <StackPanel Width="auto" Margin="10, 40, 0, 0">
-                <Label Content="{DynamicResource CityLabel}" FontSize="18" Width="auto" Height="40"></Label>
-                <RichTextBox Height="40" FontSize="18" Width="300" HorizontalAlignment="Left">
-                    <FlowDocument>
-                        <Paragraph>
-                            <Run Text="{Binding SearchCity}"/>
-                        </Paragraph>
-                    </FlowDocument>
-                </RichTextBox>
+            <StackPanel Grid.Column="1" Orientation="Horizontal">
+                <Border BorderBrush="Black" BorderThickness="2" Width="1" Height="auto" Margin="0, 60, 0, 0"></Border>
+                <StackPanel Width="auto" Margin="10, 40, 0, 0">
+                    <Label Content="{DynamicResource CityLabel}" FontSize="18" Width="auto" Height="40" Visibility="Hidden"></Label>
+                    <RichTextBox Height="40" FontSize="18" Width="300" HorizontalAlignment="Left" Visibility="Hidden">
+                        <FlowDocument>
+                            <Paragraph>
+                                <Run Text="{Binding SearchCity}"/>
+                            </Paragraph>
+                        </FlowDocument>
+                    </RichTextBox>
+                </StackPanel>
             </StackPanel>
-        </StackPanel>
 
-    </Grid>
+        </Grid>
+    </ScrollViewer>
 </Page>

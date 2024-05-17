@@ -3,12 +3,12 @@
   "WorkspaceRootPath": "D:\\Study\\CourseWork\\GlumHub\\",
   "Documents": [
     {
-      "AbsoluteMoniker": "D:0:0:{3EA0330D-57CB-4EDD-A566-416BC8F779DB}|GlumHub\\GlumHub.csproj|d:\\study\\coursework\\glumhub\\glumhub\\files\\russiandictionary.xaml||{F11ACC28-31D1-4C80-A34B-F4E09D3D753C}",
-      "RelativeMoniker": "D:0:0:{3EA0330D-57CB-4EDD-A566-416BC8F779DB}|GlumHub\\GlumHub.csproj|solutionrelative:glumhub\\files\\russiandictionary.xaml||{F11ACC28-31D1-4C80-A34B-F4E09D3D753C}"
+      "AbsoluteMoniker": "D:0:0:{3EA0330D-57CB-4EDD-A566-416BC8F779DB}|GlumHub\\GlumHub.csproj|d:\\study\\coursework\\glumhub\\glumhub\\views\\client\\notificationspage.xaml||{F11ACC28-31D1-4C80-A34B-F4E09D3D753C}",
+      "RelativeMoniker": "D:0:0:{3EA0330D-57CB-4EDD-A566-416BC8F779DB}|GlumHub\\GlumHub.csproj|solutionrelative:glumhub\\views\\client\\notificationspage.xaml||{F11ACC28-31D1-4C80-A34B-F4E09D3D753C}"
     },
     {
-      "AbsoluteMoniker": "D:0:0:{3EA0330D-57CB-4EDD-A566-416BC8F779DB}|GlumHub\\GlumHub.csproj|d:\\study\\coursework\\glumhub\\glumhub\\files\\englishdictionary.xaml||{F11ACC28-31D1-4C80-A34B-F4E09D3D753C}",
-      "RelativeMoniker": "D:0:0:{3EA0330D-57CB-4EDD-A566-416BC8F779DB}|GlumHub\\GlumHub.csproj|solutionrelative:glumhub\\files\\englishdictionary.xaml||{F11ACC28-31D1-4C80-A34B-F4E09D3D753C}"
+      "AbsoluteMoniker": "D:0:0:{3EA0330D-57CB-4EDD-A566-416BC8F779DB}|GlumHub\\GlumHub.csproj|d:\\study\\coursework\\glumhub\\glumhub\\views\\mainwindow.xaml||{F11ACC28-31D1-4C80-A34B-F4E09D3D753C}",
+      "RelativeMoniker": "D:0:0:{3EA0330D-57CB-4EDD-A566-416BC8F779DB}|GlumHub\\GlumHub.csproj|solutionrelative:glumhub\\views\\mainwindow.xaml||{F11ACC28-31D1-4C80-A34B-F4E09D3D753C}"
     }
   ],
   "DocumentGroupContainers": [
@@ -27,25 +27,25 @@
             {
               "$type": "Document",
               "DocumentIndex": 0,
-              "Title": "RussianDictionary.xaml",
-              "DocumentMoniker": "D:\\Study\\CourseWork\\GlumHub\\GlumHub\\files\\RussianDictionary.xaml",
-              "RelativeDocumentMoniker": "GlumHub\\files\\RussianDictionary.xaml",
-              "ToolTip": "D:\\Study\\CourseWork\\GlumHub\\GlumHub\\files\\RussianDictionary.xaml",
-              "RelativeToolTip": "GlumHub\\files\\RussianDictionary.xaml",
+              "Title": "NotificationsPage.xaml",
+              "DocumentMoniker": "D:\\Study\\CourseWork\\GlumHub\\GlumHub\\views\\client\\NotificationsPage.xaml",
+              "RelativeDocumentMoniker": "GlumHub\\views\\client\\NotificationsPage.xaml",
+              "ToolTip": "D:\\Study\\CourseWork\\GlumHub\\GlumHub\\views\\client\\NotificationsPage.xaml",
+              "RelativeToolTip": "GlumHub\\views\\client\\NotificationsPage.xaml",
               "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.003549|",
-              "WhenOpened": "2024-05-16T21:58:50.616Z",
+              "WhenOpened": "2024-05-17T08:44:31.055Z",
               "EditorCaption": ""
             },
             {
               "$type": "Document",
               "DocumentIndex": 1,
-              "Title": "EnglishDictionary.xaml",
-              "DocumentMoniker": "D:\\Study\\CourseWork\\GlumHub\\GlumHub\\files\\EnglishDictionary.xaml",
-              "RelativeDocumentMoniker": "GlumHub\\files\\EnglishDictionary.xaml",
-              "ToolTip": "D:\\Study\\CourseWork\\GlumHub\\GlumHub\\files\\EnglishDictionary.xaml",
-              "RelativeToolTip": "GlumHub\\files\\EnglishDictionary.xaml",
+              "Title": "MainWindow.xaml",
+              "DocumentMoniker": "D:\\Study\\CourseWork\\GlumHub\\GlumHub\\views\\MainWindow.xaml",
+              "RelativeDocumentMoniker": "GlumHub\\views\\MainWindow.xaml",
+              "ToolTip": "D:\\Study\\CourseWork\\GlumHub\\GlumHub\\views\\MainWindow.xaml",
+              "RelativeToolTip": "GlumHub\\views\\MainWindow.xaml",
               "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.003549|",
-              "WhenOpened": "2024-05-16T21:58:48.713Z",
+              "WhenOpened": "2024-05-17T08:24:20.409Z",
               "EditorCaption": ""
             }
           ]

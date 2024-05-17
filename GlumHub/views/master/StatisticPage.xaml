@@ -5,12 +5,13 @@
       xmlns:d="http://schemas.microsoft.com/expression/blend/2008" 
       xmlns:local="clr-namespace:GlumHub"
       mc:Ignorable="d" 
-      d:DesignHeight="900" d:DesignWidth="1240" Background="{DynamicResource PageBackground}"
+      d:DesignHeight="1500" d:DesignWidth="1240" Background="{DynamicResource PageBackground}"
       Title="StatisticPage">
 
     <Page.DataContext>
         <local:StatisticPageVM></local:StatisticPageVM>
     </Page.DataContext>
+    <ScrollViewer VerticalScrollBarVisibility="Hidden">
     <Grid>
             <Grid.ColumnDefinitions>
                 <ColumnDefinition Width="110*"></ColumnDefinition>
@@ -53,7 +54,9 @@
                     </DataTemplate>
                 </ListView.ItemTemplate>
             </ListView>
+                <StackPanel Height="300" Width="auto"></StackPanel>
         </StackPanel>
 
         </Grid>
+    </ScrollViewer>
 </Page>

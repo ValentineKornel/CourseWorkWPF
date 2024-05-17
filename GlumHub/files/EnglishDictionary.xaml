@@ -47,5 +47,63 @@
     <v:String x:Key="SwitchAppearanceButton">Switch Appearance</v:String>
     <v:String x:Key="SwitchLanguageButton">Switch Language</v:String>
 
+    
+    <!-- HomePageAdmin page -->
+    <v:String x:Key="RequestsLabel">Requests</v:String>
+
+    <!-- Requests page -->
+    <v:String x:Key="AttachmentImageLabel">Attachment Image</v:String>
+    <v:String x:Key="AttachmentLetterLabel">Attachment Message</v:String>
+    <v:String x:Key="ConfirmButton">Confirm</v:String>
+    <v:String x:Key="RejectButton">Reject</v:String>
+
+    <!-- SearchPageAdmin page -->
+    <v:String x:Key="CityLabel">City</v:String>
+
+    <!-- User page -->
+    <v:String x:Key="DeleteUserButton">Delete user</v:String>
+
+    <!-- ApplyToMaster page -->
+    <v:String x:Key="LoadImageButton">Load Image</v:String>
+    <v:String x:Key="ApplyButton">Send</v:String>
+
+    <!-- HomePageClient page -->
+    <v:String x:Key="UpcomintBookingsClientLabel">Upcoming bookings:</v:String>
+
+    <!-- Master page -->
+    <v:String x:Key="ServiceButton">Service</v:String>
+
+    <!-- AddNewPost page -->
+    <v:String x:Key="PostImageLabel">Image</v:String>
+    <v:String x:Key="DescriptionLabel">Description</v:String>
+    <v:String x:Key="AddNewPostButton">Add post</v:String>
+
+    <!-- AsMaster page -->
+    <v:String x:Key="UpcomingBookingsLabel">Upcoming bookings</v:String>
+    <v:String x:Key="FreeBookingsLabel">Free bookings</v:String>
+
+    <!-- CertainPost page -->
+    <v:String x:Key="DeleteButton">Delete</v:String>
+
+    <!-- FreeBooking page -->
+    <v:String x:Key="NewBookingButton">New Booking</v:String>
+
+    <!-- HomePageMaster page -->
+    <v:String x:Key="AsMasterLabel">As master</v:String>
+    <v:String x:Key="AsClientLabel">As client</v:String>
+
+    <!-- NewBooking page -->
+    <v:String x:Key="ServiceLabel">Service:</v:String>
+    <v:String x:Key="DateTimeLabel">Date/time:</v:String>
+    <v:String x:Key="AddButton">Add</v:String>
+
+    <!-- Posts page -->
+    <v:String x:Key="NewPostButton">New post</v:String>
+
+    <!-- Statistic page -->
+    <v:String x:Key="ServiceComplitedLabel">Clients Served:</v:String>
+    <v:String x:Key="ThisYearStatisticLabel">Statistic this year:</v:String>
+    <v:String x:Key="BestClientsLabel">Best clients:</v:String>
+
 
 </ResourceDictionary>

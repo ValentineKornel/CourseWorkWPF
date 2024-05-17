@@ -122,7 +122,6 @@ namespace GlumHub
 
         private void Register()
         {
-            new MyMessageBox("LJ:LJ:L").Show();
             User user = new User(Username, FirstName, SecondName, Email, Tel);
             using (ApplicationContextDB db = new ApplicationContextDB())
             {

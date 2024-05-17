@@ -25,7 +25,7 @@
                         </Paragraph>
                     </FlowDocument>
                 </RichTextBox>
-                <Button Command="{Binding SearchCommand}" Width="40" Height="40" HorizontalAlignment="Right" Margin="0, -40, 10, 0"></Button>
+                <Button Command="{Binding SearchCommand}" Width="40" Height="40" Visibility="Hidden" HorizontalAlignment="Right" Margin="0, -40, 10, 0"></Button>
             </StackPanel>
             <StackPanel Height="1000" Margin="0, 20, 0, 0" Width="auto">
                 <ListView ItemsSource="{Binding SearchedMasters}" BorderThickness="0" Width="auto">

@@ -8,9 +8,7 @@
         Title="GlumHub" Height="459" Cursor="{StaticResource cursor}" Width="703"
         WindowState="Maximized" AllowDrop="True" Background="#FF898989">
 
-    <Frame x:Name="frame" NavigationUIVisibility="Hidden" Height="auto" >
-
-    </Frame>
+    <Frame x:Name="frame" NavigationUIVisibility="Hidden" Height="auto" Width="703" MinWidth="1600" MinHeight="600" />
 
 
 

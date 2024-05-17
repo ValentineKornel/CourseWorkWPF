@@ -11,6 +11,7 @@
     <Page.DataContext>
         <local:NotificationsPageVM></local:NotificationsPageVM>
     </Page.DataContext>
+    <ScrollViewer VerticalScrollBarVisibility="Hidden">
         <Grid>
         <StackPanel Margin="20,0,0,0">
             <StackPanel Height="1000" Margin="0, 20, 0, 0" Width="auto">
@@ -35,6 +36,8 @@ Width="auto" Height="auto" Style="{StaticResource SecondaryButtonStyle}">
 
 
             </StackPanel>
+                <StackPanel Height="200" Width="auto"></StackPanel>
         </StackPanel>
     </Grid>
+    </ScrollViewer>
 </Page>
