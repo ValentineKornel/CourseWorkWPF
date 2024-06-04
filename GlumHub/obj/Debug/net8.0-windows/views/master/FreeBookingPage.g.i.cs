@@ -53,7 +53,7 @@ namespace GlumHub {
                 return;
             }
             _contentLoaded = true;
-            System.Uri resourceLocater = new System.Uri("/GlumHub;component/views/master/freebookingpage.xaml", System.UriKind.Relative);
+            System.Uri resourceLocater = new System.Uri("/GlumHub;V1.0.0.0;component/views/master/freebookingpage.xaml", System.UriKind.Relative);
             
             #line 1 "..\..\..\..\..\views\master\FreeBookingPage.xaml"
             System.Windows.Application.LoadComponent(this, resourceLocater);

@@ -61,7 +61,7 @@ namespace GlumHub {
                 return;
             }
             _contentLoaded = true;
-            System.Uri resourceLocater = new System.Uri("/GlumHub;component/views/master/addnewpostpage.xaml", System.UriKind.Relative);
+            System.Uri resourceLocater = new System.Uri("/GlumHub;V1.0.0.0;component/views/master/addnewpostpage.xaml", System.UriKind.Relative);
             
             #line 1 "..\..\..\..\..\views\master\AddNewPostPage.xaml"
             System.Windows.Application.LoadComponent(this, resourceLocater);

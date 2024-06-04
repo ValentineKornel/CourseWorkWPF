@@ -61,7 +61,7 @@ namespace GlumHub {
                 return;
             }
             _contentLoaded = true;
-            System.Uri resourceLocater = new System.Uri("/GlumHub;component/views/mainpage.xaml", System.UriKind.Relative);
+            System.Uri resourceLocater = new System.Uri("/GlumHub;V1.0.0.0;component/views/mainpage.xaml", System.UriKind.Relative);
             
             #line 1 "..\..\..\..\views\MainPage.xaml"
             System.Windows.Application.LoadComponent(this, resourceLocater);

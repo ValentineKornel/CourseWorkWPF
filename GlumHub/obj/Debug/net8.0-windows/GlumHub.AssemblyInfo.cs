@@ -14,7 +14,7 @@ using System.Reflection;
 [assembly: System.Reflection.AssemblyCompanyAttribute("GlumHub")]
 [assembly: System.Reflection.AssemblyConfigurationAttribute("Debug")]
 [assembly: System.Reflection.AssemblyFileVersionAttribute("1.0.0.0")]
-[assembly: System.Reflection.AssemblyInformationalVersionAttribute("1.0.0+4df6397d210a69b900d309632adc92089487bd73")]
+[assembly: System.Reflection.AssemblyInformationalVersionAttribute("1.0.0+eb27034ecd4928d1834ae115326990d8c9f46a28")]
 [assembly: System.Reflection.AssemblyProductAttribute("GlumHub")]
 [assembly: System.Reflection.AssemblyTitleAttribute("GlumHub")]
 [assembly: System.Reflection.AssemblyVersionAttribute("1.0.0.0")]

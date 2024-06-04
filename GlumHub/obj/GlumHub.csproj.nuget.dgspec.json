@@ -1,17 +1,17 @@
 {
   "format": 1,
   "restore": {
-    "D:\\Study\\CourseWork\\GlumHub\\GlumHub\\GlumHub.csproj": {}
+    "D:\\Study\\CourseWorkWPF\\GlumHub\\GlumHub.csproj": {}
   },
   "projects": {
-    "D:\\Study\\CourseWork\\GlumHub\\GlumHub\\GlumHub.csproj": {
+    "D:\\Study\\CourseWorkWPF\\GlumHub\\GlumHub.csproj": {
       "version": "1.0.0",
       "restore": {
-        "projectUniqueName": "D:\\Study\\CourseWork\\GlumHub\\GlumHub\\GlumHub.csproj",
+        "projectUniqueName": "D:\\Study\\CourseWorkWPF\\GlumHub\\GlumHub.csproj",
         "projectName": "GlumHub",
-        "projectPath": "D:\\Study\\CourseWork\\GlumHub\\GlumHub\\GlumHub.csproj",
+        "projectPath": "D:\\Study\\CourseWorkWPF\\GlumHub\\GlumHub.csproj",
         "packagesPath": "C:\\Users\\user\\.nuget\\packages\\",
-        "outputPath": "D:\\Study\\CourseWork\\GlumHub\\GlumHub\\obj\\",
+        "outputPath": "D:\\Study\\CourseWorkWPF\\GlumHub\\obj\\",
         "projectStyle": "PackageReference",
         "configFilePaths": [
           "C:\\Users\\user\\AppData\\Roaming\\NuGet\\NuGet.Config",

@@ -80,7 +80,7 @@ namespace GlumHub
                 using (var client = new SmtpClient())
                 {
                     client.Connect("smtp.gmail.com", 587, MailKit.Security.SecureSocketOptions.StartTls);
-                    client.Authenticate("glumhub@gmail.com", "erhc mmig kqdq kzsj");
+                    client.Authenticate("glumhub@gmail.com", "");
                     client.Send(emailMessage);
                     client.Disconnect(true);
                 }
@@ -113,7 +113,7 @@ namespace GlumHub
                 using (var client = new SmtpClient())
                 {
                     client.ConnectAsync("smtp.gmail.com", 587, MailKit.Security.SecureSocketOptions.StartTls);
-                    client.AuthenticateAsync("glumhub@gmail.com", "erhc mmig kqdq kzsj");
+                    client.AuthenticateAsync("glumhub@gmail.com", "");
                     client.SendAsync(emailMessage);
                     client.DisconnectAsync(true);
                 }
@@ -143,7 +143,7 @@ namespace GlumHub
                 using (var client = new SmtpClient())
                 {
                     client.Connect("smtp.gmail.com", 587, MailKit.Security.SecureSocketOptions.StartTls);
-                    client.Authenticate("glumhub@gmail.com", "erhc mmig kqdq kzsj");
+                    client.Authenticate("glumhub@gmail.com", "");
                     client.Send(emailMessage);
                     client.Disconnect(true);
                 }
@@ -171,7 +171,7 @@ namespace GlumHub
                 using (var client = new SmtpClient())
                 {
                     client.ConnectAsync("smtp.gmail.com", 587, MailKit.Security.SecureSocketOptions.StartTls);
-                    client.AuthenticateAsync("glumhub@gmail.com", "erhc mmig kqdq kzsj");
+                    client.AuthenticateAsync("glumhub@gmail.com", "");
                     client.SendAsync(emailMessage);
                     client.DisconnectAsync(true);
                 }
